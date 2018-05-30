@@ -1,7 +1,42 @@
-.ptag {
-  font-size: 12px;
-  color: black;
-  &:hover {
-    font-size: 24px;
+/* Imports */
+@import "mixins";
+@import "functions";
+
+/* Variables */
+  //Colors
+$backgroundColor: black;
+$defualtFontColor: white;
+
+  //height && width
+$headerHeight: 120px;
+
+
+body {
+  @include defualt-margin;
+}
+
+header {
+  display: block;
+  height: $headerHeight;
+  background-color: $backgroundColor;
+  @include defualt-margin;
+}
+
+/* Navbar */
+nav {
+  float: right;
+  li {
+    float: left;
+    height: $headerHeight;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  a {
+    display: block;
+    color: $defualtFontColor;
+    text-decoration: none; 
+    width: 150px; 
+    //height: $headerHeight;
   }
 }

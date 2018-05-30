@@ -1,5 +1,29 @@
-.ptag {
-  font-size: 12px;
-  color: black; }
-  .ptag:hover {
-    font-size: 24px; }
+/* Imports */
+/* Margins */
+/* Defualt paddings */
+/* Variables */
+body {
+  margin: 0;
+  -ms-wrap-margin: 0; }
+
+header {
+  display: block;
+  height: 120px;
+  background-color: black;
+  margin: 0;
+  -ms-wrap-margin: 0; }
+
+/* Navbar */
+nav {
+  float: right; }
+  nav li {
+    float: left;
+    height: 120px;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: sans-serif; }
+  nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: 150px; }

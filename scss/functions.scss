@@ -1,0 +1,4 @@
+/* Defualt paddings */
+@function li-position($px) {
+    @return ($px/2) - 10px;
+}
