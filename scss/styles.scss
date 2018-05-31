@@ -51,61 +51,46 @@ header {
 
 
 // Navbar inside header
-  nav {
-    height: $headerHeight;
-
-    #mobile-dropdown-menu {
-      display: block;
-      float: right;
-      height: $headerHeight;
-
-      .menu-item {
-        display: inline-block;
-        text-align: center;
-        font-size: 1.2em;
-        padding-top: header-padding($headerHeight);
-        line-height: header-height($headerHeight);
-        height: header-height($headerHeight);
-        min-width: 100px; 
-  
-        a {
-          font-family: sans-serif;
-          display: block;
-          color: $defualtFontColor;
-          text-decoration: none; 
-          min-width: 100px; 
-          width: $linkWidth;
-        }
-      }
-    }
+.navbar {
+  height: $headerHeight;
 }
+
 
 #mobile-dropdown-icon {
   cursor: pointer;
   visibility: hidden;
-  display: block;
-  float: left;
+  float: right;
   width: auto;
   height: header-height($headerHeight);
   padding-top: header-padding($headerHeight);
 }
 
-//Mobile adjustments
-@media only screen and (max-width: 1024px) {
-  nav {
 
-    #mobile-dropdown-icon {
-      visibility: visible;
-      float: right;
-    }
 
-    #mobile-dropdown-menu {
-
-      .menu-item {
-        display: table;
-        text-align: left;
-      }
-    }
-  }
+#mobile-dropdown-menu {
+  float: right;
+  height: $headerHeight;
 }
+
+.menu-item {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+  padding-top: header-padding($headerHeight);
+  line-height: header-height($headerHeight);
+  height: header-height($headerHeight);
+  min-width: 100px; 
+}
+
+a {
+  font-family: sans-serif;
+  display: block;
+  color: $defualtFontColor;
+  text-decoration: none; 
+  min-width: 100px; 
+  width: $linkWidth;
+}
+
+
+
 //========================================================//

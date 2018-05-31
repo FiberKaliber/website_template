@@ -30,41 +30,34 @@ header {
   #logo-header .logo {
     height: 100px; }
 
-nav {
+.navbar {
   height: 120px; }
-  nav #mobile-dropdown-menu {
-    display: block;
-    float: right;
-    height: 120px; }
-    nav #mobile-dropdown-menu .menu-item {
-      display: inline-block;
-      text-align: center;
-      font-size: 1.2em;
-      padding-top: 25px;
-      line-height: 60px;
-      height: 60px;
-      min-width: 100px; }
-      nav #mobile-dropdown-menu .menu-item a {
-        font-family: sans-serif;
-        display: block;
-        color: black;
-        text-decoration: none;
-        min-width: 100px;
-        width: 140px; }
 
 #mobile-dropdown-icon {
   cursor: pointer;
   visibility: hidden;
-  display: block;
-  float: left;
+  float: right;
   width: auto;
   height: 60px;
   padding-top: 25px; }
 
-@media only screen and (max-width: 1024px) {
-  nav #mobile-dropdown-icon {
-    visibility: visible;
-    float: right; }
-  nav #mobile-dropdown-menu .menu-item {
-    display: table;
-    text-align: left; } }
+#mobile-dropdown-menu {
+  float: right;
+  height: 120px; }
+
+.menu-item {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+  padding-top: 25px;
+  line-height: 60px;
+  height: 60px;
+  min-width: 100px; }
+
+a {
+  font-family: sans-serif;
+  display: block;
+  color: black;
+  text-decoration: none;
+  min-width: 100px;
+  width: 140px; }
