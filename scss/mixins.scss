@@ -1,5 +1,13 @@
+/* Imports */
+@import "functions";
+
 /* Margins */
 @mixin defualt-margin {
     margin: 0;
     -ms-wrap-margin: 0;
+}
+
+/* Paddings */
+@mixin logo-header-padding($px) {
+    padding: logo-header-padding($px) 0 logo-header-padding($px) 0;
 }

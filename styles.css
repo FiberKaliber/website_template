@@ -1,29 +1,50 @@
 /* Imports */
-/* Margins */
+/* Imports */
 /* Defualt paddings */
-/* Variables */
+/* Default heights */
+/* Margins */
+/* Paddings */
+/* Defualt paddings */
+/* Default heights */
 body {
   margin: 0;
   -ms-wrap-margin: 0; }
+
+.logo {
+  height: 120px;
+  width: auto; }
 
 header {
   display: block;
   height: 120px;
   background-color: black;
+  padding: 0 95px 0 95px;
   margin: 0;
   -ms-wrap-margin: 0; }
 
-/* Navbar */
+#logo-header {
+  float: left;
+  height: 100px;
+  padding: 10px 0 10px 0; }
+  #logo-header .logo {
+    height: 100px; }
+
 nav {
-  float: right; }
+  display: block;
+  float: right;
+  height: 120px; }
   nav li {
-    float: left;
-    height: 120px;
-    font-size: 1.2em;
+    display: inline-block;
     text-align: center;
-    font-family: sans-serif; }
-  nav a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    width: 150px; }
+    font-family: sans-serif;
+    font-size: 1.2em;
+    padding-top: 25px;
+    line-height: 60px;
+    height: 60px;
+    min-width: 100px; }
+    nav li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      min-width: 100px;
+      width: 140px; }
