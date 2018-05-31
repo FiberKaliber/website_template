@@ -3,12 +3,12 @@
 @import "functions";
 
 
-
 //==========================/* Variables */==============================//
 
   //Colors
-$backgroundColor: black;
-$defualtFontColor: white;
+$backgroundColor: white;
+$headerBackgroundColor: #4a708b;
+$defualtFontColor: black;
 
   //height && width
 $headerHeight: 120px;
@@ -33,13 +33,14 @@ body {
 header {
   display: block;
   height: $headerHeight;
-  background-color: $backgroundColor;
+  background-color: $headerBackgroundColor;
   padding: 0 95px 0 95px;
   @include defualt-margin;
 }
 
 // Logo inside header
 #logo-header {
+  cursor: pointer;
   float: left;
   height: $logoHeaderHeight;
   @include logo-header-padding($headerHeight);
@@ -48,30 +49,63 @@ header {
   }
 }
 
-// Navbar inside header
-nav {
-  display: block;
-  float: right;
-  height: $headerHeight;
 
-  li {
-    display: inline-block;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 1.2em;
-    padding-top: header-padding($headerHeight);
-    line-height: header-height($headerHeight);
-    height: header-height($headerHeight);
-    min-width: 100px; 
-    
-    a {
+// Navbar inside header
+  nav {
+    height: $headerHeight;
+
+    #mobile-dropdown-menu {
       display: block;
-      color: $defualtFontColor;
-      text-decoration: none; 
-      min-width: 100px; 
-      width: $linkWidth;
+      float: right;
+      height: $headerHeight;
+
+      .menu-item {
+        display: inline-block;
+        text-align: center;
+        font-size: 1.2em;
+        padding-top: header-padding($headerHeight);
+        line-height: header-height($headerHeight);
+        height: header-height($headerHeight);
+        min-width: 100px; 
+  
+        a {
+          font-family: sans-serif;
+          display: block;
+          color: $defualtFontColor;
+          text-decoration: none; 
+          min-width: 100px; 
+          width: $linkWidth;
+        }
+      }
+    }
+}
+
+#mobile-dropdown-icon {
+  cursor: pointer;
+  visibility: hidden;
+  display: block;
+  float: left;
+  width: auto;
+  height: header-height($headerHeight);
+  padding-top: header-padding($headerHeight);
+}
+
+//Mobile adjustments
+@media only screen and (max-width: 1024px) {
+  nav {
+
+    #mobile-dropdown-icon {
+      visibility: visible;
+      float: right;
+    }
+
+    #mobile-dropdown-menu {
+
+      .menu-item {
+        display: table;
+        text-align: left;
+      }
     }
   }
 }
-
 //========================================================//

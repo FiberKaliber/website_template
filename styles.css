@@ -17,12 +17,13 @@ body {
 header {
   display: block;
   height: 120px;
-  background-color: black;
+  background-color: #4a708b;
   padding: 0 95px 0 95px;
   margin: 0;
   -ms-wrap-margin: 0; }
 
 #logo-header {
+  cursor: pointer;
   float: left;
   height: 100px;
   padding: 10px 0 10px 0; }
@@ -30,21 +31,40 @@ header {
     height: 100px; }
 
 nav {
-  display: block;
-  float: right;
   height: 120px; }
-  nav li {
-    display: inline-block;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 1.2em;
-    padding-top: 25px;
-    line-height: 60px;
-    height: 60px;
-    min-width: 100px; }
-    nav li a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      min-width: 100px;
-      width: 140px; }
+  nav #mobile-dropdown-menu {
+    display: block;
+    float: right;
+    height: 120px; }
+    nav #mobile-dropdown-menu .menu-item {
+      display: inline-block;
+      text-align: center;
+      font-size: 1.2em;
+      padding-top: 25px;
+      line-height: 60px;
+      height: 60px;
+      min-width: 100px; }
+      nav #mobile-dropdown-menu .menu-item a {
+        font-family: sans-serif;
+        display: block;
+        color: black;
+        text-decoration: none;
+        min-width: 100px;
+        width: 140px; }
+
+#mobile-dropdown-icon {
+  cursor: pointer;
+  visibility: hidden;
+  display: block;
+  float: left;
+  width: auto;
+  height: 60px;
+  padding-top: 25px; }
+
+@media only screen and (max-width: 1024px) {
+  nav #mobile-dropdown-icon {
+    visibility: visible;
+    float: right; }
+  nav #mobile-dropdown-menu .menu-item {
+    display: table;
+    text-align: left; } }
