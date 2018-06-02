@@ -7,89 +7,125 @@
 
   //Colors
 $backgroundColor: white;
-$headerBackgroundColor: #4a708b;
-$defualtFontColor: black;
+$navBackgroundColor: #004974;
+$defualtFontColor: rgb(201, 201, 201);
 
   //height && width
-$headerHeight: 120px;
-$linkWidth: 140px;
-$logoHeaderHeight: header-logo-height($headerHeight);
+$navHeight: 120px;
+$linkWidth: 125px;
+$logoHeaderHeight: header-logo-height($navHeight);
+
+  //paddings 
+$navPadding: 95px;
 
 //==========================/* Body */==============================//
 
 body {
   @include defualt-margin;
+  @include defualt-padding;
 }
 
-//==========================/* Logo */==============================//
+//==========================/* Wrapper */==============================//
 
-.logo {
-  height: $headerHeight;
-  width: auto;
+#wrapper {
+  @include defualt-margin;
+  position: relative;
 }
+
+
+
 
 //==========================/* HEADER */==============================//
 
 header {
+  height: $navHeight;
+  position: relative;
   display: block;
-  height: $headerHeight;
-  background-color: $headerBackgroundColor;
-  padding: 0 95px 0 95px;
+  padding-left: $navPadding;
   @include defualt-margin;
 }
 
-// Logo inside header
 #logo-header {
   cursor: pointer;
-  float: left;
+  position: absolute;
+  display: block;
+  z-index: 1;
   height: $logoHeaderHeight;
-  @include logo-header-padding($headerHeight);
+  @include logo-header-padding($navHeight);
   .logo {
     height: $logoHeaderHeight;
+    width: auto;
+  }
+}
+
+//==========================/* NAVBAR */==============================//
+
+nav {
+  background-color: $navBackgroundColor;
+  height: $navHeight;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  &::after {
+    content:''; 
+    display: block; 
+    clear: both;
   }
 }
 
 
-// Navbar inside header
-.navbar {
-  height: $headerHeight;
-}
+#dropdown-menu {
+  list-style: none;
+  float: right;
+  height: header-height($navHeight);
+  padding-top: header-padding($navHeight);
+  padding-right: $navPadding;
+  padding-left: 0;
+  line-height: header-height($navHeight);
+  @include defualt-margin;
 
+  .menu-item {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2em;
+    min-width: 100px; 
+
+    a {
+      display: inline-block;
+      position: relative;
+      min-width: 100px;
+      width: $linkWidth;
+      font-family: sans-serif;
+      text-decoration: none; 
+      color: $defualtFontColor;
+      transition: 0.4s;
+
+      &:visited {
+        color: $defualtFontColor;
+      }
+
+      &:hover {
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}
 
 #mobile-dropdown-icon {
   cursor: pointer;
   visibility: hidden;
   float: right;
   width: auto;
-  height: header-height($headerHeight);
-  padding-top: header-padding($headerHeight);
-}
-
-
-
-#mobile-dropdown-menu {
-  float: right;
-  height: $headerHeight;
+  height: header-height($navHeight);
+  padding-top: header-padding($navHeight);
 }
 
 .menu-item {
-  display: inline-block;
-  text-align: center;
-  font-size: 1.2em;
-  padding-top: header-padding($headerHeight);
-  line-height: header-height($headerHeight);
-  height: header-height($headerHeight);
-  min-width: 100px; 
+
 }
 
-a {
-  font-family: sans-serif;
-  display: block;
-  color: $defualtFontColor;
-  text-decoration: none; 
-  min-width: 100px; 
-  width: $linkWidth;
-}
+
 
 
 

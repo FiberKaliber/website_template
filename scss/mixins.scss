@@ -8,6 +8,14 @@
 }
 
 /* Paddings */
+@mixin defualt-padding {
+    padding: 0;
+}
+
 @mixin logo-header-padding($px) {
+    padding: logo-header-padding($px) 0 logo-header-padding($px) 0;
+}
+
+@mixin nav-padding($px) {
     padding: logo-header-padding($px) 0 logo-header-padding($px) 0;
 }
