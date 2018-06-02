@@ -7,8 +7,9 @@
 
   //Colors
 $backgroundColor: white;
-$navBackgroundColor: #004974;
+$headerBackgroundColor: #004974;
 $defualtFontColor: rgb(201, 201, 201);
+$mobileFontColor: rgb(0,0,0);
 
   //height && width
 $navHeight: 120px;
@@ -42,6 +43,7 @@ header {
   position: relative;
   display: block;
   padding-left: $navPadding;
+  background-color: $headerBackgroundColor;
   @include defualt-margin;
 }
 
@@ -61,7 +63,6 @@ header {
 //==========================/* NAVBAR */==============================//
 
 nav {
-  background-color: $navBackgroundColor;
   height: $navHeight;
   position: absolute;
   top: 0px;
@@ -78,6 +79,7 @@ nav {
 #dropdown-menu {
   list-style: none;
   float: right;
+  display: block;
   height: header-height($navHeight);
   padding-top: header-padding($navHeight);
   padding-right: $navPadding;
@@ -99,10 +101,10 @@ nav {
       font-family: sans-serif;
       text-decoration: none; 
       color: $defualtFontColor;
-      transition: 0.4s;
+      @include transition-a;
 
       &:visited {
-        color: $defualtFontColor;
+        //color: $defualtFontColor;
       }
 
       &:hover {
@@ -111,6 +113,28 @@ nav {
     }
   }
 }
+@media only screen and (max-width: 1024px) {
+  nav { 
+    //display: none;
+    position: relative;
+    #dropdown-menu {
+      position: absolute;
+      width: 100%;
+      padding: 0;
+      .menu-item {
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid;
+        border-color: #00000031;
+        a {
+          color: $mobileFontColor;
+          padding: 0 40px;          
+        }
+      }
+    }
+  }
+}
+
 
 #mobile-dropdown-icon {
   cursor: pointer;

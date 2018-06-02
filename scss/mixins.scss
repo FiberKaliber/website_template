@@ -16,6 +16,15 @@
     padding: logo-header-padding($px) 0 logo-header-padding($px) 0;
 }
 
-@mixin nav-padding($px) {
+@mixin menu-item-a-padding($px) {
     padding: logo-header-padding($px) 0 logo-header-padding($px) 0;
+}
+
+
+/* Transition */
+@mixin transition-a {
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+     transition: 0.4s;
 }

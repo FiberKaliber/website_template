@@ -4,6 +4,7 @@
 /* Default heights */
 /* Margins */
 /* Paddings */
+/* Transition */
 /* Defualt paddings */
 /* Default heights */
 body {
@@ -21,6 +22,7 @@ header {
   position: relative;
   display: block;
   padding-left: 95px;
+  background-color: #004974;
   margin: 0;
   -ms-wrap-margin: 0; }
 
@@ -36,7 +38,6 @@ header {
     width: auto; }
 
 nav {
-  background-color: #004974;
   height: 120px;
   position: absolute;
   top: 0px;
@@ -50,6 +51,7 @@ nav {
 #dropdown-menu {
   list-style: none;
   float: right;
+  display: block;
   height: 60px;
   padding-top: 25px;
   padding-right: 95px;
@@ -70,11 +72,28 @@ nav {
       font-family: sans-serif;
       text-decoration: none;
       color: #c9c9c9;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -o-transition: 0.4s;
       transition: 0.4s; }
-      #dropdown-menu .menu-item a:visited {
-        color: #c9c9c9; }
       #dropdown-menu .menu-item a:hover {
         color: white; }
+
+@media only screen and (max-width: 1024px) {
+  nav {
+    position: relative; }
+    nav #dropdown-menu {
+      position: absolute;
+      width: 100%;
+      padding: 0; }
+      nav #dropdown-menu .menu-item {
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid;
+        border-color: #00000031; }
+        nav #dropdown-menu .menu-item a {
+          color: black;
+          padding: 0 40px; } }
 
 #mobile-dropdown-icon {
   cursor: pointer;
