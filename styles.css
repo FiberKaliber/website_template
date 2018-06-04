@@ -57,7 +57,11 @@ header {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 100%; }
+  width: 100%;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out; }
 
 #dropdown-menu {
   list-style: none;
