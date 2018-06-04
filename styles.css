@@ -1,12 +1,12 @@
 /* Imports */
 /* Imports */
-/* Defualt paddings */
-/* Default heights */
+/* Paddings */
+/* Heights */
 /* Margins */
 /* Paddings */
 /* Transition */
-/* Defualt paddings */
-/* Default heights */
+/* Paddings */
+/* Heights */
 body {
   margin: 0;
   -ms-wrap-margin: 0;
@@ -21,8 +21,8 @@ header {
   height: 120px;
   position: relative;
   display: block;
-  padding-left: 95px;
   background-color: #004974;
+  padding: 0 30px 0 30px;
   margin: 0;
   -ms-wrap-margin: 0; }
 
@@ -35,6 +35,21 @@ header {
   padding: 10px 0 10px 0; }
   #logo-header .logo {
     height: 100px;
+    width: auto; }
+
+#mobile-dropdown-link {
+  cursor: pointer;
+  position: relative;
+  visibility: hidden;
+  float: right;
+  z-index: 1;
+  height: 60px;
+  -webkit-transition: padding 0.4s;
+  -moz-transition: padding 0.4s;
+  -o-transition: padding 0.4s;
+  transition: padding 0.4s; }
+  #mobile-dropdown-link #mobile-dropdown-icon {
+    height: 60px;
     width: auto; }
 
 nav {
@@ -54,7 +69,7 @@ nav {
   display: block;
   height: 60px;
   padding-top: 25px;
-  padding-right: 95px;
+  padding-right: 30px;
   padding-left: 0;
   line-height: 60px;
   margin: 0;
@@ -72,18 +87,24 @@ nav {
       font-family: sans-serif;
       text-decoration: none;
       color: #c9c9c9;
-      -webkit-transition: 0.4s;
-      -moz-transition: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s; }
+      -webkit-transition: padding 0.4s;
+      -moz-transition: padding 0.4s;
+      -o-transition: padding 0.4s;
+      transition: padding 0.4s; }
       #dropdown-menu .menu-item a:hover {
         color: white; }
 
 @media only screen and (max-width: 1024px) {
+  header #mobile-dropdown-link {
+    visibility: visible;
+    padding: 30px 0; }
   nav {
-    position: relative; }
+    display: block;
+    position: relative;
+    height: 244px; }
     nav #dropdown-menu {
       position: absolute;
+      line-height: 60px;
       width: 100%;
       padding: 0; }
       nav #dropdown-menu .menu-item {
@@ -93,12 +114,5 @@ nav {
         border-color: #00000031; }
         nav #dropdown-menu .menu-item a {
           color: black;
-          padding: 0 40px; } }
-
-#mobile-dropdown-icon {
-  cursor: pointer;
-  visibility: hidden;
-  float: right;
-  width: auto;
-  height: 60px;
-  padding-top: 25px; }
+          padding-left: 40px;
+          width: calc(100% - 40px); } }

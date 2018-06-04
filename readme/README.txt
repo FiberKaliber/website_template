@@ -9,5 +9,3 @@
 ### NPM Packagees ###
 
 * 'npm install -g node-sass less'
-
-https://www.w3schools.com/howto/howto_css_dropdown.asp
