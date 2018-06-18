@@ -9,3 +9,7 @@
 ### NPM Packagees ###
 
 * 'npm install -g node-sass less'
+
+
+//Instructions on how to make the navbar work with transitions 
+https://stackoverflow.com/questions/3331353/transitions-on-the-display-property
