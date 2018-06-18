@@ -7,23 +7,26 @@
     -ms-wrap-margin: 0;
 }
 
+// Margins inside header
+@mixin logo-header-margin($px, $px2) {
+    margin: logo-header-padding($px) $px2 logo-header-padding($px) $px2 !important;
+}
+
+@mixin button-navbar-margin($px, $px2) {
+    margin: button-navbar-margin($px) $px2 button-navbar-margin($px) $px2 !important;
+}
+
 /* Paddings */
 @mixin defualt-padding {
     padding: 0;
 }
 
-@mixin header-padding($px) {
-    padding: 0 $px 0 $px;
+@mixin header-margin($px) {
+    margin: 0 $px 0 $px;
 }
 
-// Paddings inside header
-@mixin logo-header-padding($px) {
-    padding: logo-header-padding($px) 0 logo-header-padding($px) 0;
-}
 
-@mixin mobile-navbar-padding($px) {
-    padding: mobile-navbar-padding($px) 0;
-}
+
 
 // Paddings inside navbar
 @mixin menu-item-a-padding($px) {
@@ -31,10 +34,17 @@
 }
 
 
-/* Transition */
+/* Transition */ 
 @mixin transition-padding {
     -webkit-transition: padding 0.4s;
     -moz-transition: padding 0.4s;
     -o-transition: padding 0.4s;
      transition: padding 0.4s;
+}
+
+@mixin transition-margin {
+    -webkit-transition: margin 0.4s;
+    -moz-transition: margin 0.4s;
+    -o-transition: margin 0.4s;
+     transition: margin 0.4s;
 }

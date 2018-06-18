@@ -10,7 +10,8 @@
     @return ($px - $pxTemp) / 2;
 }
 
-@function mobile-navbar-padding($px) {
+/* Margins */
+@function button-navbar-margin($px) {
     @return ($px/4);
 }
 

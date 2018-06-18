@@ -3,7 +3,9 @@
 @import "functions";
 
 
-//==========================/* Variables */==============================//
+/*========================== 
+            Variables
+==============================*/
 
   //Colors
 $backgroundColor: white;
@@ -11,40 +13,49 @@ $headerBackgroundColor: #004974;
 $defualtFontColor: rgb(201, 201, 201);
 $mobileFontColor: rgb(0,0,0);
 
-  //height && width
-$navHeight: 120px;
+  //Height && width
+$navHeight: 140px;
 $linkWidth: 125px;
 $dropdownMenuHeightMobile: 60px;
+
 $dropdownMenuHeight: header-height($navHeight);
 $logoHeaderHeight: header-logo-height($navHeight);
 $mobileNabarHeight: mobile-navbar-height($navHeight);
 
-  //paddings 
-$headerPadding: 30px;
+  //Margins 
+$defaultHeaderMargin: 30px;
 
-//==========================/* Body */==============================//
+/*========================== 
+            Body 
+==============================*/
 
 body {
   @include defualt-margin;
   @include defualt-padding;
 }
 
-//==========================/* Wrapper */==============================//
+/*========================== 
+           Wrapper 
+==============================*/
 
 #wrapper {
   @include defualt-margin;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 
-//==========================/* HEADER */==============================//
+/*========================== 
+            Header 
+==============================*/
 
 header {
   height: $navHeight;
-  position: relative;
+  width: 100%;
+  position: absolute;
   display: block;
   background-color: $headerBackgroundColor;
-  @include header-padding($headerPadding);
   @include defualt-margin;
 }
 
@@ -54,32 +65,40 @@ header {
   display: block;
   z-index: 1;
   height: $logoHeaderHeight;
-  @include logo-header-padding($navHeight);
+  @include logo-header-margin($navHeight, $defaultHeaderMargin); // (params) first= top/bottom, second=left/right
+  @include defualt-padding;
   .logo {
     height: $logoHeaderHeight;
     width: auto;
   }
 }
 
-#mobile-dropdown-link {
+.mobile-dropdown-link {
   cursor: pointer;
-  position: relative;
+  position: absolute;
   visibility: hidden;
   float: right;
+  background: none;
+  border: none;
+  outline: inherit;
   z-index: 1;
   height: $mobileNabarHeight;
-  @include transition-padding;
+  max-height: $navHeight;
+  @include button-navbar-margin($navHeight, $defaultHeaderMargin); // (params) first= top/bottom, second=left/right
+  @include defualt-padding;
   #mobile-dropdown-icon {
     height: $mobileNabarHeight;
     width: auto;
   }
 }
 
-//==========================/* NAVBAR */==============================//
+/*========================== 
+            Navbar 
+==============================*/
 
 #navbar {
   height: $navHeight;
-  position: absolute;
+  position: relative;
   top: 0px;
   left: 0px;
   width: 100%;  
@@ -92,7 +111,7 @@ header {
   display: block;
   height: $dropdownMenuHeight;
   padding-top: header-padding($navHeight);
-  padding-right: $headerPadding;
+  padding-right: $defaultHeaderMargin;
   padding-left: 0;
   line-height: $dropdownMenuHeight;
   @include defualt-margin;
@@ -125,28 +144,31 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
-
-  header {
-    #mobile-dropdown-link {
+  .mobile-dropdown-link {
       visibility: visible;
-      @include mobile-navbar-padding($navHeight);
-    }
+      position: relative;
   }
 
   #navbar { 
-    display: none;
-    position: relative;
-    height: ($dropdownMenuHeightMobile * 4) + 4; //height multliplied with rows + borderline size
+    display: block;
+    height: $navHeight; 
     #dropdown-menu {
-      position: absolute;
+      position: relative;
+      visibility: hidden;
       line-height: $dropdownMenuHeightMobile; 
       width: 100%;
+      height: auto;
       padding: 0;
       .menu-item {
         display: block;
+        position: relative;
         text-align: left;
         border-bottom: 1px solid;
         border-color: #00000031;
+        transition: padding 0.2s ease;
+        &:hover {
+          padding-left: 10px;
+        }
         a {
           color: $mobileFontColor;
           padding-left: 40px;  
@@ -157,4 +179,3 @@ header {
   }
 }
 
-//========================================================//
