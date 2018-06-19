@@ -101,13 +101,23 @@ header {
   position: relative;
   top: 0px;
   left: 0px;
-  width: 100%;  
+  width: 100%;
+  #dropdown {
+    position: relative;
+    list-style: none;
+    #dropdown-menu-parent {
+      position: relative;
+      width: 100%;  
+      height: $navHeight;
+    }
+  }  
 }
 
-#dropdown-menu-parent {
-
-
+#dropdown, #dropdown-menu-parent {
+  @include defualt-padding;
+  @include defualt-margin;
 }
+
 
 #dropdown-menu {
   list-style: none;
@@ -153,16 +163,27 @@ header {
       position: relative;
   }
 
+  #dropdown-menu-parent:hover {
+    #dropdown-menu {
+      visibility: visible;
+      top: 100%;
+      opacity: 1;
+      transition: 0.5s;
+    }
+  }
+
   #navbar { 
     display: block;
-    height: $navHeight; 
     #dropdown-menu {
       position: absolute;
-      visibility: visible;
-      line-height: $dropdownMenuHeightMobile; 
-      width: 100%;
+      visibility: hidden;
       height: auto;
-      padding: 0;
+      width: 100%;
+      top: 0;
+      z-index: -1;
+      opacity: 0;
+      line-height: $dropdownMenuHeightMobile; 
+      @include defualt-padding;
       .menu-item {
         display: block;
         position: relative;
