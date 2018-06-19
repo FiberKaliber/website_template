@@ -11,13 +11,11 @@ var dropdownMenu = document.getElementById('dropdown-menu');
     console.log(visibility);
     dropdownMenu.style.setProperty('visibility', visibility); 
 }
-/*
-window.addEventListener('resize', function() {
-    if(window.innerWidth <= 1024) {
-        display = 'none';
-    } else if (window.innerWidth > 1024) {
-        display = 'block';
+
+/* window.addEventListener('resize', function() {
+    if(window.innerWidth > 1024) {
+        visibility = 'visible';
     }
-    console.log(display);
-    navbar.style.setProperty('display', display);
+    console.log(visibility);
+    dropdownMenu.style.setProperty('visibility', visibility); 
 }); */
