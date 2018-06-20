@@ -27,3 +27,9 @@
 @function header-logo-height($px) {
     @return $px/1.2;
 }
+
+/* Widths */
+
+@function button-navbar-width($px, $px2) {
+    @return $px + ($px2 * 2);
+}

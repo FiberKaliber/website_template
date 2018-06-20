@@ -1,21 +1,20 @@
-var dropdownMenu = document.getElementById('dropdown-menu');
-    style = window.getComputedStyle(dropdownMenu);
-    visibility = style.getPropertyValue('visibility');
+/*========================== 
+        Dropdown menu
+==============================*/
 
- function showDropdownMenu() {
-    if (visibility === 'hidden') {
-        visibility = 'visible';
-    } else if (visibility === 'visible') {
-        visibility = 'hidden';
-    }
-    console.log(visibility);
-    dropdownMenu.style.setProperty('visibility', visibility); 
+var dropdownMenuParent = document.getElementById('dropdown-menu-parent');
+var dropdownMenu = document.getElementById('dropdown-menu');    
+
+// Onclick on .mobile-dropdown-link inside #dropdownMenuparent toggles visible/hidden on menu
+dropdownMenuParent.onclick = function() {
+        dropdownMenu.classList.toggle('dropdown-menu-visible');
+        dropdownMenu.classList.toggle('dropdown-menu-hidden');
 }
 
-/* window.addEventListener('resize', function() {
+// Restores default settings on bigger screens/devices
+window.addEventListener('resize', function() {
     if(window.innerWidth > 1024) {
-        visibility = 'visible';
+        dropdownMenu.classList.remove('dropdown-menu-visible');
+        dropdownMenu.classList.add('dropdown-menu-hidden');
     }
-    console.log(visibility);
-    dropdownMenu.style.setProperty('visibility', visibility); 
-}); */
+}); 

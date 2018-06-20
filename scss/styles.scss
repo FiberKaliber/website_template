@@ -13,17 +13,21 @@ $headerBackgroundColor: #004974;
 $defualtFontColor: rgb(201, 201, 201);
 $mobileFontColor: rgb(0,0,0);
 
-  //Height && width
+  //Setting up responsive Height && width
 $navHeight: 140px;
 $linkWidth: 125px;
 $dropdownMenuHeightMobile: 60px;
 
+  //Heights that response with $navHeight
 $dropdownMenuHeight: header-height($navHeight);
 $logoHeaderHeight: header-logo-height($navHeight);
-$mobileNabarHeight: mobile-navbar-height($navHeight);
+$mobileNavbarHeight: mobile-navbar-height($navHeight);
 
   //Margins 
 $defaultHeaderMargin: 30px;
+
+  //Width that response with $mobileNavbarHeight and $defaultHeaderMargin
+$buttonNavbarWidth: button-navbar-width($mobileNavbarHeight, $defaultHeaderMargin);
 
 /*========================== 
             Body 
@@ -86,12 +90,12 @@ header {
   border: none;
   outline: inherit;
   z-index: 1;
-  height: $mobileNabarHeight;
+  height: $mobileNavbarHeight;
   max-height: $navHeight;
   @include button-navbar-margin($navHeight, $defaultHeaderMargin); // (params) first= top/bottom, second=left/right
   @include defualt-padding;
   #mobile-dropdown-icon {
-    height: $mobileNabarHeight;
+    height: $mobileNavbarHeight;
     width: auto;
   }
 }
@@ -105,11 +109,6 @@ header {
   #dropdown {
     position: relative;
     list-style: none;
-    #dropdown-menu-parent {
-      position: relative;
-      width: 100%;  
-      height: $navHeight;
-    }
   }  
 }
 
@@ -117,7 +116,6 @@ header {
   @include defualt-padding;
   @include defualt-margin;
 }
-
 
 #dropdown-menu {
   list-style: none;
@@ -146,10 +144,6 @@ header {
       color: $defualtFontColor;
       @include transition-padding;
 
-      &:visited {
-        //color: $defualtFontColor;
-      }
-
       &:hover {
         color: rgb(255, 255, 255);
       }
@@ -158,30 +152,36 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
+
+  //dropdown icon on right side pops-up
   .mobile-dropdown-link {
       visibility: visible;
-      position: relative;
+      left: calc(100% - #{$buttonNavbarWidth});
   }
 
-  #dropdown-menu-parent:hover {
-    #dropdown-menu {
-      visibility: visible;
-      top: 100%;
-      opacity: 1;
-      transition: 0.5s;
-    }
+  //JsFiddler toggles between .dropdown-menu-visible/hidden with onclick
+  .dropdown-menu-visible {
+    visibility: visible;
+    position: relative;
+    opacity: 1;
+    top: $navHeight;
+  }
+
+  .dropdown-menu-hidden {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    transition: none;
   }
 
   #navbar { 
     display: block;
     #dropdown-menu {
-      position: absolute;
-      visibility: hidden;
-      height: auto;
-      width: 100%;
-      top: 0;
       z-index: -1;
-      opacity: 0;
+      width: 100%;
+      height: auto;
+      transition: all 0.4s ease-in-out;
       line-height: $dropdownMenuHeightMobile; 
       @include defualt-padding;
       .menu-item {
