@@ -1,12 +1,54 @@
 /* Imports */
 /* Imports */
+/* Imports */
+/*========================== 
+        header&navbar
+==============================*/
 /* Paddings */
 /* Margins */
 /* Heights */
 /* Widths */
+/*========================== 
+        header&navbar
+==============================*/
 /* Margins */
 /* Paddings */
 /* Transition */
+/*========================== 
+        header&navbar
+==============================*/
+/* Paddings */
+/* Margins */
+/* Heights */
+/* Widths */
+#wrapper {
+  position: relative;
+  background: url("images/background/backgroundimage.jpg") no-repeat;
+  background-size: cover;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -ms-wrap-margin: 0; }
+
+/* Imports */
+/* Imports */
+/*========================== 
+        header&navbar
+==============================*/
+/* Paddings */
+/* Margins */
+/* Heights */
+/* Widths */
+/*========================== 
+        header&navbar
+==============================*/
+/* Margins */
+/* Paddings */
+/* Transition */
+/*========================== 
+        header&navbar
+==============================*/
 /* Paddings */
 /* Margins */
 /* Heights */
@@ -15,32 +57,27 @@
             Variables
 ==============================*/
 /*========================== 
-            Body 
-==============================*/
+              Body 
+  ==============================*/
 body {
+  background-color: #171722;
   margin: 0;
   -ms-wrap-margin: 0;
   padding: 0; }
 
 /*========================== 
-           Wrapper 
-==============================*/
-#wrapper {
-  margin: 0;
-  -ms-wrap-margin: 0;
-  position: relative;
-  width: 100%;
-  height: 100%; }
-
-/*========================== 
-            Header 
-==============================*/
-header {
+              Header 
+  ==============================*/
+#header {
   height: 140px;
   width: 100%;
-  position: absolute;
+  z-index: -5;
+  position: relative;
   display: block;
-  background-color: #004974;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   margin: 0;
   -ms-wrap-margin: 0; }
 
@@ -57,31 +94,38 @@ header {
     width: auto; }
 
 /*========================== 
-            Navbar 
-==============================*/
+              Navbar 
+  ==============================*/
 .mobile-dropdown-link {
   cursor: pointer;
   position: absolute;
   visibility: hidden;
-  float: right;
   background: none;
-  border: none;
   outline: inherit;
+  float: right;
+  border: none;
   z-index: 1;
+  opacity: 0;
+  transform: translateY(20px);
   height: 70px;
   max-height: 140px;
   margin: 35px 30px 35px 30px !important;
   padding: 0; }
   .mobile-dropdown-link #mobile-dropdown-icon {
     height: 70px;
+    border-radius: 50%;
     width: auto; }
 
 #navbar {
   height: 140px;
-  position: relative;
+  min-height: 140px;
+  position: absolute;
   top: 0px;
   left: 0px;
-  width: 100%; }
+  width: 100%;
+  border-bottom: 2px solid;
+  border-color: white;
+  background-color: #171722; }
   #navbar #dropdown {
     position: relative;
     list-style: none; }
@@ -95,7 +139,7 @@ header {
   list-style: none;
   float: right;
   display: block;
-  height: 70px;
+  height: 384px;
   padding-top: 29.16667px;
   padding-right: 30px;
   padding-left: 0;
@@ -114,48 +158,103 @@ header {
       width: 125px;
       font-family: sans-serif;
       text-decoration: none;
-      color: #c9c9c9;
-      -webkit-transition: padding 0.4s;
-      -moz-transition: padding 0.4s;
-      -o-transition: padding 0.4s;
-      transition: padding 0.4s; }
+      color: white;
+      -webkit-transition: padding 0.4s ease;
+      -moz-transition: padding 0.4s ease;
+      -o-transition: padding 0.4s ease;
+      transition: padding 0.4s ease; }
       #dropdown-menu .menu-item a:hover {
         color: white; }
 
 @media only screen and (max-width: 1024px) {
   .mobile-dropdown-link {
     visibility: visible;
-    left: calc(100% - 130px); }
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(0px);
+    left: calc(100% - 130px);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+    .mobile-dropdown-link:hover {
+      transform: scale(1.1);
+      -webkit-transition: padding 0.2s ease;
+      -moz-transition: padding 0.2s ease;
+      -o-transition: padding 0.2s ease;
+      transition: padding 0.2s ease; }
+    .mobile-dropdown-link:active {
+      transform: scale(0.9); }
   .dropdown-menu-visible {
     visibility: visible;
     position: relative;
     opacity: 1;
-    top: 140px; }
+    transform: translateY(140px); }
   .dropdown-menu-hidden {
     visibility: hidden;
     position: absolute;
     opacity: 0;
-    top: 0;
-    transition: none; }
+    transform: translateY(0); }
+  .header-height-toggle {
+    height: 384px !important; }
   #navbar {
     display: block; }
     #navbar #dropdown-menu {
       z-index: -1;
       width: 100%;
-      height: auto;
-      transition: all 0.4s ease-in-out;
+      height: 100%;
       line-height: 60px;
+      background-color: rgba(23, 23, 34, 0.5);
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
       padding: 0; }
       #navbar #dropdown-menu .menu-item {
         display: block;
         position: relative;
         text-align: left;
         border-bottom: 1px solid;
-        border-color: #00000031;
-        transition: padding 0.2s ease; }
+        border-color: #c9c9c9;
+        -webkit-transition: padding 0.4s ease;
+        -moz-transition: padding 0.4s ease;
+        -o-transition: padding 0.4s ease;
+        transition: padding 0.4s ease; }
         #navbar #dropdown-menu .menu-item:hover {
           padding-left: 10px; }
         #navbar #dropdown-menu .menu-item a {
-          color: black;
+          color: white;
           padding-left: 40px;
           width: calc(100% - 40px); } }
+
+/* Imports */
+/* Imports */
+/*========================== 
+        header&navbar
+==============================*/
+/* Paddings */
+/* Margins */
+/* Heights */
+/* Widths */
+/*========================== 
+        header&navbar
+==============================*/
+/* Margins */
+/* Paddings */
+/* Transition */
+/*========================== 
+        header&navbar
+==============================*/
+/* Paddings */
+/* Margins */
+/* Heights */
+/* Widths */
+.test {
+  position: relative;
+  z-index: -2;
+  width: 100%;
+  height: 50px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }

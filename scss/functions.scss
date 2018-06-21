@@ -1,3 +1,8 @@
+
+/*========================== 
+        header&navbar
+==============================*/
+
 /* Paddings */
 @function header-padding($px) {
     $pxTemp: ($px/4);
@@ -26,6 +31,10 @@
 
 @function header-logo-height($px) {
     @return $px/1.2;
+}
+
+@function dropdown-menu-total-height($dropdownMenus, $borderSize, $totalRows, $navHeight) {
+    @return (($dropdownMenus + $borderSize) * $totalRows) + $navHeight;
 }
 
 /* Widths */
