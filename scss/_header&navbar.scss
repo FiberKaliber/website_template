@@ -8,14 +8,14 @@
 
     //Colors
 $backgroundColor: rgba(23,23,34, 1);
-$defualtFontColor: rgb(255, 255, 255);
+$defualtFontColor: #FBFBF1;
 
 $navbarBackgroundColor: rgba(23,23,34, 1);
-$navbar-border-color: white;
+$navbar-border-color: #FBFBF1;
 
 $dropdown-menu-background-color: rgba(23,23,34, 0.5);
 $dropdown-menu-border-color: rgb(201, 201, 201);
-$mobileFontColor: white;
+$mobileFontColor: #FBFBF1;
 
     //Setting up responsive Height && width
 $navHeight: 140px;
@@ -155,7 +155,7 @@ $buttonNavbarWidth: button-navbar-width($mobileNavbarHeight, $defaultHeaderMargi
         @include transition-padding-ease(0.4s);
   
         &:hover {
-          color: rgb(255, 255, 255);
+          color: #FBFBF1;
         }
       }
     }

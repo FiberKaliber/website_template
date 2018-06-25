@@ -124,7 +124,7 @@ body {
   left: 0px;
   width: 100%;
   border-bottom: 2px solid;
-  border-color: white;
+  border-color: #FBFBF1;
   background-color: #171722; }
   #navbar #dropdown {
     position: relative;
@@ -158,13 +158,13 @@ body {
       width: 125px;
       font-family: sans-serif;
       text-decoration: none;
-      color: white;
+      color: #FBFBF1;
       -webkit-transition: padding 0.4s ease;
       -moz-transition: padding 0.4s ease;
       -o-transition: padding 0.4s ease;
       transition: padding 0.4s ease; }
       #dropdown-menu .menu-item a:hover {
-        color: white; }
+        color: #FBFBF1; }
 
 @media only screen and (max-width: 1024px) {
   .mobile-dropdown-link {
@@ -223,7 +223,7 @@ body {
         #navbar #dropdown-menu .menu-item:hover {
           padding-left: 10px; }
         #navbar #dropdown-menu .menu-item a {
-          color: white;
+          color: #FBFBF1;
           padding-left: 40px;
           width: calc(100% - 40px); } }
 
@@ -258,3 +258,58 @@ body {
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; }
+
+/* Imports */
+/* Imports */
+/*========================== 
+        header&navbar
+==============================*/
+/* Paddings */
+/* Margins */
+/* Heights */
+/* Widths */
+/*========================== 
+        header&navbar
+==============================*/
+/* Margins */
+/* Paddings */
+/* Transition */
+/*========================== 
+        header&navbar
+==============================*/
+/* Paddings */
+/* Margins */
+/* Heights */
+/* Widths */
+/*========================== 
+            Variables
+==============================*/
+footer {
+  position: absolute;
+  height: 240px;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #FBFBF1;
+  width: 100%;
+  bottom: 0; }
+  footer .content-parent {
+    position: absolute;
+    height: 120px;
+    width: 80%;
+    margin: 0 10%;
+    padding-top: 20px;
+    border-color: #FBFBF1;
+    border-top: 1px solid;
+    bottom: 0; }
+    footer .content-parent .content {
+      float: right; }
+      footer .content-parent .content .bullet-symbol {
+        padding: 0 5px; }
+      footer .content-parent .content a {
+        text-decoration: none;
+        color: #FBFBF1; }
+        footer .content-parent .content a:visited {
+          color: #FBFBF1; }
+        footer .content-parent .content a:hover {
+          text-decoration: underline;
+          color: #1f80ff; }

@@ -20,6 +20,10 @@
     @return ($px/4);
 }
 
+@function content-padding($px) {
+    @return (100% - $px) / 2;
+}
+
 /* Heights */
 @function header-height($px) {
     @return $px/2;
@@ -38,7 +42,6 @@
 }
 
 /* Widths */
-
 @function button-navbar-width($px, $px2) {
     @return $px + ($px2 * 2);
 }
