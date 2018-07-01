@@ -1,13 +1,58 @@
 /* Imports */
 @import "functions";
 
+/*========================== 
+        header&navbar
+==============================*/
+
 /* Margins */
 @mixin defualt-margin {
     margin: 0;
     -ms-wrap-margin: 0;
 }
 
+// Margins inside header
+@mixin logo-header-margin($px, $px2) {
+    margin: logo-header-padding($px) $px2 logo-header-padding($px) $px2 !important;
+}
+
+@mixin button-navbar-margin($px, $px2) {
+    margin: button-navbar-margin($px) $px2 button-navbar-margin($px) $px2 !important;
+}
+
 /* Paddings */
-@mixin logo-header-padding($px) {
-    padding: logo-header-padding($px) 0 logo-header-padding($px) 0;
+@mixin defualt-padding {
+    padding: 0;
+}
+
+@mixin header-margin($px) {
+    margin: 0 $px 0 $px;
+}
+
+// Paddings inside navbar
+@mixin menu-item-a-padding($px) {
+    padding: logo-header-padding($px) 0;
+}
+
+/* Transition */ 
+@mixin transition-padding-ease($px) {
+    -webkit-transition: padding $px ease;
+    -moz-transition: padding $px ease;
+    -o-transition: padding $px ease;
+     transition: padding $px ease;
+}
+
+@mixin transition-all-ease-in-out($px) {
+    -webkit-transition: all $px ease-in-out;
+    -moz-transition: all $px ease-in-out;
+    -o-transition: all $px ease-in-out;
+     transition: all $px ease-in-out;
+}
+
+//not using yet
+@mixin transition-margin {
+    -webkit-transition: margin 0.4s;
+    -moz-transition: margin 0.4s;
+    -o-transition: margin 0.4s;
+     transition: margin 0.4s;
 }

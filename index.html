@@ -1,30 +1,54 @@
-<!doctype HTML>
+<!DOCTYPE HTML>
 <html>
     <head>
+<<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Website template</title>
+=======
+        <title>Website template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+>>>>>>> website-template-responsive
         <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
     </head>
     <body>
         <div id="wrapper">
-            <header>
-                <div id="logo-header">
-                    <img class="logo" src="images/logo/logo-header.jpg">
-                </div>
-                <nav class="navbar">
-                    <img type="button "id="mobile-dropdown-icon" src="images/icons/dropdown-menu.png">
-                    <div id="mobile-dropdown-menu">
-                        <li class="menu-item"><a href="">Home</a></li>
-                        <li class="menu-item"><a href="">News</a></li>
-                        <li class="menu-item"><a href="">Portfolio</a></li>
-                        <li class="menu-item"><a href="">Contact us</a></li>
-                    </div>
+
+            <header id="header">
+                <a id="logo-header" title="CompanyName" href="#"><img class="logo" src="images/logo/logo-header.jpg"></a>
+
+                <nav id="navbar" title="navbar"> 
+                    <ul id="dropdown">
+                        <li id="dropdown-menu-parent">
+                            <button class="mobile-dropdown-link"><img id="mobile-dropdown-icon" src="images/icons/dropdown-menu.png"></button>             
+                            <ul id="dropdown-menu" class="dropdown-menu-hidden">
+                                <li class="menu-item"><a title="Home" href="">Home</a></li>
+                                <li class="menu-item"><a title="News" href="">News</a></li>
+                                <li class="menu-item"><a title="Portfolio" href="">Portfolio</a></li>
+                                <li class="menu-item"><a title="Contact us" href="">Contact us</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </nav>
+
             </header>
 
-            
-            <footer>
-            </footer>
-        </div>
+                <section class="test">hej</section>
+
+            </div>
+
+              <footer>
+                    <div class="content-parent">
+                        &copy; 2018 CompanyName, All rights reserved
+                        <div class="content">
+                            <a title="terms of service" href="#">Terms of service</a>
+                                <span class="bullet-symbol">&#8226;</span>
+                            <a title="privacy" href="#">Private Policy</a>
+                                <span class="bullet-symbol">&#8226;</span>
+                            <a title="cookies" href="#">Cookies</a>
+                        </div>
+                    </div>
+                </footer> 
+        
     </body>
+    <script src="js/fiddler.js"></script>
 </html>

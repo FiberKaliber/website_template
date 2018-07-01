@@ -1,12 +1,35 @@
-/* Defualt paddings */
+
+/*========================== 
+        header&navbar
+==============================*/
+
+/* Paddings */
 @function header-padding($px) {
     $pxTemp: ($px/4);
     $px: ($pxTemp/6);
     @return $pxTemp - $px;
 }
 
-/* Default heights */
+@function logo-header-padding($px) {
+    $pxTemp: $px/1.2;
+    @return ($px - $pxTemp) / 2;
+}
+
+/* Margins */
+@function button-navbar-margin($px) {
+    @return ($px/4);
+}
+
+@function content-padding($px) {
+    @return (100% - $px) / 2;
+}
+
+/* Heights */
 @function header-height($px) {
+    @return $px/2;
+}
+
+@function mobile-navbar-height($px) {
     @return $px/2;
 }
 
@@ -14,7 +37,11 @@
     @return $px/1.2;
 }
 
-@function logo-header-padding($px) {
-    $pxTemp: $px/1.2;
-    @return ($px - $pxTemp) / 2;
+@function dropdown-menu-total-height($dropdownMenus, $borderSize, $totalRows, $navHeight) {
+    @return (($dropdownMenus + $borderSize) * $totalRows) + $navHeight;
+}
+
+/* Widths */
+@function button-navbar-width($px, $px2) {
+    @return $px + ($px2 * 2);
 }

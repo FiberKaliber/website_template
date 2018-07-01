@@ -10,4 +10,6 @@
 
 * 'npm install -g node-sass less'
 
-https://www.w3schools.com/howto/howto_css_dropdown.asp
+
+//Instructions on how to make the navbar work with transitions 
+https://stackoverflow.com/questions/3331353/transitions-on-the-display-property

@@ -1,0 +1,65 @@
+/* Imports */
+@import "mixins";
+@import "functions";
+
+/*========================== 
+            Variables
+==============================*/
+
+    //Colors
+$defualtFontColor: #FBFBF1;
+$hoverFontColor: rgb(31, 128, 255);
+
+    //Setting up responsive Height && Width
+$footerHeight: 240px;
+$contentHeight: 140px;
+$contentWidth: 80%;
+
+    //Margin
+$contentMargin: content-padding($contentWidth);
+
+    //Paddings
+$contentPaddingTop: 20px;
+
+    //Fonts
+$contentFont: sans-serif;
+
+    //Font-size
+$contentFontSize: 12px;
+
+footer {
+    position: absolute;
+    height: $footerHeight;
+    font-family: $contentFont;
+    font-size: $contentFontSize;
+    color: $defualtFontColor;
+    width: 100%;
+    bottom: 0;
+    .content-parent {
+        position: absolute;
+        height: $contentHeight - $contentPaddingTop;
+        width: $contentWidth;
+        margin: 0 $contentMargin;
+        padding-top: $contentPaddingTop;
+        border-color: $defualtFontColor;
+        border-top: 1px solid;
+        bottom: 0;
+        .content {
+           float: right;
+           .bullet-symbol {
+               padding: 0 5px;
+           }
+            a {
+                text-decoration: none;
+                color: $defualtFontColor;
+                &:visited {
+                    color: $defualtFontColor;
+                }
+                &:hover {
+                    text-decoration: underline;
+                    color: $hoverFontColor;
+                }
+            }
+        }
+    }
+}
