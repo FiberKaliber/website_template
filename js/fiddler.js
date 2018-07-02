@@ -2,15 +2,12 @@
         Dropdown menu
 ==============================*/
 
-var dropdownMenuParent = document.getElementById('dropdown-menu-parent');
-var dropdownMenu = document.getElementById('dropdown-menu');    
-var headerSize = document.getElementById('header')
+var dropdownMenuParent = document.getElementById('dropdown-div');
+var dropdownMenu = document.getElementById('sidebar');    
 
 // Onclick on .mobile-dropdown-link inside #dropdownMenuparent toggles visible/hidden on menu
 dropdownMenuParent.onclick = function() {
-        dropdownMenu.classList.toggle('dropdown-menu-visible');
-        dropdownMenu.classList.toggle('dropdown-menu-hidden');
-        headerSize.classList.toggle('header-height-toggle');
+    dropdownMenu.classList.toggle('sidebar-visible');
 }
 
 // Restores default settings on bigger screens/devices
@@ -18,6 +15,5 @@ window.addEventListener('resize', function() {
     if(window.innerWidth > 1024) {
         dropdownMenu.classList.add('dropdown-menu-hidden');
         dropdownMenu.classList.remove('dropdown-menu-visible');
-        headerSize.classList.remove('header-height-toggle');
     }
 }); 

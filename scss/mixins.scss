@@ -17,7 +17,7 @@
 }
 
 @mixin button-navbar-margin($px, $px2) {
-    margin: button-navbar-margin($px) $px2 button-navbar-margin($px) $px2 !important;
+    margin: button-navbar-margin($px*2) $px2 button-navbar-margin($px*2) button-navbar-margin($px*2) !important;
 }
 
 /* Paddings */
@@ -49,10 +49,25 @@
      transition: all $px ease-in-out;
 }
 
+@mixin transition-ease-out($px) {
+    -webkit-transition: all $px ease-out;
+    -moz-transition: all $px ease-out;
+    -o-transition: all $px ease-out;
+     transition: all $px ease-out;
+}
+
 //not using yet
 @mixin transition-margin {
     -webkit-transition: margin 0.4s;
     -moz-transition: margin 0.4s;
     -o-transition: margin 0.4s;
      transition: margin 0.4s;
+}
+
+    //text decoration
+@mixin text-underline-decoration($color) {
+    -webkit-text-decoration: $color solid underline;
+    text-decoration: $color solid underline;
+    -webkit-text-underline-position: under;
+    text-underline-position: under;
 }

@@ -29,12 +29,14 @@ $contentFontSize: 12px;
 
 footer {
     position: absolute;
+    z-index: 9999 !important;
     height: $footerHeight;
     font-family: $contentFont;
     font-size: $contentFontSize;
     color: $defualtFontColor;
     width: 100%;
-    bottom: 0;
+    border-top: 2px solid;
+    border-color: $defualtFontColor;
     .content-parent {
         position: absolute;
         height: $contentHeight - $contentPaddingTop;

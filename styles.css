@@ -57,8 +57,8 @@
             Variables
 ==============================*/
 /*========================== 
-              Body 
-  ==============================*/
+            Body 
+==============================*/
 body {
   background-color: #171722;
   margin: 0;
@@ -66,13 +66,12 @@ body {
   padding: 0; }
 
 /*========================== 
-              Header 
-  ==============================*/
+            Header 
+==============================*/
 #header {
   height: 140px;
   width: 100%;
-  z-index: -5;
-  position: relative;
+  position: fixed;
   display: block;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -87,145 +86,152 @@ body {
   display: block;
   z-index: 1;
   height: 116.66667px;
-  margin: 11.66667px 30px 11.66667px 30px !important;
+  margin: 11.66667px 10% 11.66667px 10% !important;
   padding: 0; }
   #logo-header .logo {
     height: 116.66667px;
     width: auto; }
 
 /*========================== 
-              Navbar 
-  ==============================*/
-.mobile-dropdown-link {
-  cursor: pointer;
-  position: absolute;
-  visibility: hidden;
-  background: none;
-  outline: inherit;
-  float: right;
-  border: none;
-  z-index: 1;
-  opacity: 0;
-  transform: translateY(20px);
-  height: 70px;
-  max-height: 140px;
-  margin: 35px 30px 35px 30px !important;
-  padding: 0; }
-  .mobile-dropdown-link #mobile-dropdown-icon {
-    height: 70px;
-    border-radius: 50%;
-    width: auto; }
-
+        Navbar/sidebar 
+==============================*/
 #navbar {
   height: 140px;
   min-height: 140px;
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   border-bottom: 2px solid;
   border-color: #FBFBF1;
   background-color: #171722; }
-  #navbar #dropdown {
+
+.menu-item {
+  display: inline-block;
+  font-size: 1.2em; }
+  .menu-item a {
     position: relative;
-    list-style: none; }
+    display: inline-block;
+    font-family: sans-serif;
+    text-decoration: none; }
 
-#dropdown, #dropdown-menu-parent {
-  padding: 0;
-  margin: 0;
-  -ms-wrap-margin: 0; }
+#sidebar {
+  position: fixed;
+  visibility: hidden;
+  margin-top: 140px;
+  right: 0;
+  top: 0;
+  height: 0px;
+  width: calc(140px + 10%);
+  background-color: #FBFBF1;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  #sidebar #sidebar-menu {
+    height: auto;
+    line-height: 3em;
+    transform: translateY(-275px);
+    margin: 0;
+    -ms-wrap-margin: 0;
+    padding: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    #sidebar #sidebar-menu .menu-item {
+      width: 100%;
+      padding-top: 23.33333px; }
+      #sidebar #sidebar-menu .menu-item a {
+        display: block;
+        color: #171722;
+        padding-left: 10%;
+        -webkit-transition: padding 0.3s ease;
+        -moz-transition: padding 0.3s ease;
+        -o-transition: padding 0.3s ease;
+        transition: padding 0.3s ease; }
+        #sidebar #sidebar-menu .menu-item a:hover {
+          padding-left: calc(10% + 5%); }
 
-#dropdown-menu {
+.sidebar-visible {
+  height: 100% !important;
+  visibility: visible !important; }
+  .sidebar-visible #sidebar-menu {
+    transform: translateY(0px) !important; }
+
+#navbar-menu {
   list-style: none;
   float: right;
   display: block;
-  height: 384px;
+  height: auto;
+  opacity: 1;
+  transform: translateY(0px);
   padding-top: 29.16667px;
-  padding-right: 30px;
   padding-left: 0;
   line-height: 70px;
   margin: 0;
-  -ms-wrap-margin: 0; }
-  #dropdown-menu .menu-item {
-    display: inline-block;
+  -ms-wrap-margin: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  #navbar-menu .menu-item {
     text-align: center;
-    font-size: 1.2em;
-    min-width: 100px; }
-    #dropdown-menu .menu-item a {
-      display: inline-block;
-      position: relative;
-      min-width: 100px;
-      width: 125px;
-      font-family: sans-serif;
-      text-decoration: none;
+    padding-right: 60px; }
+    #navbar-menu .menu-item a {
       color: #FBFBF1;
       -webkit-transition: padding 0.4s ease;
       -moz-transition: padding 0.4s ease;
       -o-transition: padding 0.4s ease;
       transition: padding 0.4s ease; }
-      #dropdown-menu .menu-item a:hover {
-        color: #FBFBF1; }
+      #navbar-menu .menu-item a:hover {
+        -webkit-text-decoration: #FBFBF1 solid underline;
+        text-decoration: #FBFBF1 solid underline;
+        -webkit-text-underline-position: under;
+        text-underline-position: under; }
+
+/*========================== 
+        Dropdown button
+==============================*/
+#dropdown-div {
+  cursor: pointer;
+  position: relative;
+  visibility: visible;
+  background: none;
+  outline: inherit;
+  float: right;
+  border: none;
+  z-index: 1;
+  height: 46.66667px;
+  transform: scale(1);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin: 46.66667px 10% 46.66667px 46.66667px !important;
+  padding: 0; }
+  #dropdown-div:hover {
+    transform: scale(1.1);
+    -webkit-transition: padding 0.2s ease;
+    -moz-transition: padding 0.2s ease;
+    -o-transition: padding 0.2s ease;
+    transition: padding 0.2s ease; }
+  #dropdown-div:active {
+    transform: scale(0.9); }
+  #dropdown-div #dropdown-icon {
+    height: 46.66667px;
+    border-radius: 50%;
+    width: auto; }
 
 @media only screen and (max-width: 1024px) {
-  .mobile-dropdown-link {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
-    transform: translateY(0px);
-    left: calc(100% - 130px);
+  #navbar-menu {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px);
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; }
-    .mobile-dropdown-link:hover {
-      transform: scale(1.1);
-      -webkit-transition: padding 0.2s ease;
-      -moz-transition: padding 0.2s ease;
-      -o-transition: padding 0.2s ease;
-      transition: padding 0.2s ease; }
-    .mobile-dropdown-link:active {
-      transform: scale(0.9); }
-  .dropdown-menu-visible {
-    visibility: visible;
-    position: relative;
-    opacity: 1;
-    transform: translateY(140px); }
-  .dropdown-menu-hidden {
-    visibility: hidden;
-    position: absolute;
-    opacity: 0;
-    transform: translateY(0); }
-  .header-height-toggle {
-    height: 384px !important; }
-  #navbar {
-    display: block; }
-    #navbar #dropdown-menu {
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      line-height: 60px;
-      background-color: rgba(23, 23, 34, 0.5);
-      -webkit-transition: all 0.4s ease-in-out;
-      -moz-transition: all 0.4s ease-in-out;
-      -o-transition: all 0.4s ease-in-out;
-      transition: all 0.4s ease-in-out;
-      padding: 0; }
-      #navbar #dropdown-menu .menu-item {
-        display: block;
-        position: relative;
-        text-align: left;
-        border-bottom: 1px solid;
-        border-color: #c9c9c9;
-        -webkit-transition: padding 0.4s ease;
-        -moz-transition: padding 0.4s ease;
-        -o-transition: padding 0.4s ease;
-        transition: padding 0.4s ease; }
-        #navbar #dropdown-menu .menu-item:hover {
-          padding-left: 10px; }
-        #navbar #dropdown-menu .menu-item a {
-          color: #FBFBF1;
-          padding-left: 40px;
-          width: calc(100% - 40px); } }
+    transition: all 0.4s ease-in-out; } }
 
 /* Imports */
 /* Imports */
@@ -253,7 +259,7 @@ body {
   position: relative;
   z-index: -2;
   width: 100%;
-  height: 50px;
+  height: 800px;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -286,12 +292,14 @@ body {
 ==============================*/
 footer {
   position: absolute;
+  z-index: 9999 !important;
   height: 240px;
   font-family: sans-serif;
   font-size: 12px;
   color: #FBFBF1;
   width: 100%;
-  bottom: 0; }
+  border-top: 2px solid;
+  border-color: #FBFBF1; }
   footer .content-parent {
     position: absolute;
     height: 120px;

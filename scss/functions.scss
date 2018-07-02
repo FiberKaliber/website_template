@@ -29,8 +29,8 @@
     @return $px/2;
 }
 
-@function mobile-navbar-height($px) {
-    @return $px/2;
+@function button-navbar-height($px) {
+    @return $px/3;
 }
 
 @function header-logo-height($px) {
