@@ -52,6 +52,13 @@
      transition: height $px ease-in-out;
 }
 
+@mixin transition-all-margin-width($px, $px2) {
+    -webkit-transition: all $px ease-in-out, margin $px2 ease-in-out, width $px2 ease-in-out;
+    -moz-transition: all $px ease-in-out, margin $px2 ease-in-out, width $px2 ease-in-out;
+    -o-transition: all $px ease-in-out, margin $px2 ease-in-out, width $px2 ease-in-out;
+     transition: all $px ease-in-out, margin $px2 ease-in-out, width $px2 ease-in-out;
+}
+
 @mixin transition-padding-ease($px) {
     -webkit-transition: padding $px ease;
     -moz-transition: padding $px ease;

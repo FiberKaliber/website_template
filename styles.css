@@ -30,6 +30,9 @@
         Paddings/Margins
 ==============================*/
 /*========================== 
+        Paddings/Margins
+==============================*/
+/*========================== 
         Responsive Sizes
 ==============================*/
 /*========================== 
@@ -72,6 +75,9 @@
 /* Widths */
 /*========================== 
             Colors
+==============================*/
+/*========================== 
+        Paddings/Margins
 ==============================*/
 /*========================== 
         Paddings/Margins
@@ -144,7 +150,7 @@ body {
 
 .menu-item {
   display: inline-block;
-  font-size: 1.2em; }
+  font-size: 18px; }
   .menu-item a {
     position: relative;
     display: inline-block;
@@ -153,16 +159,17 @@ body {
 
 #sidebar {
   position: fixed;
+  visibility: hidden;
   margin-top: 140px;
   right: 0;
   top: 0;
-  height: 0px;
+  height: 0;
   width: calc(140px + 10%);
   background-color: #FBFBF1;
-  -webkit-transition: height 0.7s ease-in-out;
-  -moz-transition: height 0.7s ease-in-out;
-  -o-transition: height 0.7s ease-in-out;
-  transition: height 0.7s ease-in-out; }
+  -webkit-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
+  -o-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
+  transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out; }
   #sidebar #sidebar-menu {
     height: auto;
     line-height: 3em;
@@ -285,12 +292,15 @@ body {
     height: 95.83333px !important; }
   #dropdown-div, #dropdown-icon {
     height: 38.33333px !important; }
+  .menu-item {
+    font-size: 16px !important; }
   #logo-header {
     margin: 9.58333px 10% 9.58333px 10% !important; }
   #dropdown-div {
     margin: 38.33333px 10% 38.33333px 38.33333px !important; }
   #sidebar {
-    margin-top: 115px !important; }
+    margin-top: 115px !important;
+    width: calc(115px + 10%) !important; }
   #sidebar-menu {
     line-height: 2.5em !important; } }
 
@@ -302,12 +312,15 @@ body {
     height: 75px !important; }
   #dropdown-div, #dropdown-icon {
     height: 30px !important; }
+  .menu-item {
+    font-size: 14px !important; }
   #logo-header {
     margin: 7.5px 10% 7.5px 10% !important; }
   #dropdown-div {
     margin: 30px 10% 30px 30px !important; }
   #sidebar {
-    margin-top: 90px !important; }
+    margin-top: 90px !important;
+    width: calc(90px + 10%) !important; }
   #sidebar-menu {
     line-height: 2em !important; } }
 
@@ -371,6 +384,9 @@ body {
 /* Widths */
 /*========================== 
             Colors
+==============================*/
+/*========================== 
+        Paddings/Margins
 ==============================*/
 /*========================== 
         Paddings/Margins

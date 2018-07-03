@@ -80,7 +80,7 @@ body {
   
 .menu-item {
   display: inline-block;
-  font-size: 1.2em;
+  font-size: $defaultFontSize;
   a {
     position: relative;
     display: inline-block;
@@ -92,14 +92,14 @@ body {
 
 #sidebar {
   position: fixed;
-  //visibility: hidden;
+  visibility: hidden;
   margin-top: $navHeight;
   right: 0;
   top: 0;
-  height: 0px;
+  height: 0;
   width: calc(#{$navHeight} + #{$defaultMargin});
   background-color: $sidebarBackgroundColor;
-  @include transition-height(0.7s);
+  @include transition-all-margin-width(0.7s, 0.3s);
   #sidebar-menu {
     height: auto;
     line-height: $defualtLineHeight;
@@ -225,6 +225,11 @@ body {
     height: $mediumButtonHeight !important;
   }
 
+  //Font size
+  .menu-item {
+    font-size: $mediumFontSize !important;
+  }
+
     //Margins
   #logo-header {
     @include logo-header-margin($mediumNavHeight, $defaultMargin);
@@ -236,6 +241,7 @@ body {
     //Sidebar
   #sidebar {
     margin-top: $mediumNavHeight !important;
+    width: calc(#{$mediumNavHeight} + #{$defaultMargin}) !important;
   }
   #sidebar-menu {
     line-height: $mediumLineHeight !important;
@@ -257,6 +263,10 @@ body {
     height: $smallButtonHeight !important;
   }
 
+  //Font size
+  .menu-item {
+    font-size: $smallFontSize !important;
+  }
     //Margins
   #logo-header {
     @include logo-header-margin($smallNavHeight, $defaultMargin);
@@ -268,6 +278,7 @@ body {
     //Sidebar
   #sidebar {
     margin-top: $smallNavHeight !important;
+    width: calc(#{$smallNavHeight} + #{$defaultMargin}) !important;
   }
   #sidebar-menu {
     line-height: $smallLineHeight !important;
