@@ -1,47 +1,28 @@
 /* Imports */
 @import "mixins";
 @import "functions";
+@import "variables";
 
 /*========================== 
             Variables
 ==============================*/
 
-  //Colors
-$backgroundColor: rgba(23,23,34, 1);
-$defualtFontColor: #FBFBF1;
-$sidebarFontColor: rgba(23,23,34, 1);
-
-$navbarBackgroundColor: rgba(23,23,34, 1);
-$sidebarBackgroundColor: #FBFBF1;
-$navbarBorderColor: #FBFBF1;
-
-$navbar-menu-background-color: rgba(23,23,34, 0.5);
-$navbar-menu-border-color: rgb(201, 201, 201);
-$mobileFontColor: #FBFBF1;
-
-  //Setting up responsive Height && width
-$navHeight: 140px;
-$linkPadding: 60px;
-
-  //Navbar settings
-$navbarBorderSize: 2px;
-
-  //Dropdown settings
-$dropdownMenuHeightMobile: 60px;
-$dropdownMenuBorderSize: 1px;
-$totalRows: 4;
-$dropdownMenuTotalHeight: dropdown-menu-total-height($dropdownMenuHeightMobile, $dropdownMenuBorderSize, $totalRows, $navHeight);
-
-  //Heights that response with $navHeight
+  //line heights for navbar
 $navbarLinHeight: header-height($navHeight);
+$defualtLineHeight: 3em;
+$mediumLineHeight: 2.5em;
+$smallLineHeight: 2em;
+
+  //logo
 $logoHeaderHeight: header-logo-height($navHeight);
+$mediumLogoHeaderHeight: header-logo-height($mediumNavHeight);
+$smallLogoHeaderHeight: header-logo-height($smallNavHeight);
+
+  //button
 $buttonHeight: button-navbar-height($navHeight);
+$mediumButtonHeight: button-navbar-height($mediumNavHeight);
+$smallButtonHeight: button-navbar-height($smallNavHeight);
 
-  //Margins 
-$defaultHeaderMargin: 10%;
-
-  //Paddings
-$defaultPadding: 10%;
 
 /*========================== 
             Body 
@@ -53,7 +34,6 @@ body {
   @include defualt-padding;
 }
 
-
 /*========================== 
             Header 
 ==============================*/
@@ -63,7 +43,7 @@ body {
   width: 100%;
   position: fixed;
   display: block;
-  @include transition-all-ease-in-out(0.4s);
+  @include transition-height(0.3s);
   @include defualt-margin;
 }
 
@@ -73,11 +53,12 @@ body {
   display: block;
   z-index: 1;
   height: $logoHeaderHeight;
-  @include logo-header-margin($navHeight, $defaultHeaderMargin); // (params) first= top/bottom, second=left/right
+  @include logo-header-margin($navHeight, $defaultMargin); // (params) first= top/bottom, second=left/right
   @include defualt-padding;
   .logo {
     height: $logoHeaderHeight;
     width: auto;
+    @include transition-height(0.3s);
   }
 }
 
@@ -87,14 +68,14 @@ body {
 
 #navbar {
   height: $navHeight;
-  min-height: $navHeight;
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   border-bottom: $navbarBorderSize solid;
   border-color: $navbarBorderColor;
-  background-color: $navbarBackgroundColor;
+  background-color: $backgroundColor;
+  @include transition-height(0.3s);
 }
   
 .menu-item {
@@ -111,21 +92,21 @@ body {
 
 #sidebar {
   position: fixed;
-  visibility: hidden;
+  //visibility: hidden;
   margin-top: $navHeight;
   right: 0;
   top: 0;
   height: 0px;
-  width: calc(#{$navHeight} + #{$defaultHeaderMargin});
+  width: calc(#{$navHeight} + #{$defaultMargin});
   background-color: $sidebarBackgroundColor;
-  @include transition-all-ease-in-out(0.5s);
+  @include transition-height(0.7s);
   #sidebar-menu {
     height: auto;
-    line-height: 3em;
+    line-height: $defualtLineHeight;
     transform: translateY(-275px);
     @include defualt-margin;
     @include defualt-padding;
-    @include transition-all-ease-in-out(0.5s);
+    @include transition-all-ease-in-out(0.7s);
     .menu-item {
       width: 100%;
       padding-top: button-navbar-margin(($navHeight - $buttonHeight));
@@ -166,7 +147,7 @@ body {
   @include transition-all-ease-in-out(0.3s);
   .menu-item {
     text-align: center;
-    padding-right: $linkPadding;
+    padding-right: $navbarLinkPadding;
     a {
       color: $defualtFontColor;
       @include transition-padding-ease(0.4s);
@@ -192,12 +173,11 @@ body {
   z-index: 1;
   height: $buttonHeight;
   transform: scale(1);
-  @include transition-all-ease-in-out(0.4s);
-  @include button-navbar-margin(($navHeight - $buttonHeight), $defaultHeaderMargin);
+  @include transition-transform-ease-in-out(0.2s);
+  @include button-navbar-margin(($navHeight - $buttonHeight), $defaultMargin);
   @include defualt-padding;
   &:hover {
     transform: scale(1.1);
-    @include transition-padding-ease(0.2s);
   }
   &:active {
     transform: scale(0.9);
@@ -206,11 +186,17 @@ body {
     height: $buttonHeight;
     border-radius: 50%;
     width: auto;
+    @include transition-height(0.3s);
   }
 }
 
 
-@media only screen and (max-width: 1024px) {
+/*========================== 
+        Media queries
+==============================*/
+ 
+/* Large devices and up */
+@media only screen and (max-width: $largeDevices) {
   
   #navbar-menu {
     visibility: hidden;
@@ -220,5 +206,70 @@ body {
   }
 }
 
+ 
+/* Medium devices and up */
+@media only screen and (max-width: $mediumDevices) {
   
-  
+  #navbar-menu {
+    @include no-transitions;
+  }
+
+  //Heights
+  #navbar, #header {
+    height: $mediumNavHeight !important; 
+  }
+  #logo-header, .logo {
+    height: $mediumLogoHeaderHeight !important;
+  }
+  #dropdown-div, #dropdown-icon  {
+    height: $mediumButtonHeight !important;
+  }
+
+    //Margins
+  #logo-header {
+    @include logo-header-margin($mediumNavHeight, $defaultMargin);
+  }
+  #dropdown-div {
+    @include button-navbar-margin(($mediumNavHeight - $mediumButtonHeight), $defaultMargin)
+  }
+
+    //Sidebar
+  #sidebar {
+    margin-top: $mediumNavHeight !important;
+  }
+  #sidebar-menu {
+    line-height: $mediumLineHeight !important;
+  }
+}
+
+ 
+/* Small devices and up */
+@media only screen and (max-width: $smallDevices) {
+ 
+    //Heights
+  #navbar, #header {
+    height: $smallNavHeight !important; 
+  }
+  #logo-header, .logo {
+    height: $smallLogoHeaderHeight !important;
+  }
+  #dropdown-div, #dropdown-icon  {
+    height: $smallButtonHeight !important;
+  }
+
+    //Margins
+  #logo-header {
+    @include logo-header-margin($smallNavHeight, $defaultMargin);
+  }
+  #dropdown-div {
+    @include button-navbar-margin(($smallNavHeight - $smallButtonHeight), $defaultMargin)
+  }
+
+    //Sidebar
+  #sidebar {
+    margin-top: $smallNavHeight !important;
+  }
+  #sidebar-menu {
+    line-height: $smallLineHeight !important;
+  }
+}

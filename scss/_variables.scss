@@ -1,0 +1,51 @@
+/*========================== 
+            Colors
+==============================*/
+
+    //Default settings
+$backgroundColor: rgba(23,23,34, 1);
+$defualtFontColor: #FBFBF1;
+
+$sidebarFontColor: rgba(23,23,34, 1);
+$sidebarBackgroundColor: #FBFBF1;
+
+$navbarBorderColor: #FBFBF1;
+
+
+/*========================== 
+        Paddings/Margins
+==============================*/
+
+    //Paddings
+$defaultPadding: 10%;
+$navbarLinkPadding: 60px;
+
+    //Margins 
+$defaultMargin: 10%;
+
+
+
+/*========================== 
+        Responsive Sizes
+==============================*/
+
+    //Navbar
+$navHeight: 140px;
+$mediumNavHeight: ($navHeight - 25px);
+$smallNavHeight: ($mediumNavHeight - 25px);
+
+    //footer
+$footerHeight: 240px;
+
+    //Screen sizes
+$largeDevices: 1200px;
+$mediumDevices: 992px;
+$smallDevices: 768px;
+
+
+/*========================== 
+        Responsive Sizes
+==============================*/
+
+    //Navbar
+$navbarBorderSize: 2px;

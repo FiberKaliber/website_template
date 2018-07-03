@@ -34,7 +34,24 @@
     padding: logo-header-padding($px) 0;
 }
 
-/* Transition */ 
+/*========================== 
+        Transitions
+==============================*/
+
+@mixin no-transitions {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+     transition: none;
+}
+
+@mixin transition-height($px) {
+    -webkit-transition: height $px ease-in-out;
+    -moz-transition: height $px ease-in-out;
+    -o-transition: height $px ease-in-out;
+     transition: height $px ease-in-out;
+}
+
 @mixin transition-padding-ease($px) {
     -webkit-transition: padding $px ease;
     -moz-transition: padding $px ease;
@@ -54,6 +71,13 @@
     -moz-transition: all $px ease-out;
     -o-transition: all $px ease-out;
      transition: all $px ease-out;
+}
+
+@mixin transition-transform-ease-in-out($px) {
+    -webkit-transition: transform $px ease-in-out;
+    -moz-transition: transform $px ease-in-out;
+    -o-transition: transform $px ease-in-out;
+     transition: transform $px ease-in-out;
 }
 
 //not using yet

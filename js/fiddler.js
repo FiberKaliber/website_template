@@ -9,11 +9,3 @@ var dropdownMenu = document.getElementById('sidebar');
 dropdownMenuParent.onclick = function() {
     dropdownMenu.classList.toggle('sidebar-visible');
 }
-
-// Restores default settings on bigger screens/devices
-window.addEventListener('resize', function() {
-    if(window.innerWidth > 1024) {
-        dropdownMenu.classList.add('dropdown-menu-hidden');
-        dropdownMenu.classList.remove('dropdown-menu-visible');
-    }
-}); 

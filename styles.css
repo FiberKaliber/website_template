@@ -13,7 +13,9 @@
 ==============================*/
 /* Margins */
 /* Paddings */
-/* Transition */
+/*========================== 
+        Transitions
+==============================*/
 /*========================== 
         header&navbar
 ==============================*/
@@ -21,6 +23,18 @@
 /* Margins */
 /* Heights */
 /* Widths */
+/*========================== 
+            Colors
+==============================*/
+/*========================== 
+        Paddings/Margins
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
 #wrapper {
   position: relative;
   background: url("images/background/backgroundimage.jpg") no-repeat;
@@ -28,6 +42,7 @@
   z-index: 100;
   width: 100%;
   height: 100%;
+  margin-bottom: 240px;
   margin: 0;
   -ms-wrap-margin: 0; }
 
@@ -45,7 +60,9 @@
 ==============================*/
 /* Margins */
 /* Paddings */
-/* Transition */
+/*========================== 
+        Transitions
+==============================*/
 /*========================== 
         header&navbar
 ==============================*/
@@ -53,6 +70,18 @@
 /* Margins */
 /* Heights */
 /* Widths */
+/*========================== 
+            Colors
+==============================*/
+/*========================== 
+        Paddings/Margins
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
 /*========================== 
             Variables
 ==============================*/
@@ -73,10 +102,10 @@ body {
   width: 100%;
   position: fixed;
   display: block;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
   margin: 0;
   -ms-wrap-margin: 0; }
 
@@ -90,21 +119,28 @@ body {
   padding: 0; }
   #logo-header .logo {
     height: 116.66667px;
-    width: auto; }
+    width: auto;
+    -webkit-transition: height 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out; }
 
 /*========================== 
         Navbar/sidebar 
 ==============================*/
 #navbar {
   height: 140px;
-  min-height: 140px;
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   border-bottom: 2px solid;
   border-color: #FBFBF1;
-  background-color: #171722; }
+  background-color: #171722;
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out; }
 
 .menu-item {
   display: inline-block;
@@ -117,17 +153,16 @@ body {
 
 #sidebar {
   position: fixed;
-  visibility: hidden;
   margin-top: 140px;
   right: 0;
   top: 0;
   height: 0px;
   width: calc(140px + 10%);
   background-color: #FBFBF1;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
+  -webkit-transition: height 0.7s ease-in-out;
+  -moz-transition: height 0.7s ease-in-out;
+  -o-transition: height 0.7s ease-in-out;
+  transition: height 0.7s ease-in-out; }
   #sidebar #sidebar-menu {
     height: auto;
     line-height: 3em;
@@ -135,10 +170,10 @@ body {
     margin: 0;
     -ms-wrap-margin: 0;
     padding: 0;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out; }
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
     #sidebar #sidebar-menu .menu-item {
       width: 100%;
       padding-top: 23.33333px; }
@@ -204,26 +239,30 @@ body {
   z-index: 1;
   height: 46.66667px;
   transform: scale(1);
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  -moz-transition: transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   margin: 46.66667px 10% 46.66667px 46.66667px !important;
   padding: 0; }
   #dropdown-div:hover {
-    transform: scale(1.1);
-    -webkit-transition: padding 0.2s ease;
-    -moz-transition: padding 0.2s ease;
-    -o-transition: padding 0.2s ease;
-    transition: padding 0.2s ease; }
+    transform: scale(1.1); }
   #dropdown-div:active {
     transform: scale(0.9); }
   #dropdown-div #dropdown-icon {
     height: 46.66667px;
     border-radius: 50%;
-    width: auto; }
+    width: auto;
+    -webkit-transition: height 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out; }
 
-@media only screen and (max-width: 1024px) {
+/*========================== 
+        Media queries
+==============================*/
+/* Large devices and up */
+@media only screen and (max-width: 1200px) {
   #navbar-menu {
     visibility: hidden;
     opacity: 0;
@@ -232,6 +271,45 @@ body {
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; } }
+
+/* Medium devices and up */
+@media only screen and (max-width: 992px) {
+  #navbar-menu {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none; }
+  #navbar, #header {
+    height: 115px !important; }
+  #logo-header, .logo {
+    height: 95.83333px !important; }
+  #dropdown-div, #dropdown-icon {
+    height: 38.33333px !important; }
+  #logo-header {
+    margin: 9.58333px 10% 9.58333px 10% !important; }
+  #dropdown-div {
+    margin: 38.33333px 10% 38.33333px 38.33333px !important; }
+  #sidebar {
+    margin-top: 115px !important; }
+  #sidebar-menu {
+    line-height: 2.5em !important; } }
+
+/* Small devices and up */
+@media only screen and (max-width: 768px) {
+  #navbar, #header {
+    height: 90px !important; }
+  #logo-header, .logo {
+    height: 75px !important; }
+  #dropdown-div, #dropdown-icon {
+    height: 30px !important; }
+  #logo-header {
+    margin: 7.5px 10% 7.5px 10% !important; }
+  #dropdown-div {
+    margin: 30px 10% 30px 30px !important; }
+  #sidebar {
+    margin-top: 90px !important; }
+  #sidebar-menu {
+    line-height: 2em !important; } }
 
 /* Imports */
 /* Imports */
@@ -247,7 +325,9 @@ body {
 ==============================*/
 /* Margins */
 /* Paddings */
-/* Transition */
+/*========================== 
+        Transitions
+==============================*/
 /*========================== 
         header&navbar
 ==============================*/
@@ -279,7 +359,9 @@ body {
 ==============================*/
 /* Margins */
 /* Paddings */
-/* Transition */
+/*========================== 
+        Transitions
+==============================*/
 /*========================== 
         header&navbar
 ==============================*/
@@ -288,10 +370,22 @@ body {
 /* Heights */
 /* Widths */
 /*========================== 
+            Colors
+==============================*/
+/*========================== 
+        Paddings/Margins
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
+/*========================== 
             Variables
 ==============================*/
 footer {
-  position: absolute;
+  position: sticky;
   z-index: 9999 !important;
   height: 240px;
   font-family: sans-serif;
@@ -299,7 +393,8 @@ footer {
   color: #FBFBF1;
   width: 100%;
   border-top: 2px solid;
-  border-color: #FBFBF1; }
+  border-color: #FBFBF1;
+  background-color: #171722; }
   footer .content-parent {
     position: absolute;
     height: 120px;
