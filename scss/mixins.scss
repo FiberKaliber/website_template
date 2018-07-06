@@ -87,7 +87,11 @@
      transition: transform $px ease-in-out;
 }
 
-//not using yet
+
+
+
+
+/* not using yet */
 @mixin transition-margin {
     -webkit-transition: margin 0.4s;
     -moz-transition: margin 0.4s;
@@ -95,6 +99,7 @@
      transition: margin 0.4s;
 }
 
+/* not using yet */
     //text decoration
 @mixin text-underline-decoration($color) {
     -webkit-text-decoration: $color solid underline;

@@ -4,11 +4,6 @@
 ==============================*/
 
 /* Paddings */
-@function header-padding($px) {
-    $pxTemp: ($px/4);
-    $px: ($pxTemp/6);
-    @return $pxTemp - $px;
-}
 
 @function logo-header-padding($px) {
     $pxTemp: $px/1.2;
@@ -22,6 +17,10 @@
 
 @function content-padding($px) {
     @return (100% - $px) / 2;
+}
+
+@function header-margin($px, $px2) {
+    @return ($px - $px2)/2;
 }
 
 /* Heights */

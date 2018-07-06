@@ -16,6 +16,8 @@
 /*========================== 
         Transitions
 ==============================*/
+/* not using yet */
+/* not using yet */
 /*========================== 
         header&navbar
 ==============================*/
@@ -30,13 +32,13 @@
         Paddings/Margins
 ==============================*/
 /*========================== 
-        Paddings/Margins
-==============================*/
-/*========================== 
         Responsive Sizes
 ==============================*/
 /*========================== 
-        Responsive Sizes
+        Border Sizes
+==============================*/
+/*========================== 
+            Fonts
 ==============================*/
 #wrapper {
   position: relative;
@@ -66,6 +68,8 @@
 /*========================== 
         Transitions
 ==============================*/
+/* not using yet */
+/* not using yet */
 /*========================== 
         header&navbar
 ==============================*/
@@ -80,13 +84,13 @@
         Paddings/Margins
 ==============================*/
 /*========================== 
-        Paddings/Margins
-==============================*/
-/*========================== 
         Responsive Sizes
 ==============================*/
 /*========================== 
-        Responsive Sizes
+        Border Sizes
+==============================*/
+/*========================== 
+            Fonts
 ==============================*/
 /*========================== 
             Variables
@@ -100,11 +104,21 @@ body {
   -ms-wrap-margin: 0;
   padding: 0; }
 
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: inherit; }
+
 /*========================== 
             Header 
 ==============================*/
 #header {
-  height: 140px;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  font-weight: 500; }
+
+#header {
+  height: 120px;
   width: 100%;
   position: fixed;
   display: block;
@@ -120,11 +134,11 @@ body {
   position: absolute;
   display: block;
   z-index: 1;
-  height: 116.66667px;
-  margin: 11.66667px 10% 11.66667px 10% !important;
+  height: 100px;
+  margin: 10px 10% 10px 10% !important;
   padding: 0; }
   #logo-header .logo {
-    height: 116.66667px;
+    height: 100px;
     width: auto;
     -webkit-transition: height 0.3s ease-in-out;
     -moz-transition: height 0.3s ease-in-out;
@@ -135,7 +149,7 @@ body {
         Navbar/sidebar 
 ==============================*/
 #navbar {
-  height: 140px;
+  height: 120px;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -150,21 +164,35 @@ body {
 
 .menu-item {
   display: inline-block;
-  font-size: 18px; }
+  font-size: 16px; }
   .menu-item a {
     position: relative;
     display: inline-block;
-    font-family: sans-serif;
-    text-decoration: none; }
+    text-decoration: none;
+    text-transform: uppercase; }
+
+#toolbar {
+  margin-top: 20px;
+  margin: 8%;
+  border-top: 1px solid;
+  border-color: rgba(23, 23, 34, 0.3);
+  padding: 0; }
+  #toolbar .toolbar-item {
+    float: right;
+    display: block;
+    list-style: none; }
+    #toolbar .toolbar-item #lang-icon {
+      height: 20px;
+      width: auto; }
 
 #sidebar {
   position: fixed;
   visibility: hidden;
-  margin-top: 140px;
+  margin-top: 120px;
   right: 0;
   top: 0;
   height: 0;
-  width: calc(140px + 10%);
+  width: calc(120px + 10%);
   background-color: #FBFBF1;
   -webkit-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
   -moz-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
@@ -172,7 +200,7 @@ body {
   transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out; }
   #sidebar #sidebar-menu {
     height: auto;
-    line-height: 3em;
+    line-height: 2.5em;
     transform: translateY(-275px);
     margin: 0;
     -ms-wrap-margin: 0;
@@ -183,7 +211,7 @@ body {
     transition: all 0.7s ease-in-out; }
     #sidebar #sidebar-menu .menu-item {
       width: 100%;
-      padding-top: 23.33333px; }
+      margin-top: 20px; }
       #sidebar #sidebar-menu .menu-item a {
         display: block;
         color: #171722;
@@ -208,56 +236,50 @@ body {
   height: auto;
   opacity: 1;
   transform: translateY(0px);
-  padding-top: 29.16667px;
-  padding-left: 0;
-  line-height: 70px;
-  margin: 0;
-  -ms-wrap-margin: 0;
+  margin: 30px 0;
+  line-height: 60px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  padding: 0; }
   #navbar-menu .menu-item {
-    text-align: center;
-    padding-right: 60px; }
+    height: 60px;
+    text-align: center; }
     #navbar-menu .menu-item a {
+      height: 40px;
+      margin: 0 30px;
       color: #FBFBF1;
       -webkit-transition: padding 0.4s ease;
       -moz-transition: padding 0.4s ease;
       -o-transition: padding 0.4s ease;
       transition: padding 0.4s ease; }
       #navbar-menu .menu-item a:hover {
-        -webkit-text-decoration: #FBFBF1 solid underline;
-        text-decoration: #FBFBF1 solid underline;
-        -webkit-text-underline-position: under;
-        text-underline-position: under; }
+        border-bottom: 2px solid;
+        border-color: #FBFBF1; }
 
 /*========================== 
         Dropdown button
 ==============================*/
 #dropdown-div {
-  cursor: pointer;
   position: relative;
   visibility: visible;
-  background: none;
-  outline: inherit;
   float: right;
-  border: none;
   z-index: 1;
-  height: 46.66667px;
+  height: 40px;
   transform: scale(1);
   -webkit-transition: transform 0.2s ease-in-out;
   -moz-transition: transform 0.2s ease-in-out;
   -o-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
-  margin: 46.66667px 10% 46.66667px 46.66667px !important;
+  margin: 40px 10% 40px 40px !important;
   padding: 0; }
   #dropdown-div:hover {
     transform: scale(1.1); }
   #dropdown-div:active {
     transform: scale(0.9); }
   #dropdown-div #dropdown-icon {
-    height: 46.66667px;
+    height: 40px;
     border-radius: 50%;
     width: auto;
     -webkit-transition: height 0.3s ease-in-out;
@@ -287,42 +309,42 @@ body {
     -o-transition: none;
     transition: none; }
   #navbar, #header {
-    height: 115px !important; }
+    height: 95px !important; }
   #logo-header, .logo {
-    height: 95.83333px !important; }
+    height: 79.16667px !important; }
   #dropdown-div, #dropdown-icon {
-    height: 38.33333px !important; }
+    height: 31.66667px !important; }
   .menu-item {
-    font-size: 16px !important; }
+    font-size: 14px !important; }
   #logo-header {
-    margin: 9.58333px 10% 9.58333px 10% !important; }
+    margin: 7.91667px 10% 7.91667px 10% !important; }
   #dropdown-div {
-    margin: 38.33333px 10% 38.33333px 38.33333px !important; }
+    margin: 31.66667px 10% 31.66667px 31.66667px !important; }
   #sidebar {
-    margin-top: 115px !important;
-    width: calc(115px + 10%) !important; }
+    margin-top: 95px !important;
+    width: calc(95px + 10%) !important; }
   #sidebar-menu {
-    line-height: 2.5em !important; } }
+    line-height: 1.5em !important; } }
 
 /* Small devices and up */
 @media only screen and (max-width: 768px) {
   #navbar, #header {
-    height: 90px !important; }
+    height: 70px !important; }
   #logo-header, .logo {
-    height: 75px !important; }
+    height: 58.33333px !important; }
   #dropdown-div, #dropdown-icon {
-    height: 30px !important; }
+    height: 23.33333px !important; }
   .menu-item {
-    font-size: 14px !important; }
+    font-size: 12px !important; }
   #logo-header {
-    margin: 7.5px 10% 7.5px 10% !important; }
+    margin: 5.83333px 10% 5.83333px 10% !important; }
   #dropdown-div {
-    margin: 30px 10% 30px 30px !important; }
+    margin: 23.33333px 10% 23.33333px 23.33333px !important; }
   #sidebar {
-    margin-top: 90px !important;
-    width: calc(90px + 10%) !important; }
+    margin-top: 70px !important;
+    width: calc(70px + 10%) !important; }
   #sidebar-menu {
-    line-height: 2em !important; } }
+    line-height: 1em !important; } }
 
 /* Imports */
 /* Imports */
@@ -341,6 +363,8 @@ body {
 /*========================== 
         Transitions
 ==============================*/
+/* not using yet */
+/* not using yet */
 /*========================== 
         header&navbar
 ==============================*/
@@ -375,6 +399,8 @@ body {
 /*========================== 
         Transitions
 ==============================*/
+/* not using yet */
+/* not using yet */
 /*========================== 
         header&navbar
 ==============================*/
@@ -389,13 +415,13 @@ body {
         Paddings/Margins
 ==============================*/
 /*========================== 
-        Paddings/Margins
-==============================*/
-/*========================== 
         Responsive Sizes
 ==============================*/
 /*========================== 
-        Responsive Sizes
+        Border Sizes
+==============================*/
+/*========================== 
+            Fonts
 ==============================*/
 /*========================== 
             Variables

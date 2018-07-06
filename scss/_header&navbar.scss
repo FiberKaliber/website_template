@@ -9,9 +9,9 @@
 
   //line heights for navbar
 $navbarLinHeight: header-height($navHeight);
-$defualtLineHeight: 3em;
-$mediumLineHeight: 2.5em;
-$smallLineHeight: 2em;
+$defualtLineHeight: 2.5em;
+$mediumLineHeight: 1.5em;
+$smallLineHeight: 1em;
 
   //logo
 $logoHeaderHeight: header-logo-height($navHeight);
@@ -23,6 +23,9 @@ $buttonHeight: button-navbar-height($navHeight);
 $mediumButtonHeight: button-navbar-height($mediumNavHeight);
 $smallButtonHeight: button-navbar-height($smallNavHeight);
 
+  //navbar
+$menuItemHeight: $navHeight / 2;
+$navbarAlink: $menuItemHeight / 1.5;
 
 /*========================== 
             Body 
@@ -34,9 +37,21 @@ body {
   @include defualt-padding;
 }
 
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: inherit;
+}
+
 /*========================== 
             Header 
 ==============================*/
+
+#header {
+  font-family: $headerFont, Arial, Helvetica, sans-serif;
+  font-weight: $headerFontWeight;
+}
 
 #header {
   height: $navHeight;
@@ -78,17 +93,35 @@ body {
   @include transition-height(0.3s);
 }
   
+  //Default settings for menu-item for navbar && sidebar
 .menu-item {
   display: inline-block;
   font-size: $defaultFontSize;
   a {
     position: relative;
     display: inline-block;
-    font-family: sans-serif;
     text-decoration: none; 
+    text-transform: uppercase;
   }
 }
 
+  //Toolbar inside sidebar-menu
+#toolbar {
+  margin-top: button-navbar-margin(($navHeight - $buttonHeight));
+  margin: $toolbarBorderMargin;
+  border-top: $toolbarBorderSize solid;
+  border-color: $toolbarBorderColor;
+  @include defualt-padding;
+  .toolbar-item {
+    float: right;
+    display: block;
+    list-style: none;
+    #lang-icon {
+      height: 20px;
+      width: auto;
+    }
+  }
+}
 
 #sidebar {
   position: fixed;
@@ -109,7 +142,7 @@ body {
     @include transition-all-ease-in-out(0.7s);
     .menu-item {
       width: 100%;
-      padding-top: button-navbar-margin(($navHeight - $buttonHeight));
+      margin-top: button-navbar-margin(($navHeight - $buttonHeight));
       a {
         display: block;
         color: $sidebarFontColor;
@@ -140,19 +173,21 @@ body {
   height: auto;
   opacity: 1;
   transform: translateY(0px);
-  padding-top: header-padding($navHeight);
-  padding-left: 0;
+  margin: header-margin($navHeight, $menuItemHeight) 0;
   line-height: $navbarLinHeight;
-  @include defualt-margin;
   @include transition-all-ease-in-out(0.3s);
+  @include defualt-padding;
   .menu-item {
+    height: $menuItemHeight;
     text-align: center;
-    padding-right: $navbarLinkPadding;
     a {
+      height: $navbarAlink;
+      margin: 0 $navbarLinkPadding;
       color: $defualtFontColor;
       @include transition-padding-ease(0.4s);
       &:hover {
-        @include text-underline-decoration($defualtFontColor);
+        border-bottom: $menuItemABorderSize solid;
+        border-color: $menuItemABorderColor;
       }
     }
   }
@@ -163,13 +198,9 @@ body {
 ==============================*/
 
 #dropdown-div {
-  cursor: pointer;
   position: relative;
   visibility: visible;
-  background: none;
-  outline: inherit;
   float: right;
-  border: none;
   z-index: 1;
   height: $buttonHeight;
   transform: scale(1);

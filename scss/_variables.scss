@@ -9,15 +9,10 @@ $defualtFontColor: #FBFBF1;
 $sidebarFontColor: rgba(23,23,34, 1);
 $sidebarBackgroundColor: #FBFBF1;
 
+    //border color
 $navbarBorderColor: #FBFBF1;
-
-/*========================== 
-        Paddings/Margins
-==============================*/
-
-$defaultFontSize: 18px;
-$mediumFontSize: 16px;
-$smallFontSize: 14px; 
+$menuItemABorderColor: #FBFBF1;
+$toolbarBorderColor: rgba(23,23,34, 0.3);
 
 /*========================== 
         Paddings/Margins
@@ -25,11 +20,11 @@ $smallFontSize: 14px;
 
     //Paddings
 $defaultPadding: 10%;
-$navbarLinkPadding: 60px;
+$navbarLinkPadding: 30px;
 
     //Margins 
 $defaultMargin: 10%;
-
+$toolbarBorderMargin: $defaultMargin - 2%;
 
 
 /*========================== 
@@ -37,7 +32,7 @@ $defaultMargin: 10%;
 ==============================*/
 
     //Navbar
-$navHeight: 140px;
+$navHeight: 120px;
 $mediumNavHeight: ($navHeight - 25px);
 $smallNavHeight: ($mediumNavHeight - 25px);
 
@@ -51,8 +46,25 @@ $smallDevices: 768px;
 
 
 /*========================== 
-        Responsive Sizes
+        Border Sizes
 ==============================*/
 
     //Navbar
 $navbarBorderSize: 2px;
+$menuItemABorderSize: 2px;
+$toolbarBorderSize: 1px;
+
+/*========================== 
+            Fonts
+==============================*/
+
+    //Font Family
+$headerFont: 'Work Sans';
+
+    //Font sizes
+$defaultFontSize: 16px;
+$mediumFontSize: 14px;
+$smallFontSize: 12px; 
+
+    //font weight
+$headerFontWeight: 500;
