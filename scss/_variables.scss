@@ -14,6 +14,9 @@ $navbarBorderColor: #FBFBF1;
 $menuItemABorderColor: #FBFBF1;
 $toolbarBorderColor: rgba(23,23,34, 0.3);
 
+    //Shadow color
+$h1TextShadow: rgba(23,23,34, 1);
+
 /*========================== 
         Paddings/Margins
 ==============================*/
@@ -35,6 +38,10 @@ $toolbarBorderMargin: $defaultMargin - 2%;
 $navHeight: 120px;
 $mediumNavHeight: ($navHeight - 25px);
 $smallNavHeight: ($mediumNavHeight - 25px);
+
+    //home-page
+$titleContainerWidth: 50%;
+$titleContainerResponsiveMargin: $titleContainerWidth/2;
 
     //footer
 $footerHeight: 240px;

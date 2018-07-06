@@ -42,7 +42,6 @@
 ==============================*/
 #wrapper {
   position: relative;
-  background: url("images/background/backgroundimage.jpg") no-repeat;
   background-size: cover;
   z-index: 100;
   width: 100%;
@@ -120,7 +119,7 @@ button {
 #header {
   height: 120px;
   width: 100%;
-  position: fixed;
+  position: relative;
   display: block;
   -webkit-transition: height 0.3s ease-in-out;
   -moz-transition: height 0.3s ease-in-out;
@@ -131,7 +130,7 @@ button {
 
 #logo-header {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   display: block;
   z-index: 1;
   height: 100px;
@@ -372,15 +371,74 @@ button {
 /* Margins */
 /* Heights */
 /* Widths */
-.test {
+/*========================== 
+            Colors
+==============================*/
+/*========================== 
+        Paddings/Margins
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
+/*========================== 
+        Border Sizes
+==============================*/
+/*========================== 
+            Fonts
+==============================*/
+/*========================== 
+            Home-page
+==============================*/
+#home-page {
   position: relative;
+  background-color: #b46565;
+  z-index: -9999;
+  width: 100%;
+  height: calc(100vh - 120px); }
+
+.background-container {
+  height: 100%;
+  width: 100%;
+  background-image: url("images/background/home-page-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.title-container {
+  position: absolute;
+  height: 200px;
+  width: 50%;
+  top: calc(40% - 120px);
+  margin: 0 25%;
+  text-align: center; }
+
+#home-page-title {
+  color: white;
+  position: relative;
+  text-shadow: 2px 2px 8px #171722; }
+
+/* -------------------------------------------------------- */
+#test {
+  position: relative;
+  background-color: blue;
   z-index: -2;
   width: 100%;
-  height: 800px;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out; }
+  height: 500px; }
+
+/*========================== 
+        H1, H2, H3
+==============================*/
+h1, h2, h3 {
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  margin: 0;
+  -ms-wrap-margin: 0;
+  padding: 0; }
+
+h1, h2 {
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 56px; }
 
 /* Imports */
 /* Imports */
