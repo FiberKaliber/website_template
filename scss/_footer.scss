@@ -29,7 +29,7 @@ $contentFontSize: 12px;
 
 footer {
     position: sticky;
-    z-index: 9999 !important;
+    //z-index: 9999 !important;
     height: $footerHeight;
     font-family: $contentFont;
     font-size: $contentFontSize;

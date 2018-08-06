@@ -9,7 +9,7 @@ dropdownMenuParent.onclick = function() {
 
 /*   */
 function titleAnimation() {
-    var homePageTitle = document.getElementById('home-page-title');
+    var homePageTitle = document.getElementById('title-animation');
     var titleCharArray = homePageTitle.innerHTML.split("");
     var titleTemp = "";
     homePageTitle.innerHTML = ""; //empty h1 title inside #home-page-title
@@ -22,7 +22,7 @@ function titleAnimation() {
             i++;    
             theLoop(i);       
           }
-        }, Math.floor((Math.random() * 400) + 100));
+        }, Math.floor((Math.random() * 40) + 100));
       })(0);
 }
 
