@@ -66,3 +66,22 @@ footer {
         }
     }
 }
+
+/*========================== 
+        Media queries
+==============================*/
+
+/* Small devices and up */
+@media only screen and (max-width: $smallDevices) {
+    
+    footer {
+        .content-parent {
+            float: none;
+            text-align: center;
+            .content {
+                float: none;
+                text-align: center;
+            }
+        }
+    }
+}

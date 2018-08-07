@@ -433,9 +433,6 @@ h1, h2, h3 {
   -ms-wrap-margin: 0;
   padding: 0; }
 
-h1, h2 {
-  text-transform: uppercase; }
-
 h1 {
   font-size: 56px; }
 
@@ -514,3 +511,15 @@ footer {
         footer .content-parent .content a:hover {
           text-decoration: underline;
           color: #1f80ff; }
+
+/*========================== 
+        Media queries
+==============================*/
+/* Small devices and up */
+@media only screen and (max-width: 768px) {
+  footer .content-parent {
+    float: none;
+    text-align: center; }
+    footer .content-parent .content {
+      float: none;
+      text-align: center; } }
