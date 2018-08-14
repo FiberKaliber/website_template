@@ -10,8 +10,8 @@
   //line heights for navbar
 $navbarLinHeight: header-height($navHeight);
 $defualtLineHeight: 2.5em;
-$mediumLineHeight: 1.5em;
-$smallLineHeight: 1em;
+$mediumLineHeight: 2.4em;
+$smallLineHeight: 2.2em;
 
   //logo
 $logoHeaderHeight: header-logo-height($navHeight);
@@ -258,7 +258,7 @@ button {
 
   //Font size
   .menu-item {
-    font-size: $mediumFontSize !important;
+    font-size: $h1MediumSize !important;
   }
 
     //Margins
@@ -272,7 +272,7 @@ button {
     //Sidebar
   #sidebar {
     margin-top: $mediumNavHeight !important;
-    width: calc(#{$mediumNavHeight} + #{$defaultMargin}) !important;
+    width: calc(#{$mediumNavHeight} + #{$defaultMargin}) + 10% !important;
   }
   #sidebar-menu {
     line-height: $mediumLineHeight !important;
@@ -296,7 +296,7 @@ button {
 
   //Font size
   .menu-item {
-    font-size: $smallFontSize !important;
+    font-size: $h1SmallSize !important;
   }
     //Margins
   #logo-header {
@@ -309,7 +309,7 @@ button {
     //Sidebar
   #sidebar {
     margin-top: $smallNavHeight !important;
-    width: calc(#{$smallNavHeight} + #{$defaultMargin}) !important;
+    width: calc(#{$smallNavHeight} + #{$defaultMargin}) + 10% !important;
   }
   #sidebar-menu {
     line-height: $smallLineHeight !important;

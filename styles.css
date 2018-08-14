@@ -163,7 +163,7 @@ button {
 
 .menu-item {
   display: inline-block;
-  font-size: 16px; }
+  font-size: 1rem; }
   .menu-item a {
     position: relative;
     display: inline-block;
@@ -314,16 +314,16 @@ button {
   #dropdown-div, #dropdown-icon {
     height: 31.66667px !important; }
   .menu-item {
-    font-size: 14px !important; }
+    font-size: 1.2rem !important; }
   #logo-header {
     margin: 7.91667px 10% 7.91667px 10% !important; }
   #dropdown-div {
     margin: 31.66667px 10% 31.66667px 31.66667px !important; }
   #sidebar {
     margin-top: 95px !important;
-    width: calc(95px + 10%) !important; }
+    width: calc(95px + 10%)10% !important; }
   #sidebar-menu {
-    line-height: 1.5em !important; } }
+    line-height: 2.4em !important; } }
 
 /* Small devices and up */
 @media only screen and (max-width: 768px) {
@@ -334,16 +334,16 @@ button {
   #dropdown-div, #dropdown-icon {
     height: 23.33333px !important; }
   .menu-item {
-    font-size: 12px !important; }
+    font-size: 1.2rem !important; }
   #logo-header {
     margin: 5.83333px 10% 5.83333px 10% !important; }
   #dropdown-div {
     margin: 23.33333px 10% 23.33333px 23.33333px !important; }
   #sidebar {
     margin-top: 70px !important;
-    width: calc(70px + 10%) !important; }
+    width: calc(70px + 10%)10% !important; }
   #sidebar-menu {
-    line-height: 1em !important; } }
+    line-height: 2.2em !important; } }
 
 /* Imports */
 /* Imports */
