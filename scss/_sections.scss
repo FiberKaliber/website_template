@@ -37,9 +37,9 @@
 
 .home-page-title {
     font-family: $titleFont;
-    color: $backgroundColor;
+    color: $titleColor;
     position: relative;
-    //text-shadow: 2px 2px 8px $h1TextShadow;
+    text-shadow: 0.05em 0.05em $titleShadowColor;
 }
 
 /* -------------------------------------------------------- */

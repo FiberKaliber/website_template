@@ -148,7 +148,7 @@ button {
   }
 }
 
-//JsFiddler toggles this class
+//JsFiddler toggle classes
 .sidebar-visible {
   height: 100% !important;
   visibility: visible !important;
@@ -156,6 +156,8 @@ button {
       transform: translateY(0px) !important;
     }
 }
+
+
 
 
 #navbar-menu {
@@ -191,7 +193,7 @@ button {
 
 #dropdown-div {
   position: relative;
-  visibility: visible;
+  visibility: hidden;
   float: right;
   z-index: 1;
   height: $buttonHeight;

@@ -9,13 +9,15 @@ $defualtFontColor: #FBFBF1;
 $sidebarFontColor: rgba(23,23,34, 1);
 $sidebarBackgroundColor: #FBFBF1;
 
+$titleColor: #FBFBF1;
+
     //border color
 $navbarBorderColor: #FBFBF1;
 $menuItemABorderColor: #FBFBF1;
 $toolbarBorderColor: rgba(23,23,34, 0.3);
 
     //Shadow color
-$h1TextShadow: rgba(23,23,34, 1);
+$titleShadowColor: $backgroundColor;
 
 /*========================== 
         Paddings/Margins
