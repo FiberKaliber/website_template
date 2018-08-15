@@ -94,15 +94,6 @@
 /*========================== 
             Variables
 ==============================*/
-/*========================== 
-            Body 
-==============================*/
-body {
-  background-color: #171722;
-  margin: 0;
-  -ms-wrap-margin: 0;
-  padding: 0; }
-
 button {
   cursor: pointer;
   background: none;
@@ -314,7 +305,7 @@ button {
   #dropdown-div, #dropdown-icon {
     height: 31.66667px !important; }
   .menu-item {
-    font-size: 1.2rem !important; }
+    font-size: 1.05rem !important; }
   #logo-header {
     margin: 7.91667px 10% 7.91667px 10% !important; }
   #dropdown-div {
@@ -334,7 +325,7 @@ button {
   #dropdown-div, #dropdown-icon {
     height: 23.33333px !important; }
   .menu-item {
-    font-size: 1.2rem !important; }
+    font-size: 1.1rem !important; }
   #logo-header {
     margin: 5.83333px 10% 5.83333px 10% !important; }
   #dropdown-div {
@@ -413,7 +404,8 @@ button {
   text-align: center; }
 
 .home-page-title {
-  color: white;
+  font-family: "Permanent Marker";
+  color: #171722;
   position: relative; }
 
 /* -------------------------------------------------------- */
@@ -425,16 +417,27 @@ button {
   height: 500px; }
 
 /*========================== 
-        H1, H2, H3
+        Media queries
 ==============================*/
-h1, h2, h3 {
-  font-family: "Work Sans", Arial, Helvetica, sans-serif;
-  margin: 0;
-  -ms-wrap-margin: 0;
-  padding: 0; }
+/* Large devices and up */
+@media only screen and (max-width: 1200px) {
+  .title-container {
+    top: calc(40% - 95px) !important;
+    width: 64% !important;
+    margin: 0 calc((100% - 64%) / 2) !important; } }
 
-h1 {
-  font-size: 56px; }
+/* Medium devices and up */
+@media only screen and (max-width: 992px) {
+  .title-container {
+    top: calc(40% - 70px) !important;
+    width: 74% !important;
+    margin: 0 calc((100% - 74%) / 2) !important; } }
+
+/* Small devices and up */
+@media only screen and (max-width: 768px) {
+  .title-container {
+    width: 84% !important;
+    margin: 0 calc((100% - 84%) / 2) !important; } }
 
 /* Imports */
 /* Imports */
@@ -523,3 +526,57 @@ footer {
     footer .content-parent .content {
       float: none;
       text-align: center; } }
+
+/*========================== 
+            Colors
+==============================*/
+/*========================== 
+        Paddings/Margins
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
+/*========================== 
+        Border Sizes
+==============================*/
+/*========================== 
+            Fonts
+==============================*/
+/*========================== 
+            Body 
+==============================*/
+body {
+  background-color: #171722;
+  margin: 0;
+  -ms-wrap-margin: 0;
+  padding: 0; }
+
+/*========================== 
+        H1, H2, H3
+==============================*/
+h1, h2, h3 {
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  margin: 0;
+  -ms-wrap-margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 5rem; }
+
+/*========================== 
+        Media queries
+==============================*/
+/* Large devices and up */
+@media only screen and (max-width: 1200px) {
+  h1 {
+    font-size: 4.2rem; } }
+
+/* Medium devices and up */
+@media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 3.4rem; } }
+
+/* Small devices and up */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.6rem; } }

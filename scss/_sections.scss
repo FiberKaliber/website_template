@@ -36,7 +36,8 @@
 }
 
 .home-page-title {
-    color: white;
+    font-family: $titleFont;
+    color: $backgroundColor;
     position: relative;
     //text-shadow: 2px 2px 8px $h1TextShadow;
 }
@@ -52,19 +53,33 @@
 }
 
 /*========================== 
-        H1, H2, H3
+        Media queries
 ==============================*/
-
-h1, h2, h3 {
-    font-family: $headerFont, Arial, Helvetica, sans-serif;
-    @include defualt-margin;
-    @include defualt-padding;
+ 
+/* Large devices and up */
+@media only screen and (max-width: $largeDevices) {
+    .title-container {
+        top: calc(40% - #{$mediumNavHeight}) !important;
+        width: $titleContainerWidth-lg !important;
+        margin: 0 $titleContainerResponsiveMargin-lg !important;
+    }
 }
-
-h1, h2 {
-    //text-transform: uppercase;
+  
+   
+/* Medium devices and up */
+@media only screen and (max-width: $mediumDevices) {
+    .title-container {
+        top: calc(40% - #{$smallNavHeight}) !important;
+        width: $titleContainerWidth-md !important;
+        margin: 0 $titleContainerResponsiveMargin-md !important;
+    }
 }
-
-h1 {
-    font-size: 56px;
+  
+   
+/* Small devices and up */
+@media only screen and (max-width: $smallDevices) {
+    .title-container {
+        width: $titleContainerWidth-sm !important;
+        margin: 0 $titleContainerResponsiveMargin-sm !important;
+    }
 }

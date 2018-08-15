@@ -27,15 +27,7 @@ $smallButtonHeight: button-navbar-height($smallNavHeight);
 $menuItemHeight: $navHeight / 2;
 $navbarAlink: $menuItemHeight / 1.5;
 
-/*========================== 
-            Body 
-==============================*/
 
-body {
-  background-color: $backgroundColor;
-  @include defualt-margin;
-  @include defualt-padding;
-}
 
 button {
   cursor: pointer;
@@ -96,7 +88,7 @@ button {
   //Default settings for menu-item for navbar && sidebar
 .menu-item {
   display: inline-block;
-  font-size: $defaultFontSize;
+  font-size: $menuItemFont;
   a {
     position: relative;
     display: inline-block;
@@ -258,7 +250,7 @@ button {
 
   //Font size
   .menu-item {
-    font-size: $h1MediumSize !important;
+    font-size: $menuItem-md !important;
   }
 
     //Margins
@@ -296,8 +288,9 @@ button {
 
   //Font size
   .menu-item {
-    font-size: $h1SmallSize !important;
+    font-size: $menuItem-sm !important;
   }
+
     //Margins
   #logo-header {
     @include logo-header-margin($smallNavHeight, $defaultMargin);
