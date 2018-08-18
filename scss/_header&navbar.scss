@@ -214,9 +214,16 @@ button {
 .sidebar-visible {
   height: 100% !important;
   visibility: visible !important;
-    #sidebar-menu {
-      transform: translateY(0px) !important;
-    }
+  #sidebar-menu {
+    transform: translateY(0px) !important;
+  }
+}
+
+.navbar-menu-hidden {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transform: translateY(15px) !important;
+  @include transition-all-ease-in-out(0.4s);
 }
 
 .dropdown-div-visible {
@@ -233,13 +240,14 @@ button {
  
 /* Large devices and up */
 @media only screen and (max-width: $largeDevices) {
-  
+
   #navbar-menu {
     visibility: hidden;
     opacity: 0;
     transform: translateY(15px);
     @include transition-all-ease-in-out(0.4s);
-  }
+  } 
+
 }
 
  

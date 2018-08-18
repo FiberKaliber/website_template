@@ -282,6 +282,15 @@ button {
   .sidebar-visible #sidebar-menu {
     transform: translateY(0px) !important; }
 
+.navbar-menu-hidden {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transform: translateY(15px) !important;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+
 .dropdown-div-visible {
   visibility: visible !important; }
   .dropdown-div-visible #dropdown-icon {

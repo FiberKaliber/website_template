@@ -1,8 +1,12 @@
+var navbarMenu = document.getElementById('navbar-menu')
 var dropdownMenu = document.getElementById('dropdown-div');
 var sidebarMenu = document.getElementById('sidebar');   
 
-var dropdownMenuVisible = false;
+/* Booleans on visible items, false = not visible */
+var navbarMenuVisible = true;
 var sidebarVisible = false;
+
+var largeDevices = true;
 
 /*  Onclick on dropdown-div toggles visible/hidden on sidebar-menu */
 dropdownMenu.onclick = function() {
@@ -29,19 +33,32 @@ function titleAnimation() {
       })(0);
 }
 
-/* window onLoad */
-window.onload = function() {
-    titleAnimation();
+function resize() {
+    var innerWidth = window.innerWidth;
+    if(innerWidth <= 1200) {
+        largeDevices = false;
+        if(navbarMenuVisible) {
+            navbarMenuVisible = false;
+            navbarMenu.classList.toggle('navbar-menu-hidden');
+            dropdownMenu.classList.toggle('dropdown-div-visible');
+        }
+    } else {
+        largeDevices = true;
+        if(!navbarMenuVisible) {
+            navbarMenuVisible = true;
+            navbarMenu.classList.toggle('navbar-menu-hidden');
+            dropdownMenu.classList.toggle('dropdown-div-visible');
+        }
+    }
 }
-
-
 
 function scrolled() {
     var scrollTop = window.pageYOffset;
-    if(scrollTop === 0) {
+    if(scrollTop < 100 && largeDevices) {
 
-        if(dropdownMenuVisible) {
-            dropdownMenuVisible = !dropdownMenuVisible;
+        if(!navbarMenuVisible) {
+            navbarMenuVisible = !navbarMenuVisible;
+            navbarMenu.classList.toggle('navbar-menu-hidden');
             dropdownMenu.classList.toggle('dropdown-div-visible');
         }
 
@@ -49,15 +66,34 @@ function scrolled() {
             sidebarVisible = !sidebarVisible;
             sidebarMenu.classList.toggle('sidebar-visible');
         }
-    } else {
 
-        if(!dropdownMenuVisible) {
-            dropdownMenuVisible = !dropdownMenuVisible;
+    } else if (scrollTop >= 100 && largeDevices) {
+
+        if(navbarMenuVisible) {
+            navbarMenuVisible = !navbarMenuVisible;
+            navbarMenu.classList.toggle('navbar-menu-hidden');
             dropdownMenu.classList.toggle('dropdown-div-visible');
         }
-    }
+    } 
 }
 
+/* Resizing funcntion */
+window.addEventListener("resize", function()  {
+    resize();
+}, false)
+
+
+/* Scrolling function */
 window.addEventListener("scroll", function() {
     scrolled();
 }, false)
+
+
+
+/* window onLoad */
+window.onload = function() {
+    resize();
+    scrolled();
+    titleAnimation();
+}
+
