@@ -213,12 +213,6 @@ button {
         #sidebar #sidebar-menu .menu-item a:hover {
           padding-left: calc(10% + 5%); }
 
-.sidebar-visible {
-  height: 100% !important;
-  visibility: visible !important; }
-  .sidebar-visible #sidebar-menu {
-    transform: translateY(0px) !important; }
-
 #navbar-menu {
   list-style: none;
   float: right;
@@ -271,11 +265,28 @@ button {
   #dropdown-div #dropdown-icon {
     height: 40px;
     border-radius: 50%;
+    opacity: 0;
     width: auto;
-    -webkit-transition: height 0.3s ease-in-out;
-    -moz-transition: height 0.3s ease-in-out;
-    -o-transition: height 0.3s ease-in-out;
-    transition: height 0.3s ease-in-out; }
+    transform: translateY(-15px);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+
+/*========================== 
+  JsFiddler, toggles classes
+==============================*/
+.sidebar-visible {
+  height: 100% !important;
+  visibility: visible !important; }
+  .sidebar-visible #sidebar-menu {
+    transform: translateY(0px) !important; }
+
+.dropdown-div-visible {
+  visibility: visible !important; }
+  .dropdown-div-visible #dropdown-icon {
+    opacity: 1 !important;
+    transform: translateY(0px) !important; }
 
 /*========================== 
         Media queries

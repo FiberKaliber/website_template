@@ -148,18 +148,6 @@ button {
   }
 }
 
-//JsFiddler toggle classes
-.sidebar-visible {
-  height: 100% !important;
-  visibility: visible !important;
-    #sidebar-menu {
-      transform: translateY(0px) !important;
-    }
-}
-
-
-
-
 #navbar-menu {
   list-style: none;
   float: right;
@@ -198,6 +186,7 @@ button {
   z-index: 1;
   height: $buttonHeight;
   transform: scale(1);
+  //transform: translateY(-20px);
   @include transition-transform-ease-in-out(0.2s);
   @include button-navbar-margin(($navHeight - $buttonHeight), $defaultMargin);
   @include defualt-padding;
@@ -210,11 +199,33 @@ button {
   #dropdown-icon {
     height: $buttonHeight;
     border-radius: 50%;
+    opacity: 0;
     width: auto;
-    @include transition-height(0.3s);
+    transform: translateY(-15px);
+    @include transition-all-ease-in-out(0.4s);
   }
 }
 
+/*========================== 
+  JsFiddler, toggles classes
+==============================*/
+
+
+.sidebar-visible {
+  height: 100% !important;
+  visibility: visible !important;
+    #sidebar-menu {
+      transform: translateY(0px) !important;
+    }
+}
+
+.dropdown-div-visible {
+  visibility: visible !important;
+  #dropdown-icon {
+    opacity: 1 !important;
+    transform: translateY(0px) !important;
+  }
+}
 
 /*========================== 
         Media queries

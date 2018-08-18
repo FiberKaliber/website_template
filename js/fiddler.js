@@ -1,12 +1,13 @@
-var dropdownMenuParent = document.getElementById('dropdown-div');
-var dropdownMenu = document.getElementById('sidebar');   
+var dropdownMenu = document.getElementById('dropdown-div');
+var sidebarMenu = document.getElementById('sidebar');   
 
 var dropdownMenuVisible = false;
+var sidebarVisible = false;
 
 /*  Onclick on dropdown-div toggles visible/hidden on sidebar-menu */
-dropdownMenuParent.onclick = function() {
-    dropdownMenu.classList.toggle('sidebar-visible');
-    dropdownMenuVisible = !dropdownMenuVisible;
+dropdownMenu.onclick = function() {
+    sidebarMenu.classList.toggle('sidebar-visible');
+    sidebarVisible = !sidebarVisible;
 }
 
 /* Animation in form of a "typer-machine"  */
@@ -35,18 +36,25 @@ window.onload = function() {
 
 
 
-
-
 function scrolled() {
     var scrollTop = window.pageYOffset;
     if(scrollTop === 0) {
-        dropdownMenuParent.style.visibility = "hidden"
+
         if(dropdownMenuVisible) {
             dropdownMenuVisible = !dropdownMenuVisible;
-            dropdownMenu.classList.toggle('sidebar-visible');
+            dropdownMenu.classList.toggle('dropdown-div-visible');
+        }
+
+        if(sidebarVisible) {
+            sidebarVisible = !sidebarVisible;
+            sidebarMenu.classList.toggle('sidebar-visible');
         }
     } else {
-        dropdownMenuParent.style.visibility = "visible"
+
+        if(!dropdownMenuVisible) {
+            dropdownMenuVisible = !dropdownMenuVisible;
+            dropdownMenu.classList.toggle('dropdown-div-visible');
+        }
     }
 }
 
