@@ -276,13 +276,7 @@ button {
 /*========================== 
   JsFiddler, toggles classes
 ==============================*/
-.sidebar-visible {
-  height: 100% !important;
-  visibility: visible !important; }
-  .sidebar-visible #sidebar-menu {
-    transform: translateY(0px) !important; }
-
-.navbar-menu-hidden {
+.navbar-hidden #navbar-menu {
   visibility: hidden !important;
   opacity: 0 !important;
   transform: translateY(15px) !important;
@@ -291,10 +285,16 @@ button {
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; }
 
-.dropdown-div-visible {
+.navbar-hidden #dropdown-div {
   visibility: visible !important; }
-  .dropdown-div-visible #dropdown-icon {
+  .navbar-hidden #dropdown-div #dropdown-icon {
     opacity: 1 !important;
+    transform: translateY(0px) !important; }
+
+.sidebar-visible {
+  height: 100% !important;
+  visibility: visible !important; }
+  .sidebar-visible #sidebar-menu {
     transform: translateY(0px) !important; }
 
 /*========================== 
@@ -309,7 +309,12 @@ button {
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; } }
+    transition: all 0.4s ease-in-out; }
+  #dropdown-div {
+    visibility: visible !important; }
+    #dropdown-div #dropdown-icon {
+      opacity: 1 !important;
+      transform: translateY(0px) !important; } }
 
 /* Medium devices and up */
 @media only screen and (max-width: 992px) {

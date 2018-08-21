@@ -210,26 +210,26 @@ button {
   JsFiddler, toggles classes
 ==============================*/
 
+.navbar-hidden {
+  #navbar-menu {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transform: translateY(15px) !important;
+    @include transition-all-ease-in-out(0.4s);
+  }
+  #dropdown-div {
+    visibility: visible !important;
+    #dropdown-icon {
+      opacity: 1 !important;
+      transform: translateY(0px) !important;
+    }
+  } 
+}
 
 .sidebar-visible {
   height: 100% !important;
   visibility: visible !important;
   #sidebar-menu {
-    transform: translateY(0px) !important;
-  }
-}
-
-.navbar-menu-hidden {
-  visibility: hidden !important;
-  opacity: 0 !important;
-  transform: translateY(15px) !important;
-  @include transition-all-ease-in-out(0.4s);
-}
-
-.dropdown-div-visible {
-  visibility: visible !important;
-  #dropdown-icon {
-    opacity: 1 !important;
     transform: translateY(0px) !important;
   }
 }
@@ -247,7 +247,14 @@ button {
     transform: translateY(15px);
     @include transition-all-ease-in-out(0.4s);
   } 
-
+  
+  #dropdown-div {
+    visibility: visible !important;
+    #dropdown-icon {
+      opacity: 1 !important;
+      transform: translateY(0px) !important;
+    }
+  } 
 }
 
  

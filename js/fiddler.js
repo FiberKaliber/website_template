@@ -1,5 +1,6 @@
-var navbarMenu = document.getElementById('navbar-menu')
+var navbar = document.getElementById('navbar');
 var dropdownMenu = document.getElementById('dropdown-div');
+var navbarMenu = document.getElementById('navbar-menu');
 var sidebarMenu = document.getElementById('sidebar');   
 
 /* Booleans on visible items, false = not visible */
@@ -36,51 +37,37 @@ function titleAnimation() {
 function resize() {
     var innerWidth = window.innerWidth;
     if(innerWidth <= 1200) {
-        largeDevices = false;
-        if(navbarMenuVisible) {
-            navbarMenuVisible = false;
-            navbarMenu.classList.toggle('navbar-menu-hidden');
-            dropdownMenu.classList.toggle('dropdown-div-visible');
-        }
-    } else {
         largeDevices = true;
-        if(!navbarMenuVisible) {
-            navbarMenuVisible = true;
-            navbarMenu.classList.toggle('navbar-menu-hidden');
-            dropdownMenu.classList.toggle('dropdown-div-visible');
-        }
+    } else {
+        largeDevices = false;
     }
 }
 
-function scrolled() {
-    var scrollTop = window.pageYOffset;
-    if(scrollTop < 100 && largeDevices) {
-
-        if(!navbarMenuVisible) {
-            navbarMenuVisible = !navbarMenuVisible;
-            navbarMenu.classList.toggle('navbar-menu-hidden');
-            dropdownMenu.classList.toggle('dropdown-div-visible');
-        }
-
-        if(sidebarVisible) {
-            sidebarVisible = !sidebarVisible;
-            sidebarMenu.classList.toggle('sidebar-visible');
-        }
-
-    } else if (scrollTop >= 100 && largeDevices) {
-
-        if(navbarMenuVisible) {
-            navbarMenuVisible = !navbarMenuVisible;
-            navbarMenu.classList.toggle('navbar-menu-hidden');
-            dropdownMenu.classList.toggle('dropdown-div-visible');
-        }
-    } 
-}
 
 /* Resizing funcntion */
 window.addEventListener("resize", function()  {
     resize();
 }, false)
+
+
+function scrolled() {
+    var scrollTop = window.pageYOffset;
+    if(scrollTop < 100 && !largeDevices) {
+        if(!navbarMenuVisible) {
+            navbar.classList.toggle('navbar-hidden');
+            navbarMenuVisible = !navbarMenuVisible;
+        }
+        if(sidebarVisible) {
+            sidebarVisible = !sidebarVisible;
+            sidebarMenu.classList.toggle('sidebar-visible');
+        }
+    } else if (!largeDevices) {
+        if(navbarMenuVisible) {
+            navbar.classList.toggle('navbar-hidden');
+            navbarMenuVisible = !navbarMenuVisible;
+        }
+    }
+}
 
 
 /* Scrolling function */
@@ -92,7 +79,6 @@ window.addEventListener("scroll", function() {
 
 /* window onLoad */
 window.onload = function() {
-    resize();
     scrolled();
     titleAnimation();
 }
