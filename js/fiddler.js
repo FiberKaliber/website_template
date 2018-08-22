@@ -79,6 +79,7 @@ window.addEventListener("scroll", function() {
 
 /* window onLoad */
 window.onload = function() {
+    resize();
     scrolled();
     titleAnimation();
 }
