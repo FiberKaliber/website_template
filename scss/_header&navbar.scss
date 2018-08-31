@@ -69,6 +69,12 @@ button {
   }
 }
 
+#roller {
+  position: absolute;
+  //width: 200px;
+  @include defualt-margin;
+}
+
 /*========================== 
         Navbar/sidebar 
 ==============================*/
@@ -79,7 +85,7 @@ button {
   top: 0px;
   left: 0px;
   width: 100%;
-  border-bottom: $navbarBorderSize solid;
+  //border-bottom: $navbarBorderSize solid;
   border-color: $navbarBorderColor;
   background-color: $backgroundColor;
   @include transition-height(0.3s);

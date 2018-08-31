@@ -37,9 +37,9 @@ $toolbarBorderMargin: $defaultMargin - 2%;
 ==============================*/
 
     //Navbar
-$navHeight: 120px;
-$mediumNavHeight: ($navHeight - 25px);
-$smallNavHeight: ($mediumNavHeight - 25px);
+$navHeight: 100px;
+$mediumNavHeight: ($navHeight - 20px);
+$smallNavHeight: ($mediumNavHeight - 20px);
 
     //title-container
 $titleContainerWidth: 50%;
