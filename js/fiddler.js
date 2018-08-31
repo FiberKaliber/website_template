@@ -2,6 +2,7 @@ var navbar = document.getElementById('navbar');
 var dropdownMenu = document.getElementById('dropdown-div');
 var navbarMenu = document.getElementById('navbar-menu');
 var sidebarMenu = document.getElementById('sidebar');   
+var roller = document.getElementById('roller');
 
 /* Booleans on visible items, false = not visible */
 var navbarMenuVisible = true;
@@ -52,6 +53,12 @@ window.addEventListener("resize", function()  {
 
 function scrolled() {
     var scrollTop = window.pageYOffset;
+    var page1 = window.innerHeight;
+    var lenght = document.body.scrollHeight - page1;
+    var pct = Math.floor((scrollTop/lenght) * 100);
+    console.log(pct);
+
+    roller.style.width = pct + "%";
     if(scrollTop < 100 && !largeDevices) {
         if(!navbarMenuVisible) {
             navbar.classList.toggle('navbar-hidden');
