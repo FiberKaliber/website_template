@@ -73,11 +73,18 @@
      transition: all $px ease-in-out;
 }
 
+@mixin transition-top-ease-in-out($px) {
+    -webkit-transition: top $px ease-in-out;
+    -moz-transition: top $px ease-in-out;
+    -o-transition: top $px ease-in-out;
+     transition: top $px ease-in-out;
+}
+
 @mixin transition-ease-out($px) {
-    -webkit-transition: all $px ease-out;
-    -moz-transition: all $px ease-out;
-    -o-transition: all $px ease-out;
-     transition: all $px ease-out;
+    -webkit-transition: all $px ease;
+    -moz-transition: all $px ease;
+    -o-transition: all $px ease;
+     transition: all $px ease;
 }
 
 @mixin transition-transform-ease-in-out($px) {

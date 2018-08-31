@@ -3,6 +3,7 @@
 @import "functions";
 @import "variables";
 
+
 /*========================== 
             Variables
 ==============================*/
@@ -27,14 +28,13 @@ $smallButtonHeight: button-navbar-height($smallNavHeight);
 $menuItemHeight: $navHeight / 2;
 $navbarAlink: $menuItemHeight / 1.5;
 
-
-
 button {
   cursor: pointer;
   background: none;
   border: none;
   outline: inherit;
 }
+
 
 /*========================== 
             Header 
@@ -69,11 +69,21 @@ button {
   }
 }
 
+
+/*========================== 
+    Roller effect on navbar
+==============================*/
+
 #roller {
   position: absolute;
-  //width: 200px;
+  height: $rollerHeight;
+  border: none;
+  background-color: $rollerColor;
+  top: $navHeight - $rollerHeight;
   @include defualt-margin;
+  @include transition-top-ease-in-out(0.3s);
 }
+
 
 /*========================== 
         Navbar/sidebar 
@@ -181,6 +191,7 @@ button {
   }
 }
 
+
 /*========================== 
         Dropdown button
 ==============================*/
@@ -212,6 +223,7 @@ button {
   }
 }
 
+
 /*========================== 
   JsFiddler, toggles classes
 ==============================*/
@@ -239,6 +251,7 @@ button {
     transform: translateY(0px) !important;
   }
 }
+
 
 /*========================== 
         Media queries
@@ -303,6 +316,11 @@ button {
   #sidebar-menu {
     line-height: $mediumLineHeight !important;
   }
+
+    //Roller
+  #roller {
+    top: $mediumNavHeight - $rollerHeight;
+  }
 }
 
  
@@ -340,5 +358,10 @@ button {
   }
   #sidebar-menu {
     line-height: $smallLineHeight !important;
+  }
+
+  //Roller
+  #roller {
+    top: $smallNavHeight - $rollerHeight;
   }
 }

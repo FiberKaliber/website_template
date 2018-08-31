@@ -32,6 +32,9 @@
         Paddings/Margins
 ==============================*/
 /*========================== 
+            Sizes
+==============================*/
+/*========================== 
         Responsive Sizes
 ==============================*/
 /*========================== 
@@ -81,6 +84,9 @@
 ==============================*/
 /*========================== 
         Paddings/Margins
+==============================*/
+/*========================== 
+            Sizes
 ==============================*/
 /*========================== 
         Responsive Sizes
@@ -135,10 +141,21 @@ button {
     -o-transition: height 0.3s ease-in-out;
     transition: height 0.3s ease-in-out; }
 
+/*========================== 
+    Roller effect on navbar
+==============================*/
 #roller {
   position: absolute;
+  height: 2px;
+  border: none;
+  background-color: #FBFBF1;
+  top: 98px;
   margin: 0;
-  -ms-wrap-margin: 0; }
+  -ms-wrap-margin: 0;
+  -webkit-transition: top 0.3s ease-in-out;
+  -moz-transition: top 0.3s ease-in-out;
+  -o-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out; }
 
 /*========================== 
         Navbar/sidebar 
@@ -343,7 +360,9 @@ button {
     margin-top: 80px !important;
     width: calc(80px + 10%)10% !important; }
   #sidebar-menu {
-    line-height: 2.4em !important; } }
+    line-height: 2.4em !important; }
+  #roller {
+    top: 78px; } }
 
 /* Small devices and up */
 @media only screen and (max-width: 768px) {
@@ -363,7 +382,9 @@ button {
     margin-top: 60px !important;
     width: calc(60px + 10%)10% !important; }
   #sidebar-menu {
-    line-height: 2.2em !important; } }
+    line-height: 2.2em !important; }
+  #roller {
+    top: 58px; } }
 
 /* Imports */
 /* Imports */
@@ -396,6 +417,9 @@ button {
 ==============================*/
 /*========================== 
         Paddings/Margins
+==============================*/
+/*========================== 
+            Sizes
 ==============================*/
 /*========================== 
         Responsive Sizes
@@ -502,6 +526,9 @@ button {
         Paddings/Margins
 ==============================*/
 /*========================== 
+            Sizes
+==============================*/
+/*========================== 
         Responsive Sizes
 ==============================*/
 /*========================== 
@@ -562,6 +589,9 @@ footer {
 ==============================*/
 /*========================== 
         Paddings/Margins
+==============================*/
+/*========================== 
+            Sizes
 ==============================*/
 /*========================== 
         Responsive Sizes

@@ -19,6 +19,10 @@ $toolbarBorderColor: rgba(23,23,34, 0.3);
     //Shadow color
 $titleShadowColor: $backgroundColor;
 
+    //rollor color
+$rollerColor: $defualtFontColor;
+
+
 /*========================== 
         Paddings/Margins
 ==============================*/
@@ -30,6 +34,22 @@ $navbarLinkPadding: 30px;
     //Margins 
 $defaultMargin: 10%;
 $toolbarBorderMargin: $defaultMargin - 2%;
+
+
+/*========================== 
+            Sizes
+==============================*/
+
+    //footer
+$footerHeight: 240px;
+
+    //Screen sizes
+$largeDevices: 1200px;
+$mediumDevices: 992px;
+$smallDevices: 768px;
+
+    //Roller
+$rollerHeight: 2px;
 
 
 /*========================== 
@@ -52,14 +72,6 @@ $titleContainerResponsiveMargin-lg: calc((100% - #{$titleContainerWidth-lg}) / 2
 $titleContainerResponsiveMargin-md: calc((100% - #{$titleContainerWidth-md}) / 2);
 $titleContainerResponsiveMargin-sm: calc((100% - #{$titleContainerWidth-sm}) / 2);
 
-    //footer
-$footerHeight: 240px;
-
-    //Screen sizes
-$largeDevices: 1200px;
-$mediumDevices: 992px;
-$smallDevices: 768px;
-
 
 /*========================== 
         Border Sizes
@@ -69,6 +81,7 @@ $smallDevices: 768px;
 $navbarBorderSize: 2px;
 $menuItemABorderSize: 2px;
 $toolbarBorderSize: 1px;
+
 
 /*========================== 
             Fonts
