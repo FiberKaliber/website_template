@@ -26,13 +26,14 @@
 }
 
 @mixin header-margin($px) {
-    margin: 0 $px 0 $px;
+    margin: 0 $px;
 }
 
 // Paddings inside navbar
 @mixin menu-item-a-padding($px) {
     padding: logo-header-padding($px) 0;
 }
+
 
 /*========================== 
         Transitions

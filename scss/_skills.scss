@@ -1,0 +1,33 @@
+/* Imports */
+@import "mixins";
+@import "functions";
+@import "variables";
+
+/*========================== 
+            Skills
+==============================*/
+
+#skills {
+    position: relative;
+    background-color: white;
+    z-index: -2;
+    width: 100%;  
+}
+
+.skills-container {
+    position: relative;
+    width: $skillsContainerWidth;
+    height: 200px;
+    margin: 0 $skillsContaiernMargin;
+}
+
+.skills-box {
+    position: relative;
+    float: left;
+    margin: $skillsBoxMargin;
+}
+
+#skills-logo {
+    height: auto;
+    width: $skillsWidth;
+}

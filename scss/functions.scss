@@ -4,7 +4,6 @@
 ==============================*/
 
 /* Paddings */
-
 @function logo-header-padding($px) {
     $pxTemp: $px/1.2;
     @return ($px - $pxTemp) / 2;
