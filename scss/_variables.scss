@@ -9,7 +9,7 @@ $defualtFontColor: #FBFBF1;
 $sidebarFontColor: rgba(23,23,34, 1);
 $sidebarBackgroundColor: #FBFBF1;
 
-$titleColor: #FBFBF1;
+$titleColor: rgba(23,23,34, 1);
 
     //border color
 $navbarBorderColor: #FBFBF1;
@@ -100,17 +100,17 @@ $toolbarBorderSize: 1px;
 
     //Font Family
 $headerFont: 'Work Sans';
-$titleFont: 'Open Sans';
+$titleFont: 'Montserrat';
 
     //Font sizes
 $defaultFontSize: 1rem;
 //$mediumFontSize: 1.4rem;
 //$smallFontSize: 1.2rem; 
 
-$h1: 5rem;
-$h1-lg: 4.2rem;
-$h1-md: 3.4rem;
-$h1-sm: 2.6rem;
+$h1: 4rem;
+$h1-lg: $h1 - 0.8rem;
+$h1-md: $h1-lg - 0.8rem;
+$h1-sm: $h1-md - 0.8rem;
 
     //menu-item size
 $menuItemFont: 1rem;

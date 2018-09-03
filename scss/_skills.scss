@@ -9,7 +9,7 @@
 
 #skills {
     position: relative;
-    background-color: white;
+    background-color: #FBFBF1;
     z-index: -2;
     width: 100%;  
 }
@@ -17,14 +17,15 @@
 .skills-container {
     position: relative;
     width: $skillsContainerWidth;
-    height: 200px;
+    height: 103px;
+    padding: 50px 0;
     margin: 0 $skillsContaiernMargin;
 }
 
 .skills-box {
     position: relative;
     float: left;
-    margin: $skillsBoxMargin;
+    margin: 0 $skillsBoxMargin;
 }
 
 #skills-logo {

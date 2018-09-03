@@ -28,18 +28,17 @@
 
 .title-container {
     position: absolute;
-    height: 200px;
     width: $titleContainerWidth;
-    top: calc(40% - #{$navHeight});
+    top: calc(30% - #{$navHeight});
     margin: 0 $titleContainerResponsiveMargin;
-    text-align: center;
+    //text-align: center;
 }
 
 .home-page-title {
     font-family: $titleFont;
     color: $titleColor;
     position: relative;
-    text-shadow: 0.05em 0.05em $titleShadowColor;
+    //text-shadow: 0.05em 0.05em $titleShadowColor;
 }
 
 
@@ -50,7 +49,7 @@
 /* Large devices and up */
 @media only screen and (max-width: $largeDevices) {
     .title-container {
-        top: calc(40% - #{$mediumNavHeight}) !important;
+        top: calc(30% - #{$mediumNavHeight}) !important;
         width: $titleContainerWidth-lg !important;
         margin: 0 $titleContainerResponsiveMargin-lg !important;
     }
@@ -60,7 +59,7 @@
 /* Medium devices and up */
 @media only screen and (max-width: $mediumDevices) {
     .title-container {
-        top: calc(40% - #{$smallNavHeight}) !important;
+        top: calc(30% - #{$smallNavHeight}) !important;
         width: $titleContainerWidth-md !important;
         margin: 0 $titleContainerResponsiveMargin-md !important;
     }

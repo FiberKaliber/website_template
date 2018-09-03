@@ -27,6 +27,10 @@ dropdownMenu.onclick = function() {
     sidebarVisible = !sidebarVisible;
 }
 
+/*========================== 
+          Animations
+==============================*/
+
 /* Animation in form of a "typer-machine"  */
 function titleAnimation() {
     var homePageTitle = document.getElementById('title-animation');
@@ -42,7 +46,7 @@ function titleAnimation() {
             i++;    
             theLoop(i);       
           }
-        }, Math.floor((Math.random() * 40) + 100));
+        }, Math.floor((Math.random() * 40) + 70));
       })(0);
 }
 
