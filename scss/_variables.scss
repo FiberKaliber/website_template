@@ -9,7 +9,7 @@ $defualtFontColor: #FBFBF1;
 $sidebarFontColor: rgba(23,23,34, 1);
 $sidebarBackgroundColor: #FBFBF1;
 
-$titleColor: rgba(23,23,34, 1);
+$titleColor: #fcca37;
 
     //border color
 $navbarBorderColor: #FBFBF1;
@@ -20,7 +20,7 @@ $toolbarBorderColor: rgba(23,23,34, 0.3);
 $titleShadowColor: $backgroundColor;
 
     //rollor color
-$rollerColor: $defualtFontColor;
+$rollerColor: #fcca37;
 
 
 /*========================== 
@@ -34,7 +34,7 @@ $navbarLinkPadding: 30px;
     //Margins 
 $defaultMargin: 10%;
 $toolbarBorderMargin: $defaultMargin - 2%;
-$skillsBoxMargin: 20px;
+$skillsBoxMargin: 70px;
 
 
 /*========================== 
@@ -74,8 +74,8 @@ $titleContainerResponsiveMargin-md: calc((100% - #{$titleContainerWidth-md}) / 2
 $titleContainerResponsiveMargin-sm: calc((100% - #{$titleContainerWidth-sm}) / 2);
 
     //Skills-container
-$skillsWidth: 140px;
-$skillsContainerWidth: ($skillsWidth + ($skillsBoxMargin * 2)) * 5; //width and margin on each skillsBox multiplied with quantity
+$skillsHeight: 140px;
+$skillsContainerWidth: ($skillsHeight + ($skillsBoxMargin * 2)) * 4; //width and margin on each skillsBox multiplied with quantity
 $skillsContaiernMargin: calc((100% - #{$skillsContainerWidth}) / 2);
 
     //Line Height
@@ -100,17 +100,27 @@ $toolbarBorderSize: 1px;
 
     //Font Family
 $headerFont: 'Work Sans';
-$titleFont: 'Montserrat';
+$titleFont: 'Archivo Black';
 
     //Font sizes
 $defaultFontSize: 1rem;
 //$mediumFontSize: 1.4rem;
 //$smallFontSize: 1.2rem; 
 
-$h1: 4rem;
-$h1-lg: $h1 - 0.8rem;
-$h1-md: $h1-lg - 0.8rem;
-$h1-sm: $h1-md - 0.8rem;
+$h1: 3.5rem;
+$h1-lg: $h1 - 0.3rem;
+$h1-md: $h1-lg - 0.3rem;
+$h1-sm: $h1-md - 0.3rem;
+
+$h2: 1.5rem;
+$h2-lg: $h2 - 0.1rem;
+$h2-md: $h2-lg - 0.1rem;
+$h2-sm: $h2-md - 0.1rem;
+
+$h3: 1.17rem;
+$h3-lg: $h3 - 0.05rem;
+$h3-md: $h3-lg - 0.05rem;
+$h3-sm: $h3-md - 0.05rem;
 
     //menu-item size
 $menuItemFont: 1rem;

@@ -148,14 +148,14 @@ button {
   position: absolute;
   height: 2px;
   border: none;
-  background-color: #FBFBF1;
+  background-color: #fcca37;
   top: 98px;
   margin: 0;
   -ms-wrap-margin: 0;
-  -webkit-transition: top 0.3s ease-in-out;
-  -moz-transition: top 0.3s ease-in-out;
-  -o-transition: top 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out; }
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
 
 /*========================== 
         Navbar/sidebar 
@@ -443,7 +443,7 @@ button {
 .background-container {
   height: 100%;
   width: 100%;
-  background-image: url("images/background/home-page-background.jpg");
+  background-image: url("images/background/shumai.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
@@ -455,8 +455,8 @@ button {
   margin: 0 25%; }
 
 .home-page-title {
-  font-family: "Montserrat";
-  color: #171722;
+  font-family: "Archivo Black";
+  color: #fcca37;
   position: relative; }
 
 /*========================== 
@@ -536,25 +536,38 @@ button {
 #skills {
   position: relative;
   background-color: #FBFBF1;
+  height: auto;
   z-index: -2;
   width: 100%; }
 
 .skills-container {
   position: relative;
-  width: 900px;
-  height: 103px;
-  padding: 50px 0;
-  margin: 0 calc((100% - 900px) / 2); }
-
-.skills-box {
-  position: relative;
-  float: left;
-  margin: 0 20px; }
+  height: 800px;
+  margin: 0 10%; }
+  .skills-container .skills-box {
+    position: relative;
+    float: left;
+    width: 270px;
+    padding: 25px 1%; }
 
 #skills-logo {
-  height: auto;
-  width: 140px; }
+  border-radius: 50%;
+  height: 140px;
+  width: auto; }
 
+.info-box {
+  height: auto;
+  margin-top: 10px; }
+
+.skills-title {
+  padding: 20px 0; }
+
+/*========================== 
+        Media queries
+==============================*/
+/* Large devices and up */
+/* Medium devices and up */
+/* Small devices and up */
 /* Imports */
 /* Imports */
 /*========================== 
@@ -683,7 +696,13 @@ h1, h2, h3 {
   padding: 0; }
 
 h1 {
-  font-size: 4rem; }
+  font-size: 3.5rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h3 {
+  font-size: 1.17rem; }
 
 /*========================== 
         Media queries
@@ -691,14 +710,26 @@ h1 {
 /* Large devices and up */
 @media only screen and (max-width: 1200px) {
   h1 {
-    font-size: 3.2rem; } }
+    font-size: 3.2rem; }
+  h2 {
+    font-size: 1.4rem; }
+  h3 {
+    font-size: 1.12rem; } }
 
 /* Medium devices and up */
 @media only screen and (max-width: 992px) {
   h1 {
-    font-size: 2.4rem; } }
+    font-size: 2.9rem; }
+  h2 {
+    font-size: 1.3rem; }
+  h3 {
+    font-size: 1.07rem; } }
 
 /* Small devices and up */
 @media only screen and (max-width: 768px) {
   h1 {
-    font-size: 1.6rem; } }
+    font-size: 2.6rem; }
+  h2 {
+    font-size: 1.2rem; }
+  h3 {
+    font-size: 1.02rem; } }
