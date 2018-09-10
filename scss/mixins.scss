@@ -17,7 +17,7 @@
 }
 
 @mixin button-navbar-margin($px, $px2) {
-    margin: button-navbar-margin($px) $px2 button-navbar-margin($px) $px2 !important;
+    margin: button-navbar-margin($px*2) $px2 button-navbar-margin($px*2) button-navbar-margin($px*2) !important;
 }
 
 /* Paddings */
@@ -26,7 +26,7 @@
 }
 
 @mixin header-margin($px) {
-    margin: 0 $px 0 $px;
+    margin: 0 $px;
 }
 
 // Paddings inside navbar
@@ -34,7 +34,32 @@
     padding: logo-header-padding($px) 0;
 }
 
-/* Transition */ 
+
+/*========================== 
+        Transitions
+==============================*/
+
+@mixin no-transitions {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+     transition: none;
+}
+
+@mixin transition-height($px) {
+    -webkit-transition: height $px ease-in-out;
+    -moz-transition: height $px ease-in-out;
+    -o-transition: height $px ease-in-out;
+     transition: height $px ease-in-out;
+}
+
+@mixin transition-all-margin-width($px, $px2) {
+    -webkit-transition: all $px ease-in-out, margin $px2 ease-in-out, width $px2 ease-in-out;
+    -moz-transition: all $px ease-in-out, margin $px2 ease-in-out, width $px2 ease-in-out;
+    -o-transition: all $px ease-in-out, margin $px2 ease-in-out, width $px2 ease-in-out;
+     transition: all $px ease-in-out, margin $px2 ease-in-out, width $px2 ease-in-out;
+}
+
 @mixin transition-padding-ease($px) {
     -webkit-transition: padding $px ease;
     -moz-transition: padding $px ease;
@@ -49,10 +74,44 @@
      transition: all $px ease-in-out;
 }
 
-//not using yet
+@mixin transition-top-ease-in-out($px) {
+    -webkit-transition: top $px ease-in-out;
+    -moz-transition: top $px ease-in-out;
+    -o-transition: top $px ease-in-out;
+     transition: top $px ease-in-out;
+}
+
+@mixin transition-ease-out($px) {
+    -webkit-transition: all $px ease;
+    -moz-transition: all $px ease;
+    -o-transition: all $px ease;
+     transition: all $px ease;
+}
+
+@mixin transition-transform-ease-in-out($px) {
+    -webkit-transition: transform $px ease-in-out;
+    -moz-transition: transform $px ease-in-out;
+    -o-transition: transform $px ease-in-out;
+     transition: transform $px ease-in-out;
+}
+
+
+
+
+
+/* not using yet */
 @mixin transition-margin {
     -webkit-transition: margin 0.4s;
     -moz-transition: margin 0.4s;
     -o-transition: margin 0.4s;
      transition: margin 0.4s;
+}
+
+/* not using yet */
+    //text decoration
+@mixin text-underline-decoration($color) {
+    -webkit-text-decoration: $color solid underline;
+    text-decoration: $color solid underline;
+    -webkit-text-underline-position: under;
+    text-underline-position: under;
 }

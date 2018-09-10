@@ -4,6 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Website template</title>
         <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     </head>
     <body>
         <div id="wrapper">
@@ -11,39 +13,80 @@
             <header id="header">
                 <a id="logo-header" title="CompanyName" href="#"><img class="logo" src="images/logo/logo-header.jpg"></a>
 
-                <nav id="navbar" title="navbar"> 
-                    <ul id="dropdown">
-                        <li id="dropdown-menu-parent">
-                            <button class="mobile-dropdown-link"><img id="mobile-dropdown-icon" src="images/icons/dropdown-menu.png"></button>             
-                            <ul id="dropdown-menu" class="dropdown-menu-hidden">
-                                <li class="menu-item"><a title="Home" href="">Home</a></li>
-                                <li class="menu-item"><a title="News" href="">News</a></li>
-                                <li class="menu-item"><a title="Portfolio" href="">Portfolio</a></li>
-                                <li class="menu-item"><a title="Contact us" href="">Contact us</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+                <nav id="navbar"> 
 
+                    <button id="dropdown-div">
+                        <img id="dropdown-icon" src="images/icons/dropdown-menu.png">
+                    </button>             
+
+                    <ul id="navbar-menu">
+                        <li class="menu-item"><a href="">Home</a></li>
+                        <li class="menu-item"><a href="">About</a></li>
+                        <li class="menu-item"><a href="">Portfolio</a></li>
+                        <li class="menu-item"><a href="">Contact</a></li>
+                    </ul>
+
+                    <div id="sidebar">
+                        <ul id="sidebar-menu">
+                            <li class="menu-item"><a href="">Home</a></li>
+                            <li class="menu-item"><a href="">News</a></li>
+                            <li class="menu-item"><a href="">Portfolio</a></li>
+                            <li class="menu-item"><a href="">Contact</a></li>
+                            <!--<ul id="toolbar">
+                                <li class="toolbar-item">
+                                    <button id="lang"><img id="lang-icon" src="images/icons/en-icon.png"></button></li>
+                            </ul> -->
+                        </ul>
+                    </div>
+                    <hr id="roller">
+                </nav>
             </header>
 
-                <section class="test">hej</section>
-
-            </div>
-
-              <footer>
-                    <div class="content-parent">
-                        &copy; 2018 CompanyName, All rights reserved
-                        <div class="content">
-                            <a title="terms of service" href="#">Terms of service</a>
-                                <span class="bullet-symbol">&#8226;</span>
-                            <a title="privacy" href="#">Private Policy</a>
-                                <span class="bullet-symbol">&#8226;</span>
-                            <a title="cookies" href="#">Cookies</a>
+                <section id="home-page">
+                    <div class="background-container">
+                        <!-- Centering title -->
+                        <div class="title-container">
+                            <h1 class="home-page-title" id="title-animation">David Gunbrant</h1>
                         </div>
                     </div>
-                </footer> 
-        
+                </section>
+
+                <section id="skills">
+                    <div class="skills-container">
+                        <div class="skills-box">
+                                <img id="skills-logo" src="images/skills/html.png">
+                        </div>
+                        <div class="skills-box">
+                                <img id="skills-logo" src="images/skills/css.png">
+                        </div>
+                        <div class="skills-box">
+                                <img id="skills-logo" src="images/skills/js.png">
+                        </div>
+                        <div class="skills-box">
+                                <img id="skills-logo" src="images/skills/sass.png">
+                        </div>
+                        <div class="skills-box">
+                                <img id="skills-logo" src="images/skills/git.png">
+                        </div>
+                    </div>
+                </section>
+
+        </div>
+
+        <footer>
+            <div class="content-parent">
+                &copy; 2018 CompanyName, All rights reserved
+                <div class="content">
+                    <a title="terms of service" href="#">Terms of service</a>
+                        <span class="bullet-symbol">&#8226;</span>
+                    <a title="privacy" href="#">Private Policy</a>
+                        <span class="bullet-symbol">&#8226;</span>
+                    <a title="cookies" href="#">Cookies</a>
+                </div>
+            </div>
+        </footer> 
+
     </body>
+    
     <script src="js/fiddler.js"></script>
 </html>

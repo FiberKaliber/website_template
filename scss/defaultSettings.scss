@@ -1,0 +1,61 @@
+@import "variables"; 
+
+/*========================== 
+            Body 
+==============================*/
+
+body {
+    background-color: $backgroundColor;
+    @include defualt-margin;
+    @include defualt-padding;
+  }
+
+/*========================== 
+        H1, H2, H3
+==============================*/
+
+h1, h2, h3 {
+    font-family: $headerFont, Arial, Helvetica, sans-serif;
+    @include defualt-margin;
+    @include defualt-padding;
+}
+
+h1 {
+    font-size: $h1;
+}
+
+h2 {
+    //text-transform: uppercase;
+}
+
+h3 {
+    //text-transform: uppercase;
+}
+
+/*========================== 
+        Media queries
+==============================*/
+ 
+/* Large devices and up */
+@media only screen and (max-width: $largeDevices) {
+    h1 {
+        font-size: $h1-lg;
+    }
+}
+  
+   
+/* Medium devices and up */
+@media only screen and (max-width: $mediumDevices) {
+    h1 {
+        font-size: $h1-md;
+    }
+
+}
+  
+   
+/* Small devices and up */
+@media only screen and (max-width: $smallDevices) {
+    h1 {
+        font-size: $h1-sm;
+    }
+}

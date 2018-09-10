@@ -4,12 +4,6 @@
 ==============================*/
 
 /* Paddings */
-@function header-padding($px) {
-    $pxTemp: ($px/4);
-    $px: ($pxTemp/6);
-    @return $pxTemp - $px;
-}
-
 @function logo-header-padding($px) {
     $pxTemp: $px/1.2;
     @return ($px - $pxTemp) / 2;
@@ -24,13 +18,17 @@
     @return (100% - $px) / 2;
 }
 
+@function header-margin($px, $px2) {
+    @return ($px - $px2)/2;
+}
+
 /* Heights */
 @function header-height($px) {
     @return $px/2;
 }
 
-@function mobile-navbar-height($px) {
-    @return $px/2;
+@function button-navbar-height($px) {
+    @return $px/3;
 }
 
 @function header-logo-height($px) {

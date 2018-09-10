@@ -1,233 +1,364 @@
 /* Imports */
 @import "mixins";
 @import "functions";
+@import "variables";
+
 
 /*========================== 
             Variables
 ==============================*/
 
-    //Colors
-$backgroundColor: rgba(23,23,34, 1);
-$defualtFontColor: #FBFBF1;
+  //line heights for navbar
+$navbarLinHeight: header-height($navHeight);
 
-$navbarBackgroundColor: rgba(23,23,34, 1);
-$navbar-border-color: #FBFBF1;
-
-$dropdown-menu-background-color: rgba(23,23,34, 0.5);
-$dropdown-menu-border-color: rgb(201, 201, 201);
-$mobileFontColor: #FBFBF1;
-
-    //Setting up responsive Height && width
-$navHeight: 140px;
-$linkWidth: 125px;
-
-    //Navbar settings
-$navbarBorderSize: 2px;
-
-    //Dropdown settings
-$dropdownMenuHeightMobile: 60px;
-$dropdownMenuBorderSize: 1px;
-$totalRows: 4;
-$dropdownMenuTotalHeight: dropdown-menu-total-height($dropdownMenuHeightMobile, $dropdownMenuBorderSize, $totalRows, $navHeight);
-
-    //Heights that response with $navHeight
-$dropdownMenuHeight: header-height($navHeight);
+  //logo
 $logoHeaderHeight: header-logo-height($navHeight);
-$mobileNavbarHeight: mobile-navbar-height($navHeight);
+$mediumLogoHeaderHeight: header-logo-height($mediumNavHeight);
+$smallLogoHeaderHeight: header-logo-height($smallNavHeight);
 
-    //Margins 
-$defaultHeaderMargin: 30px;
+  //button
+$buttonHeight: button-navbar-height($navHeight);
+$mediumButtonHeight: button-navbar-height($mediumNavHeight);
+$smallButtonHeight: button-navbar-height($smallNavHeight);
 
-    //Width that response with $mobileNavbarHeight and $defaultHeaderMargin
-$buttonNavbarWidth: button-navbar-width($mobileNavbarHeight, $defaultHeaderMargin);
+  //navbar
+$menuItemHeight: $navHeight / 2;
+$navbarAlink: $menuItemHeight / 1.5;
 
-  /*========================== 
-              Body 
-  ==============================*/
-  
-  body {
-    background-color: $backgroundColor;
-    @include defualt-margin;
-    @include defualt-padding;
-  }
- 
-  
-  /*========================== 
-              Header 
-  ==============================*/
-  
-  #header {
-    height: $navHeight;
-    width: 100%;
-    z-index: -5;
-    position: relative;
-    display: block;
-    @include transition-all-ease-in-out(0.4s);
-    @include defualt-margin;
-  }
-  
-  #logo-header {
-    cursor: pointer;
-    position: absolute;
-    display: block;
-    z-index: 1;
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: inherit;
+}
+
+
+/*========================== 
+            Header 
+==============================*/
+
+#header {
+  font-family: $headerFont, Arial, Helvetica, sans-serif;
+  font-weight: $headerFontWeight;
+}
+
+#header {
+  height: $navHeight;
+  width: 100%;
+  position: relative;
+  display: block;
+  @include transition-height(0.3s);
+  @include defualt-margin;
+}
+
+#logo-header {
+  cursor: pointer;
+  position: fixed;
+  display: block;
+  z-index: 1;
+  height: $logoHeaderHeight;
+  @include logo-header-margin($navHeight, $defaultMargin); // (params) first= top/bottom, second=left/right
+  @include defualt-padding;
+  .logo {
     height: $logoHeaderHeight;
-    @include logo-header-margin($navHeight, $defaultHeaderMargin); // (params) first= top/bottom, second=left/right
-    @include defualt-padding;
-    .logo {
-      height: $logoHeaderHeight;
-      width: auto;
-    }
+    width: auto;
+    @include transition-height(0.3s);
   }
+}
+
+
+/*========================== 
+    Roller effect on navbar
+==============================*/
+
+#roller {
+  position: absolute;
+  height: $rollerHeight;
+  border: none;
+  background-color: $rollerColor;
+  top: $navHeight - $rollerHeight;
+  @include defualt-margin;
+  @include transition-top-ease-in-out(0.3s);
+}
+
+
+/*========================== 
+        Navbar/sidebar 
+==============================*/
+
+#navbar {
+  height: $navHeight;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  //border-bottom: $navbarBorderSize solid;
+  border-color: $navbarBorderColor;
+  background-color: $backgroundColor;
+  @include transition-height(0.3s);
+}
   
-  /*========================== 
-              Navbar 
-  ==============================*/
-  
-  .mobile-dropdown-link {
-    cursor: pointer;
-    position: absolute;
-    visibility: hidden;
-    background: none;
-    outline: inherit;
-    float: right;
-    border: none;
-    z-index: 1;
-    opacity: 0;
-    transform: translateY(20px);
-    height: $mobileNavbarHeight;
-    max-height: $navHeight;
-    @include button-navbar-margin($navHeight, $defaultHeaderMargin); // (params) first= top/bottom, second=left/right
-    @include defualt-padding;
-    #mobile-dropdown-icon {
-      height: $mobileNavbarHeight;
-      border-radius: 50%;
-      width: auto;
-    }
+  //Default settings for menu-item for navbar && sidebar
+.menu-item {
+  display: inline-block;
+  font-size: $menuItemFont;
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none; 
+    text-transform: uppercase;
   }
-  
-  #navbar {
-    height: $navHeight;
-    min-height: $navHeight;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    border-bottom: $navbarBorderSize solid;
-    border-color: $navbar-border-color;
-    background-color: $navbarBackgroundColor;
-    #dropdown {
-      position: relative;
-      list-style: none;
-    }  
-  }
-  
-  #dropdown, #dropdown-menu-parent {
-    @include defualt-padding;
-    @include defualt-margin;
-  }
-  
-  #dropdown-menu {
-    list-style: none;
+}
+
+  //Toolbar inside sidebar-menu
+#toolbar {
+  margin-top: button-navbar-margin(($navHeight - $buttonHeight));
+  margin: $toolbarBorderMargin;
+  border-top: $toolbarBorderSize solid;
+  border-color: $toolbarBorderColor;
+  @include defualt-padding;
+  .toolbar-item {
     float: right;
     display: block;
-    height: $dropdownMenuTotalHeight;
-    padding-top: header-padding($navHeight);
-    padding-right: $defaultHeaderMargin;
-    padding-left: 0;
-    line-height: $dropdownMenuHeight;
-    @include defualt-margin;
-  
-    .menu-item {
-      display: inline-block;
-      text-align: center;
-      font-size: 1.2em;
-      min-width: 100px; 
-  
-      a {
-        display: inline-block;
-        position: relative;
-        min-width: 100px;
-        width: $linkWidth;
-        font-family: sans-serif;
-        text-decoration: none; 
-        color: $defualtFontColor;
-        @include transition-padding-ease(0.4s);
-  
-        &:hover {
-          color: #FBFBF1;
-        }
-      }
+    list-style: none;
+    #lang-icon {
+      height: 20px;
+      width: auto;
     }
   }
-  
-  @media only screen and (max-width: 1024px) {
-  
-    //dropdown icon on right side pops-up
-    .mobile-dropdown-link {
-      visibility: visible;
-      opacity: 1;
-      transform: scale(1);
-      transform: translateY(0px);
-      left: calc(100% - #{$buttonNavbarWidth});
-      @include transition-all-ease-in-out(0.4s);
-      &:hover {
-        transform: scale(1.1);
-        @include transition-padding-ease(0.2s);
-      }
-      &:active {
-        transform: scale(0.9);
-      }
-    }
-  
-    //JsFiddler toggles between .dropdown-menu-visible/hidden with onclick
-    .dropdown-menu-visible {
-      visibility: visible;
-      position: relative;
-      opacity: 1;
-      transform: translateY($navHeight);
-    }
-  
-    .dropdown-menu-hidden {
-      visibility: hidden;
-      position: absolute;
-      opacity: 0;
-      transform: translateY(0);
-    }
-    
-    //Pushes everything down when dropdown menu is rolling down
-    .header-height-toggle {
-        height: $dropdownMenuTotalHeight !important;
-    }
+}
 
-    #navbar { 
-      display: block;
-      #dropdown-menu {
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        line-height: $dropdownMenuHeightMobile; 
-        background-color: $dropdown-menu-background-color;
-        @include transition-all-ease-in-out(0.4s);
-        @include defualt-padding;
-        .menu-item {
-          display: block;
-          position: relative;
-          text-align: left;
-          border-bottom: $dropdownMenuBorderSize solid;
-          border-color: $dropdown-menu-border-color;
-          @include transition-padding-ease(0.4s);
-          &:hover {
-            padding-left: 10px;
-          }
-          a {
-            color: $mobileFontColor;
-            padding-left: 40px;  
-            width: calc(100% - 40px);      
-          }
+#sidebar {
+  position: fixed;
+  visibility: hidden;
+  margin-top: $navHeight;
+  right: 0;
+  top: 0;
+  height: 0;
+  width: calc(#{$navHeight} + #{$defaultMargin});
+  background-color: $sidebarBackgroundColor;
+  @include transition-all-margin-width(0.7s, 0.3s);
+  #sidebar-menu {
+    height: auto;
+    line-height: $defualtLineHeight;
+    transform: translateY(-275px);
+    @include defualt-margin;
+    @include defualt-padding;
+    @include transition-all-ease-in-out(0.7s);
+    .menu-item {
+      width: 100%;
+      margin-top: button-navbar-margin(($navHeight - $buttonHeight));
+      a {
+        display: block;
+        color: $sidebarFontColor;
+        padding-left: $defaultPadding;
+        @include transition-padding-ease(0.3s);
+        &:hover {
+          padding-left: calc(#{$defaultPadding} + 5%); 
         }
       }
     }
   }
+}
+
+#navbar-menu {
+  list-style: none;
+  float: right;
+  display: block;
+  height: auto;
+  opacity: 1;
+  transform: translateY(0px);
+  margin: header-margin($navHeight, $menuItemHeight) 0;
+  line-height: $navbarLinHeight;
+  @include transition-all-ease-in-out(0.3s);
+  @include defualt-padding;
+  .menu-item {
+    height: $menuItemHeight;
+    text-align: center;
+    a {
+      height: $navbarAlink;
+      margin: 0 $navbarLinkPadding;
+      color: $defualtFontColor;
+      @include transition-padding-ease(0.4s);
+      &:hover {
+        border-bottom: $menuItemABorderSize solid;
+        border-color: $menuItemABorderColor;
+      }
+    }
+  }
+}
+
+
+/*========================== 
+        Dropdown button
+==============================*/
+
+#dropdown-div {
+  position: relative;
+  visibility: hidden;
+  float: right;
+  z-index: 1;
+  height: $buttonHeight;
+  transform: scale(1);
+  //transform: translateY(-20px);
+  @include transition-transform-ease-in-out(0.2s);
+  @include button-navbar-margin(($navHeight - $buttonHeight), $defaultMargin);
+  @include defualt-padding;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+  #dropdown-icon {
+    height: $buttonHeight;
+    border-radius: 50%;
+    opacity: 0;
+    width: auto;
+    transform: translateY(-15px);
+    @include transition-all-ease-in-out(0.4s);
+  }
+}
+
+
+/*========================== 
+  JsFiddler, toggles classes
+==============================*/
+
+.navbar-hidden {
+  #navbar-menu {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transform: translateY(15px) !important;
+    @include transition-all-ease-in-out(0.4s);
+  }
+  #dropdown-div {
+    visibility: visible !important;
+    #dropdown-icon {
+      opacity: 1 !important;
+      transform: translateY(0px) !important;
+    }
+  } 
+}
+
+.sidebar-visible {
+  height: 100% !important;
+  visibility: visible !important;
+  #sidebar-menu {
+    transform: translateY(0px) !important;
+  }
+}
+
+
+/*========================== 
+        Media queries
+==============================*/
+ 
+/* Large devices and up */
+@media only screen and (max-width: $largeDevices) {
+
+  #navbar-menu {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px);
+    @include transition-all-ease-in-out(0.4s);
+  } 
   
+  #dropdown-div {
+    visibility: visible !important;
+    #dropdown-icon {
+      opacity: 1 !important;
+      transform: translateY(0px) !important;
+    }
+  } 
+}
+
+ 
+/* Medium devices and up */
+@media only screen and (max-width: $mediumDevices) {
   
+  #navbar-menu {
+    @include no-transitions;
+  }
+
+  //Heights
+  #navbar, #header {
+    height: $mediumNavHeight !important; 
+  }
+  #logo-header, .logo {
+    height: $mediumLogoHeaderHeight !important;
+  }
+  #dropdown-div, #dropdown-icon  {
+    height: $mediumButtonHeight !important;
+  }
+
+  //Font size
+  .menu-item {
+    font-size: $menuItem-md !important;
+  }
+
+    //Margins
+  #logo-header {
+    @include logo-header-margin($mediumNavHeight, $defaultMargin);
+  }
+  #dropdown-div {
+    @include button-navbar-margin(($mediumNavHeight - $mediumButtonHeight), $defaultMargin)
+  }
+
+    //Sidebar
+  #sidebar {
+    margin-top: $mediumNavHeight !important;
+    width: calc(#{$mediumNavHeight} + #{$defaultMargin}) + 10% !important;
+  }
+  #sidebar-menu {
+    line-height: $mediumLineHeight !important;
+  }
+
+    //Roller
+  #roller {
+    top: $mediumNavHeight - $rollerHeight;
+  }
+}
+
+ 
+/* Small devices and up */
+@media only screen and (max-width: $smallDevices) {
+ 
+    //Heights
+  #navbar, #header {
+    height: $smallNavHeight !important; 
+  }
+  #logo-header, .logo {
+    height: $smallLogoHeaderHeight !important;
+  }
+  #dropdown-div, #dropdown-icon  {
+    height: $smallButtonHeight !important;
+  }
+
+  //Font size
+  .menu-item {
+    font-size: $menuItem-sm !important;
+  }
+
+    //Margins
+  #logo-header {
+    @include logo-header-margin($smallNavHeight, $defaultMargin);
+  }
+  #dropdown-div {
+    @include button-navbar-margin(($smallNavHeight - $smallButtonHeight), $defaultMargin)
+  }
+
+    //Sidebar
+  #sidebar {
+    margin-top: $smallNavHeight !important;
+    width: calc(#{$smallNavHeight} + #{$defaultMargin}) + 10% !important;
+  }
+  #sidebar-menu {
+    line-height: $smallLineHeight !important;
+  }
+
+  //Roller
+  #roller {
+    top: $smallNavHeight - $rollerHeight;
+  }
+}

@@ -1,0 +1,83 @@
+/* Imports */
+@import "mixins";
+@import "functions";
+@import "variables";
+
+
+/*========================== 
+            Home-page
+==============================*/
+
+#home-page {
+    position: relative;
+    background-color: rgb(180, 101, 101);
+    z-index: -9999;
+    width: 100%;
+    height: calc(100vh - #{$navHeight});
+}
+
+.background-container {
+    height: 100%;
+    width: 100%;
+    background-image: url('images/background/home-page-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+
+.title-container {
+    position: absolute;
+    width: $titleContainerWidth;
+    top: calc(30% - #{$navHeight});
+    margin: 0 $titleContainerResponsiveMargin;
+    //text-align: center;
+}
+
+.home-page-title {
+    font-family: $titleFont;
+    color: $titleColor;
+    position: relative;
+    //text-shadow: 0.05em 0.05em $titleShadowColor;
+}
+
+
+/*========================== 
+        Media queries
+==============================*/
+ 
+/* Large devices and up */
+@media only screen and (max-width: $largeDevices) {
+    .title-container {
+        top: calc(30% - #{$mediumNavHeight}) !important;
+        width: $titleContainerWidth-lg !important;
+        margin: 0 $titleContainerResponsiveMargin-lg !important;
+    }
+}
+  
+   
+/* Medium devices and up */
+@media only screen and (max-width: $mediumDevices) {
+    .title-container {
+        top: calc(30% - #{$smallNavHeight}) !important;
+        width: $titleContainerWidth-md !important;
+        margin: 0 $titleContainerResponsiveMargin-md !important;
+    }
+
+    #home-page {
+        height: calc(100vh - #{$mediumNavHeight});
+    }
+}
+  
+   
+/* Small devices and up */
+@media only screen and (max-width: $smallDevices) {
+    .title-container {
+        width: $titleContainerWidth-sm !important;
+        margin: 0 $titleContainerResponsiveMargin-sm !important;
+    }
+
+    #home-page {
+        height: calc(100vh - #{$smallNavHeight});
+    }
+}

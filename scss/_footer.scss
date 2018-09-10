@@ -1,40 +1,43 @@
 /* Imports */
 @import "mixins";
 @import "functions";
+@import "variables";
 
 /*========================== 
             Variables
 ==============================*/
 
-    //Colors
+//Colors
 $defualtFontColor: #FBFBF1;
 $hoverFontColor: rgb(31, 128, 255);
 
-    //Setting up responsive Height && Width
-$footerHeight: 240px;
+//Setting up responsive Height && Width
 $contentHeight: 140px;
 $contentWidth: 80%;
 
-    //Margin
+//Margin
 $contentMargin: content-padding($contentWidth);
 
-    //Paddings
+//Paddings
 $contentPaddingTop: 20px;
 
-    //Fonts
+//Fonts
 $contentFont: sans-serif;
 
-    //Font-size
+//Font-size
 $contentFontSize: 12px;
 
 footer {
-    position: absolute;
+    position: sticky;
+    //z-index: 9999 !important;
     height: $footerHeight;
     font-family: $contentFont;
     font-size: $contentFontSize;
     color: $defualtFontColor;
     width: 100%;
-    bottom: 0;
+    border-top: 2px solid;
+    border-color: $defualtFontColor;
+    background-color: $backgroundColor;
     .content-parent {
         position: absolute;
         height: $contentHeight - $contentPaddingTop;
@@ -59,6 +62,25 @@ footer {
                     text-decoration: underline;
                     color: $hoverFontColor;
                 }
+            }
+        }
+    }
+}
+
+/*========================== 
+        Media queries
+==============================*/
+
+/* Small devices and up */
+@media only screen and (max-width: $smallDevices) {
+    
+    footer {
+        .content-parent {
+            float: none;
+            text-align: center;
+            .content {
+                float: none;
+                text-align: center;
             }
         }
     }

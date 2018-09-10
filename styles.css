@@ -13,7 +13,11 @@
 ==============================*/
 /* Margins */
 /* Paddings */
-/* Transition */
+/*========================== 
+        Transitions
+==============================*/
+/* not using yet */
+/* not using yet */
 /*========================== 
         header&navbar
 ==============================*/
@@ -21,13 +25,31 @@
 /* Margins */
 /* Heights */
 /* Widths */
+/*========================== 
+            Colors
+==============================*/
+/*========================== 
+        Paddings/Margins
+==============================*/
+/*========================== 
+            Sizes
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
+/*========================== 
+        Border Sizes
+==============================*/
+/*========================== 
+            Fonts
+==============================*/
 #wrapper {
   position: relative;
-  background: url("images/background/backgroundimage.jpg") no-repeat;
   background-size: cover;
   z-index: 100;
   width: 100%;
   height: 100%;
+  margin-bottom: 240px;
   margin: 0;
   -ms-wrap-margin: 0; }
 
@@ -45,7 +67,11 @@
 ==============================*/
 /* Margins */
 /* Paddings */
-/* Transition */
+/*========================== 
+        Transitions
+==============================*/
+/* not using yet */
+/* not using yet */
 /*========================== 
         header&navbar
 ==============================*/
@@ -54,211 +80,312 @@
 /* Heights */
 /* Widths */
 /*========================== 
-            Variables
+            Colors
 ==============================*/
 /*========================== 
-              Body 
-  ==============================*/
-body {
-  background-color: #171722;
-  margin: 0;
-  -ms-wrap-margin: 0;
-  padding: 0; }
+        Paddings/Margins
+==============================*/
+/*========================== 
+            Sizes
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
+/*========================== 
+        Border Sizes
+==============================*/
+/*========================== 
+            Fonts
+==============================*/
+/*========================== 
+            Variables
+==============================*/
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: inherit; }
 
 /*========================== 
-              Header 
-  ==============================*/
+            Header 
+==============================*/
 #header {
-  height: 140px;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  font-weight: 500; }
+
+#header {
+  height: 100px;
   width: 100%;
-  z-index: -5;
   position: relative;
   display: block;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
   margin: 0;
   -ms-wrap-margin: 0; }
 
 #logo-header {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   display: block;
   z-index: 1;
-  height: 116.66667px;
-  margin: 11.66667px 30px 11.66667px 30px !important;
+  height: 83.33333px;
+  margin: 8.33333px 10% 8.33333px 10% !important;
   padding: 0; }
   #logo-header .logo {
-    height: 116.66667px;
-    width: auto; }
+    height: 83.33333px;
+    width: auto;
+    -webkit-transition: height 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out; }
 
 /*========================== 
-              Navbar 
-  ==============================*/
-.mobile-dropdown-link {
-  cursor: pointer;
+    Roller effect on navbar
+==============================*/
+#roller {
   position: absolute;
-  visibility: hidden;
-  background: none;
-  outline: inherit;
-  float: right;
+  height: 2px;
   border: none;
-  z-index: 1;
-  opacity: 0;
-  transform: translateY(20px);
-  height: 70px;
-  max-height: 140px;
-  margin: 35px 30px 35px 30px !important;
-  padding: 0; }
-  .mobile-dropdown-link #mobile-dropdown-icon {
-    height: 70px;
-    border-radius: 50%;
-    width: auto; }
+  background-color: #FBFBF1;
+  top: 98px;
+  margin: 0;
+  -ms-wrap-margin: 0;
+  -webkit-transition: top 0.3s ease-in-out;
+  -moz-transition: top 0.3s ease-in-out;
+  -o-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out; }
 
+/*========================== 
+        Navbar/sidebar 
+==============================*/
 #navbar {
-  height: 140px;
-  min-height: 140px;
-  position: absolute;
+  height: 100px;
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
-  border-bottom: 2px solid;
   border-color: #FBFBF1;
-  background-color: #171722; }
-  #navbar #dropdown {
+  background-color: #171722;
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out; }
+
+.menu-item {
+  display: inline-block;
+  font-size: 1rem; }
+  .menu-item a {
     position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; }
+
+#toolbar {
+  margin-top: 16.66667px;
+  margin: 8%;
+  border-top: 1px solid;
+  border-color: rgba(23, 23, 34, 0.3);
+  padding: 0; }
+  #toolbar .toolbar-item {
+    float: right;
+    display: block;
     list-style: none; }
+    #toolbar .toolbar-item #lang-icon {
+      height: 20px;
+      width: auto; }
 
-#dropdown, #dropdown-menu-parent {
-  padding: 0;
-  margin: 0;
-  -ms-wrap-margin: 0; }
+#sidebar {
+  position: fixed;
+  visibility: hidden;
+  margin-top: 100px;
+  right: 0;
+  top: 0;
+  height: 0;
+  width: calc(100px + 10%);
+  background-color: #FBFBF1;
+  -webkit-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
+  -o-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
+  transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out; }
+  #sidebar #sidebar-menu {
+    height: auto;
+    line-height: 2.5em;
+    transform: translateY(-275px);
+    margin: 0;
+    -ms-wrap-margin: 0;
+    padding: 0;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+    #sidebar #sidebar-menu .menu-item {
+      width: 100%;
+      margin-top: 16.66667px; }
+      #sidebar #sidebar-menu .menu-item a {
+        display: block;
+        color: #171722;
+        padding-left: 10%;
+        -webkit-transition: padding 0.3s ease;
+        -moz-transition: padding 0.3s ease;
+        -o-transition: padding 0.3s ease;
+        transition: padding 0.3s ease; }
+        #sidebar #sidebar-menu .menu-item a:hover {
+          padding-left: calc(10% + 5%); }
 
-#dropdown-menu {
+#navbar-menu {
   list-style: none;
   float: right;
   display: block;
-  height: 384px;
-  padding-top: 29.16667px;
-  padding-right: 30px;
-  padding-left: 0;
-  line-height: 70px;
-  margin: 0;
-  -ms-wrap-margin: 0; }
-  #dropdown-menu .menu-item {
-    display: inline-block;
-    text-align: center;
-    font-size: 1.2em;
-    min-width: 100px; }
-    #dropdown-menu .menu-item a {
-      display: inline-block;
-      position: relative;
-      min-width: 100px;
-      width: 125px;
-      font-family: sans-serif;
-      text-decoration: none;
+  height: auto;
+  opacity: 1;
+  transform: translateY(0px);
+  margin: 25px 0;
+  line-height: 50px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 0; }
+  #navbar-menu .menu-item {
+    height: 50px;
+    text-align: center; }
+    #navbar-menu .menu-item a {
+      height: 33.33333px;
+      margin: 0 30px;
       color: #FBFBF1;
       -webkit-transition: padding 0.4s ease;
       -moz-transition: padding 0.4s ease;
       -o-transition: padding 0.4s ease;
       transition: padding 0.4s ease; }
-      #dropdown-menu .menu-item a:hover {
-        color: #FBFBF1; }
+      #navbar-menu .menu-item a:hover {
+        border-bottom: 2px solid;
+        border-color: #FBFBF1; }
 
-@media only screen and (max-width: 1024px) {
-  .mobile-dropdown-link {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
-    transform: translateY(0px);
-    left: calc(100% - 130px);
+/*========================== 
+        Dropdown button
+==============================*/
+#dropdown-div {
+  position: relative;
+  visibility: hidden;
+  float: right;
+  z-index: 1;
+  height: 33.33333px;
+  transform: scale(1);
+  -webkit-transition: transform 0.2s ease-in-out;
+  -moz-transition: transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  margin: 33.33333px 10% 33.33333px 33.33333px !important;
+  padding: 0; }
+  #dropdown-div:hover {
+    transform: scale(1.1); }
+  #dropdown-div:active {
+    transform: scale(0.9); }
+  #dropdown-div #dropdown-icon {
+    height: 33.33333px;
+    border-radius: 50%;
+    opacity: 0;
+    width: auto;
+    transform: translateY(-15px);
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; }
-    .mobile-dropdown-link:hover {
-      transform: scale(1.1);
-      -webkit-transition: padding 0.2s ease;
-      -moz-transition: padding 0.2s ease;
-      -o-transition: padding 0.2s ease;
-      transition: padding 0.2s ease; }
-    .mobile-dropdown-link:active {
-      transform: scale(0.9); }
-  .dropdown-menu-visible {
-    visibility: visible;
-    position: relative;
-    opacity: 1;
-    transform: translateY(140px); }
-  .dropdown-menu-hidden {
-    visibility: hidden;
-    position: absolute;
-    opacity: 0;
-    transform: translateY(0); }
-  .header-height-toggle {
-    height: 384px !important; }
-  #navbar {
-    display: block; }
-    #navbar #dropdown-menu {
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      line-height: 60px;
-      background-color: rgba(23, 23, 34, 0.5);
-      -webkit-transition: all 0.4s ease-in-out;
-      -moz-transition: all 0.4s ease-in-out;
-      -o-transition: all 0.4s ease-in-out;
-      transition: all 0.4s ease-in-out;
-      padding: 0; }
-      #navbar #dropdown-menu .menu-item {
-        display: block;
-        position: relative;
-        text-align: left;
-        border-bottom: 1px solid;
-        border-color: #c9c9c9;
-        -webkit-transition: padding 0.4s ease;
-        -moz-transition: padding 0.4s ease;
-        -o-transition: padding 0.4s ease;
-        transition: padding 0.4s ease; }
-        #navbar #dropdown-menu .menu-item:hover {
-          padding-left: 10px; }
-        #navbar #dropdown-menu .menu-item a {
-          color: #FBFBF1;
-          padding-left: 40px;
-          width: calc(100% - 40px); } }
 
-/* Imports */
-/* Imports */
 /*========================== 
-        header&navbar
+  JsFiddler, toggles classes
 ==============================*/
-/* Paddings */
-/* Margins */
-/* Heights */
-/* Widths */
-/*========================== 
-        header&navbar
-==============================*/
-/* Margins */
-/* Paddings */
-/* Transition */
-/*========================== 
-        header&navbar
-==============================*/
-/* Paddings */
-/* Margins */
-/* Heights */
-/* Widths */
-.test {
-  position: relative;
-  z-index: -2;
-  width: 100%;
-  height: 50px;
+.navbar-hidden #navbar-menu {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transform: translateY(15px) !important;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; }
 
+.navbar-hidden #dropdown-div {
+  visibility: visible !important; }
+  .navbar-hidden #dropdown-div #dropdown-icon {
+    opacity: 1 !important;
+    transform: translateY(0px) !important; }
+
+.sidebar-visible {
+  height: 100% !important;
+  visibility: visible !important; }
+  .sidebar-visible #sidebar-menu {
+    transform: translateY(0px) !important; }
+
+/*========================== 
+        Media queries
+==============================*/
+/* Large devices and up */
+@media only screen and (max-width: 1200px) {
+  #navbar-menu {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+  #dropdown-div {
+    visibility: visible !important; }
+    #dropdown-div #dropdown-icon {
+      opacity: 1 !important;
+      transform: translateY(0px) !important; } }
+
+/* Medium devices and up */
+@media only screen and (max-width: 992px) {
+  #navbar-menu {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none; }
+  #navbar, #header {
+    height: 80px !important; }
+  #logo-header, .logo {
+    height: 66.66667px !important; }
+  #dropdown-div, #dropdown-icon {
+    height: 26.66667px !important; }
+  .menu-item {
+    font-size: 1.05rem !important; }
+  #logo-header {
+    margin: 6.66667px 10% 6.66667px 10% !important; }
+  #dropdown-div {
+    margin: 26.66667px 10% 26.66667px 26.66667px !important; }
+  #sidebar {
+    margin-top: 80px !important;
+    width: calc(80px + 10%)10% !important; }
+  #sidebar-menu {
+    line-height: 2.4em !important; }
+  #roller {
+    top: 78px; } }
+
+/* Small devices and up */
+@media only screen and (max-width: 768px) {
+  #navbar, #header {
+    height: 60px !important; }
+  #logo-header, .logo {
+    height: 50px !important; }
+  #dropdown-div, #dropdown-icon {
+    height: 20px !important; }
+  .menu-item {
+    font-size: 1.1rem !important; }
+  #logo-header {
+    margin: 5px 10% 5px 10% !important; }
+  #dropdown-div {
+    margin: 20px 10% 20px 20px !important; }
+  #sidebar {
+    margin-top: 60px !important;
+    width: calc(60px + 10%)10% !important; }
+  #sidebar-menu {
+    line-height: 2.2em !important; }
+  #roller {
+    top: 58px; } }
+
 /* Imports */
 /* Imports */
 /*========================== 
@@ -273,7 +400,11 @@ body {
 ==============================*/
 /* Margins */
 /* Paddings */
-/* Transition */
+/*========================== 
+        Transitions
+==============================*/
+/* not using yet */
+/* not using yet */
 /*========================== 
         header&navbar
 ==============================*/
@@ -281,17 +412,206 @@ body {
 /* Margins */
 /* Heights */
 /* Widths */
+/*========================== 
+            Colors
+==============================*/
+/*========================== 
+        Paddings/Margins
+==============================*/
+/*========================== 
+            Sizes
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
+/*========================== 
+        Border Sizes
+==============================*/
+/*========================== 
+            Fonts
+==============================*/
+/*========================== 
+            Home-page
+==============================*/
+#home-page {
+  position: relative;
+  background-color: #b46565;
+  z-index: -9999;
+  width: 100%;
+  height: calc(100vh - 100px); }
+
+.background-container {
+  height: 100%;
+  width: 100%;
+  background-image: url("images/background/home-page-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.title-container {
+  position: absolute;
+  width: 50%;
+  top: calc(30% - 100px);
+  margin: 0 25%; }
+
+.home-page-title {
+  font-family: "Montserrat";
+  color: #171722;
+  position: relative; }
+
+/*========================== 
+        Media queries
+==============================*/
+/* Large devices and up */
+@media only screen and (max-width: 1200px) {
+  .title-container {
+    top: calc(30% - 80px) !important;
+    width: 64% !important;
+    margin: 0 calc((100% - 64%) / 2) !important; } }
+
+/* Medium devices and up */
+@media only screen and (max-width: 992px) {
+  .title-container {
+    top: calc(30% - 60px) !important;
+    width: 74% !important;
+    margin: 0 calc((100% - 74%) / 2) !important; }
+  #home-page {
+    height: calc(100vh - 80px); } }
+
+/* Small devices and up */
+@media only screen and (max-width: 768px) {
+  .title-container {
+    width: 84% !important;
+    margin: 0 calc((100% - 84%) / 2) !important; }
+  #home-page {
+    height: calc(100vh - 60px); } }
+
+/* Imports */
+/* Imports */
+/*========================== 
+        header&navbar
+==============================*/
+/* Paddings */
+/* Margins */
+/* Heights */
+/* Widths */
+/*========================== 
+        header&navbar
+==============================*/
+/* Margins */
+/* Paddings */
+/*========================== 
+        Transitions
+==============================*/
+/* not using yet */
+/* not using yet */
+/*========================== 
+        header&navbar
+==============================*/
+/* Paddings */
+/* Margins */
+/* Heights */
+/* Widths */
+/*========================== 
+            Colors
+==============================*/
+/*========================== 
+        Paddings/Margins
+==============================*/
+/*========================== 
+            Sizes
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
+/*========================== 
+        Border Sizes
+==============================*/
+/*========================== 
+            Fonts
+==============================*/
+/*========================== 
+            Skills
+==============================*/
+#skills {
+  position: relative;
+  background-color: #FBFBF1;
+  z-index: -2;
+  width: 100%; }
+
+.skills-container {
+  position: relative;
+  width: 900px;
+  height: 103px;
+  padding: 50px 0;
+  margin: 0 calc((100% - 900px) / 2); }
+
+.skills-box {
+  position: relative;
+  float: left;
+  margin: 0 20px; }
+
+#skills-logo {
+  height: auto;
+  width: 140px; }
+
+/* Imports */
+/* Imports */
+/*========================== 
+        header&navbar
+==============================*/
+/* Paddings */
+/* Margins */
+/* Heights */
+/* Widths */
+/*========================== 
+        header&navbar
+==============================*/
+/* Margins */
+/* Paddings */
+/*========================== 
+        Transitions
+==============================*/
+/* not using yet */
+/* not using yet */
+/*========================== 
+        header&navbar
+==============================*/
+/* Paddings */
+/* Margins */
+/* Heights */
+/* Widths */
+/*========================== 
+            Colors
+==============================*/
+/*========================== 
+        Paddings/Margins
+==============================*/
+/*========================== 
+            Sizes
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
+/*========================== 
+        Border Sizes
+==============================*/
+/*========================== 
+            Fonts
+==============================*/
 /*========================== 
             Variables
 ==============================*/
 footer {
-  position: absolute;
+  position: sticky;
   height: 240px;
   font-family: sans-serif;
   font-size: 12px;
   color: #FBFBF1;
   width: 100%;
-  bottom: 0; }
+  border-top: 2px solid;
+  border-color: #FBFBF1;
+  background-color: #171722; }
   footer .content-parent {
     position: absolute;
     height: 120px;
@@ -313,3 +633,72 @@ footer {
         footer .content-parent .content a:hover {
           text-decoration: underline;
           color: #1f80ff; }
+
+/*========================== 
+        Media queries
+==============================*/
+/* Small devices and up */
+@media only screen and (max-width: 768px) {
+  footer .content-parent {
+    float: none;
+    text-align: center; }
+    footer .content-parent .content {
+      float: none;
+      text-align: center; } }
+
+/*========================== 
+            Colors
+==============================*/
+/*========================== 
+        Paddings/Margins
+==============================*/
+/*========================== 
+            Sizes
+==============================*/
+/*========================== 
+        Responsive Sizes
+==============================*/
+/*========================== 
+        Border Sizes
+==============================*/
+/*========================== 
+            Fonts
+==============================*/
+/*========================== 
+            Body 
+==============================*/
+body {
+  background-color: #171722;
+  margin: 0;
+  -ms-wrap-margin: 0;
+  padding: 0; }
+
+/*========================== 
+        H1, H2, H3
+==============================*/
+h1, h2, h3 {
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  margin: 0;
+  -ms-wrap-margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 4rem; }
+
+/*========================== 
+        Media queries
+==============================*/
+/* Large devices and up */
+@media only screen and (max-width: 1200px) {
+  h1 {
+    font-size: 3.2rem; } }
+
+/* Medium devices and up */
+@media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 2.4rem; } }
+
+/* Small devices and up */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem; } }
