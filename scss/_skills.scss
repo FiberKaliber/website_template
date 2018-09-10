@@ -4,6 +4,9 @@
 @import "variables";
 
 
+    //Variables
+$skillsHeight: 140px;
+$skillsBoxWidth: 270px;
 
 /*========================== 
             Skills
@@ -15,26 +18,30 @@
     height: auto;
     z-index: -2;
     width: 100%;  
+
 }
 
 .skills-container {
     position: relative;
-    height: 800px;
-    margin: 0 10%;
+    margin: 0 0 0 10%;
+    padding-bottom: 5%;
+    display: block;
+    overflow: auto;
+    @include transition-ease-out(0.2s);
     .skills-box {
         position: relative;
         float: left;
-        width: 270px;
+        width: $skillsBoxWidth;
         padding: 25px 1%;
     }
 }
-
 
 #skills-logo {
     border-radius: 50%;
     height: $skillsHeight;
     width: auto;
 }
+
 
 .info-box {
     height: auto;
@@ -52,17 +59,41 @@
  
 /* Large devices and up */
 @media only screen and (max-width: $largeDevices) {
-    
+    .skills-container {
+        margin: 0 0 0 8%;
+        .skills-box {
+            width: $skillsBoxWidth - 40px;
+            #skills-logo {
+                height: $skillsHeight - 15px;
+            }
+        }
+    }
 }
   
    
 /* Medium devices and up */
 @media only screen and (max-width: $mediumDevices) {
-    
+    .skills-container {
+        margin: 0 0 0 6.5%;
+        .skills-box {
+            width: $skillsBoxWidth - 90px;
+            #skills-logo {
+                height: $skillsHeight - 30px;
+            }
+        }
+    }
 }
   
    
 /* Small devices and up */
 @media only screen and (max-width: $smallDevices) {
-    
+    .skills-container {
+        margin: 0 0 0 5%;
+        .skills-box {
+            width: $skillsBoxWidth - 110px;
+            #skills-logo {
+                height: $skillsHeight - 45px;
+            }
+        }
+    }
 }

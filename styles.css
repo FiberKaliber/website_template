@@ -542,8 +542,14 @@ button {
 
 .skills-container {
   position: relative;
-  height: 800px;
-  margin: 0 10%; }
+  margin: 0 0 0 10%;
+  padding-bottom: 5%;
+  display: block;
+  overflow: auto;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
   .skills-container .skills-box {
     position: relative;
     float: left;
@@ -566,8 +572,32 @@ button {
         Media queries
 ==============================*/
 /* Large devices and up */
+@media only screen and (max-width: 1200px) {
+  .skills-container {
+    margin: 0 0 0 8%; }
+    .skills-container .skills-box {
+      width: 230px; }
+      .skills-container .skills-box #skills-logo {
+        height: 125px; } }
+
 /* Medium devices and up */
+@media only screen and (max-width: 992px) {
+  .skills-container {
+    margin: 0 0 0 6.5%; }
+    .skills-container .skills-box {
+      width: 180px; }
+      .skills-container .skills-box #skills-logo {
+        height: 110px; } }
+
 /* Small devices and up */
+@media only screen and (max-width: 768px) {
+  .skills-container {
+    margin: 0 0 0 5%; }
+    .skills-container .skills-box {
+      width: 160px; }
+      .skills-container .skills-box #skills-logo {
+        height: 95px; } }
+
 /* Imports */
 /* Imports */
 /*========================== 
@@ -712,7 +742,7 @@ h3 {
   h1 {
     font-size: 3.2rem; }
   h2 {
-    font-size: 1.4rem; }
+    font-size: 1.37rem; }
   h3 {
     font-size: 1.12rem; } }
 
@@ -721,7 +751,7 @@ h3 {
   h1 {
     font-size: 2.9rem; }
   h2 {
-    font-size: 1.3rem; }
+    font-size: 1.24rem; }
   h3 {
     font-size: 1.07rem; } }
 
@@ -730,6 +760,6 @@ h3 {
   h1 {
     font-size: 2.6rem; }
   h2 {
-    font-size: 1.2rem; }
+    font-size: 1.11rem; }
   h3 {
     font-size: 1.02rem; } }
