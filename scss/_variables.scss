@@ -96,17 +96,23 @@ $toolbarBorderSize: 1px;
 
     //Font Family
 $headerFont: 'Work Sans';
-$titleFont: 'Archivo Black';
+$titleFont: 'Spectral';
 
     //Font sizes
 $defaultFontSize: 1rem;
 //$mediumFontSize: 1.4rem;
 //$smallFontSize: 1.2rem; 
 
-$h1: 3.5rem;
+$h1: 3rem;
 $h1-lg: $h1 - 0.3rem;
 $h1-md: $h1-lg - 0.3rem;
 $h1-sm: $h1-md - 0.3rem;
+
+//HOMEPAGE H!
+$h1-homepage: 7.5rem;
+$h1-homepage-lg: 6.5rem;
+$h1-homepage-md: 5.5rem;
+$h1-homepage-sm: 4.2rem;
 
 $h2: 1.5rem;
 $h2-lg: $h2 - 0.13rem;

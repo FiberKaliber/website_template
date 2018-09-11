@@ -31,13 +31,14 @@
     width: $titleContainerWidth;
     top: calc(30% - #{$navHeight});
     margin: 0 $titleContainerResponsiveMargin;
-    //text-align: center;
+    text-align: none;
 }
 
 .home-page-title {
     font-family: $titleFont;
     color: $titleColor;
     position: relative;
+    font-size: $h1-homepage;
     //text-shadow: 0.05em 0.05em $titleShadowColor;
 }
 
@@ -53,12 +54,17 @@
         width: $titleContainerWidth-lg !important;
         margin: 0 $titleContainerResponsiveMargin-lg !important;
     }
+
+    .home-page-title {
+        font-size: $h1-homepage-lg;
+    }
 }
   
    
 /* Medium devices and up */
 @media only screen and (max-width: $mediumDevices) {
     .title-container {
+        text-align: center;
         top: calc(30% - #{$smallNavHeight}) !important;
         width: $titleContainerWidth-md !important;
         margin: 0 $titleContainerResponsiveMargin-md !important;
@@ -66,6 +72,9 @@
 
     #home-page {
         height: calc(100vh - #{$mediumNavHeight});
+    }
+    .home-page-title {
+        font-size: $h1-homepage-md;
     }
 }
   
@@ -79,5 +88,8 @@
 
     #home-page {
         height: calc(100vh - #{$smallNavHeight});
+    }
+    .home-page-title {
+        font-size: $h1-homepage-sm;
     }
 }

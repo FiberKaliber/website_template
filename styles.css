@@ -452,12 +452,14 @@ button {
   position: absolute;
   width: 50%;
   top: calc(30% - 100px);
-  margin: 0 25%; }
+  margin: 0 25%;
+  text-align: none; }
 
 .home-page-title {
-  font-family: "Archivo Black";
+  font-family: "Spectral";
   color: #fcca37;
-  position: relative; }
+  position: relative;
+  font-size: 7.5rem; }
 
 /*========================== 
         Media queries
@@ -467,16 +469,21 @@ button {
   .title-container {
     top: calc(30% - 80px) !important;
     width: 64% !important;
-    margin: 0 calc((100% - 64%) / 2) !important; } }
+    margin: 0 calc((100% - 64%) / 2) !important; }
+  .home-page-title {
+    font-size: 6.5rem; } }
 
 /* Medium devices and up */
 @media only screen and (max-width: 992px) {
   .title-container {
+    text-align: center;
     top: calc(30% - 60px) !important;
     width: 74% !important;
     margin: 0 calc((100% - 74%) / 2) !important; }
   #home-page {
-    height: calc(100vh - 80px); } }
+    height: calc(100vh - 80px); }
+  .home-page-title {
+    font-size: 5.5rem; } }
 
 /* Small devices and up */
 @media only screen and (max-width: 768px) {
@@ -484,7 +491,9 @@ button {
     width: 84% !important;
     margin: 0 calc((100% - 84%) / 2) !important; }
   #home-page {
-    height: calc(100vh - 60px); } }
+    height: calc(100vh - 60px); }
+  .home-page-title {
+    font-size: 4.2rem; } }
 
 /* Imports */
 /* Imports */
@@ -543,7 +552,7 @@ button {
 .skills-container {
   position: relative;
   margin: 0 0 0 10%;
-  padding-bottom: 5%;
+  padding: 3% 0 2% 0;
   display: block;
   overflow: auto;
   -webkit-transition: all 0.2s ease;
@@ -566,7 +575,8 @@ button {
   margin-top: 10px; }
 
 .skills-title {
-  padding: 20px 0; }
+  padding-bottom: 1%;
+  color: #171722; }
 
 /*========================== 
         Media queries
@@ -726,7 +736,7 @@ h1, h2, h3 {
   padding: 0; }
 
 h1 {
-  font-size: 3.5rem; }
+  font-size: 3rem; }
 
 h2 {
   font-size: 1.5rem; }
@@ -740,7 +750,7 @@ h3 {
 /* Large devices and up */
 @media only screen and (max-width: 1200px) {
   h1 {
-    font-size: 3.2rem; }
+    font-size: 2.7rem; }
   h2 {
     font-size: 1.37rem; }
   h3 {
@@ -749,7 +759,7 @@ h3 {
 /* Medium devices and up */
 @media only screen and (max-width: 992px) {
   h1 {
-    font-size: 2.9rem; }
+    font-size: 2.4rem; }
   h2 {
     font-size: 1.24rem; }
   h3 {
@@ -758,7 +768,7 @@ h3 {
 /* Small devices and up */
 @media only screen and (max-width: 768px) {
   h1 {
-    font-size: 2.6rem; }
+    font-size: 2.1rem; }
   h2 {
     font-size: 1.11rem; }
   h3 {
