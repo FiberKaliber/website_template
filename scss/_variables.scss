@@ -3,24 +3,24 @@
 ==============================*/
 
     //Default settings
-$backgroundColor: rgba(23,23,34, 1);
+$backgroundColor: #156a93;
 $defualtFontColor: #FBFBF1;
 
-$sidebarFontColor: rgba(23,23,34, 1);
-$sidebarBackgroundColor: #FBFBF1;
+$sidebarFontColor: $backgroundColor;
+$sidebarBackgroundColor: #f1e9d4;
 
-$titleColor: #fcca37;
+$titleColor: #f5cf62;
 
     //border color
-$navbarBorderColor: #FBFBF1;
-$menuItemABorderColor: #FBFBF1;
+$navbarBorderColor: #f1e9d4;
+$menuItemABorderColor: #f1e9d4;
 $toolbarBorderColor: rgba(23,23,34, 0.3);
 
     //Shadow color
 $titleShadowColor: $backgroundColor;
 
     //rollor color
-$rollerColor: #fcca37;
+$rollerColor:#f5cf62;
 
 
 /*========================== 
@@ -109,10 +109,10 @@ $h1-md: $h1-lg - 0.3rem;
 $h1-sm: $h1-md - 0.3rem;
 
 //HOMEPAGE H!
-$h1-homepage: 7.5rem;
-$h1-homepage-lg: 6.5rem;
-$h1-homepage-md: 5.5rem;
-$h1-homepage-sm: 4.2rem;
+$h1-homepage: 7rem;
+$h1-homepage-lg: 6rem;
+$h1-homepage-md: 5rem;
+$h1-homepage-sm: 4rem;
 
 $h2: 1.5rem;
 $h2-lg: $h2 - 0.13rem;

@@ -148,7 +148,7 @@ button {
   position: absolute;
   height: 2px;
   border: none;
-  background-color: #fcca37;
+  background-color: #f5cf62;
   top: 98px;
   margin: 0;
   -ms-wrap-margin: 0;
@@ -166,8 +166,8 @@ button {
   top: 0px;
   left: 0px;
   width: 100%;
-  border-color: #FBFBF1;
-  background-color: #171722;
+  border-color: #f1e9d4;
+  background-color: #156a93;
   -webkit-transition: height 0.3s ease-in-out;
   -moz-transition: height 0.3s ease-in-out;
   -o-transition: height 0.3s ease-in-out;
@@ -204,7 +204,7 @@ button {
   top: 0;
   height: 0;
   width: calc(100px + 10%);
-  background-color: #FBFBF1;
+  background-color: #f1e9d4;
   -webkit-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
   -moz-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
   -o-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
@@ -225,7 +225,7 @@ button {
       margin-top: 16.66667px; }
       #sidebar #sidebar-menu .menu-item a {
         display: block;
-        color: #171722;
+        color: #156a93;
         padding-left: 10%;
         -webkit-transition: padding 0.3s ease;
         -moz-transition: padding 0.3s ease;
@@ -261,7 +261,7 @@ button {
       transition: padding 0.4s ease; }
       #navbar-menu .menu-item a:hover {
         border-bottom: 2px solid;
-        border-color: #FBFBF1; }
+        border-color: #f1e9d4; }
 
 /*========================== 
         Dropdown button
@@ -435,7 +435,7 @@ button {
 ==============================*/
 #home-page {
   position: relative;
-  background-color: #171722;
+  background-color: #156a93;
   z-index: -9999;
   width: 100%;
   height: calc(100vh - 100px); }
@@ -443,23 +443,26 @@ button {
 .background-container {
   height: 100%;
   width: 100%;
-  background-image: url("images/background/shumai.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+  /*  background-image: url('images/background/shumai.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */ }
 
 .title-container {
   position: absolute;
   width: 50%;
   top: calc(30% - 100px);
-  margin: 0 25%;
+  margin: 0 10%;
   text-align: none; }
 
 .home-page-title {
   font-family: "Maven Pro";
-  color: #fcca37;
+  color: #f5cf62;
   position: relative;
-  font-size: 7.5rem; }
+  font-size: 7rem; }
+
+.home-page-under-title {
+  color: #FBFBF1; }
 
 /*========================== 
         Media queries
@@ -469,9 +472,9 @@ button {
   .title-container {
     top: calc(30% - 80px) !important;
     width: 64% !important;
-    margin: 0 calc((100% - 64%) / 2) !important; }
+    margin: 0 8%; }
   .home-page-title {
-    font-size: 6.5rem; } }
+    font-size: 6rem; } }
 
 /* Medium devices and up */
 @media only screen and (max-width: 992px) {
@@ -483,7 +486,7 @@ button {
   #home-page {
     height: calc(100vh - 80px); }
   .home-page-title {
-    font-size: 5.5rem; } }
+    font-size: 5rem; } }
 
 /* Small devices and up */
 @media only screen and (max-width: 768px) {
@@ -493,7 +496,7 @@ button {
   #home-page {
     height: calc(100vh - 60px); }
   .home-page-title {
-    font-size: 4.2rem; } }
+    font-size: 4rem; } }
 
 /* Imports */
 /* Imports */
@@ -576,7 +579,7 @@ button {
 
 .skills-title {
   padding-bottom: 1%;
-  color: #171722; }
+  color: #156a93; }
 
 /*========================== 
         Media queries
@@ -664,7 +667,7 @@ footer {
   width: 100%;
   border-top: 2px solid;
   border-color: #FBFBF1;
-  background-color: #171722; }
+  background-color: #156a93; }
   footer .content-parent {
     position: absolute;
     height: 120px;
@@ -721,7 +724,7 @@ footer {
             Body 
 ==============================*/
 body {
-  background-color: #171722;
+  background-color: #156a93;
   margin: 0;
   -ms-wrap-margin: 0;
   padding: 0; }

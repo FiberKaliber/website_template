@@ -19,10 +19,10 @@
 .background-container {
     height: 100%;
     width: 100%;
-    background-image: url('images/background/shumai.jpg');
+  /*  background-image: url('images/background/shumai.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; 
+    background-position: center; */
 }
 
 
@@ -30,7 +30,8 @@
     position: absolute;
     width: $titleContainerWidth;
     top: calc(30% - #{$navHeight});
-    margin: 0 $titleContainerResponsiveMargin;
+    //margin: 0 $titleContainerResponsiveMargin;
+    margin: 0 10%;
     text-align: none;
 }
 
@@ -40,6 +41,11 @@
     position: relative;
     font-size: $h1-homepage;
     //text-shadow: 0.05em 0.05em $titleShadowColor;
+}
+
+.home-page-under-title {
+    color: $defualtFontColor;
+   // font-size: $h1-homepage;
 }
 
 
@@ -52,7 +58,7 @@
     .title-container {
         top: calc(30% - #{$mediumNavHeight}) !important;
         width: $titleContainerWidth-lg !important;
-        margin: 0 $titleContainerResponsiveMargin-lg !important;
+        margin: 0 8%;
     }
 
     .home-page-title {
