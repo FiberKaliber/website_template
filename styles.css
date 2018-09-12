@@ -166,7 +166,7 @@ button {
   top: 0px;
   left: 0px;
   width: 100%;
-  border-color: #f1e9d4;
+  border-color: #fbfbf1;
   background-color: #156a93;
   -webkit-transition: height 0.3s ease-in-out;
   -moz-transition: height 0.3s ease-in-out;
@@ -204,7 +204,7 @@ button {
   top: 0;
   height: 0;
   width: calc(100px + 10%);
-  background-color: #f1e9d4;
+  background-color: #fbfbf1;
   -webkit-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
   -moz-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
   -o-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
@@ -254,7 +254,7 @@ button {
     #navbar-menu .menu-item a {
       height: 33.33333px;
       margin: 0 30px;
-      color: #FBFBF1;
+      color: #fbfbf1;
       -webkit-transition: padding 0.4s ease;
       -moz-transition: padding 0.4s ease;
       -o-transition: padding 0.4s ease;
@@ -443,10 +443,10 @@ button {
 .background-container {
   height: 100%;
   width: 100%;
-  /*  background-image: url('images/background/shumai.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */ }
+  background-image: url("images/background/shumai.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom; }
 
 .title-container {
   position: absolute;
@@ -462,7 +462,7 @@ button {
   font-size: 7rem; }
 
 .home-page-under-title {
-  color: #FBFBF1; }
+  color: #fbfbf1; }
 
 /*========================== 
         Media queries
