@@ -10,7 +10,7 @@
 
 #home-page {
     position: relative;
-    background-color: rgb(180, 101, 101);
+    background-color: $backgroundColor;
     z-index: -9999;
     width: 100%;
     height: calc(100vh - #{$navHeight});

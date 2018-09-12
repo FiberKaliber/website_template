@@ -435,7 +435,7 @@ button {
 ==============================*/
 #home-page {
   position: relative;
-  background-color: #b46565;
+  background-color: #171722;
   z-index: -9999;
   width: 100%;
   height: calc(100vh - 100px); }
@@ -456,7 +456,7 @@ button {
   text-align: none; }
 
 .home-page-title {
-  font-family: "Spectral";
+  font-family: "Maven Pro";
   color: #fcca37;
   position: relative;
   font-size: 7.5rem; }
