@@ -49,7 +49,6 @@
   z-index: 100;
   width: 100%;
   height: 100%;
-  margin-bottom: 240px;
   margin: 0;
   -ms-wrap-margin: 0; }
 
@@ -545,7 +544,7 @@ button {
 /*========================== 
             Skills
 ==============================*/
-#skills {
+.skills {
   position: relative;
   background-color: #FBFBF1;
   height: auto;
@@ -555,18 +554,19 @@ button {
 .skills-container {
   position: relative;
   margin: 0 0 0 10%;
-  padding: 3% 0 2% 0;
+  padding: 6% 0 0 0;
   display: block;
   overflow: auto;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
-  .skills-container .skills-box {
-    position: relative;
-    float: left;
-    width: 270px;
-    padding: 25px 1%; }
+
+.skills-box {
+  position: relative;
+  float: left;
+  width: 270px;
+  padding: 25px 1%; }
 
 #skills-logo {
   border-radius: 50%;
@@ -581,6 +581,9 @@ button {
   padding-bottom: 1%;
   color: #156a93; }
 
+.extra-space {
+  height: 100px; }
+
 /*========================== 
         Media queries
 ==============================*/
@@ -591,7 +594,9 @@ button {
     .skills-container .skills-box {
       width: 230px; }
       .skills-container .skills-box #skills-logo {
-        height: 125px; } }
+        height: 125px; }
+  .extra-space {
+    height: 800px; } }
 
 /* Medium devices and up */
 @media only screen and (max-width: 992px) {
@@ -600,7 +605,9 @@ button {
     .skills-container .skills-box {
       width: 180px; }
       .skills-container .skills-box #skills-logo {
-        height: 110px; } }
+        height: 110px; }
+  .extra-space {
+    height: 60px; } }
 
 /* Small devices and up */
 @media only screen and (max-width: 768px) {
@@ -609,7 +616,9 @@ button {
     .skills-container .skills-box {
       width: 160px; }
       .skills-container .skills-box #skills-logo {
-        height: 95px; } }
+        height: 95px; }
+  .extra-space {
+    height: 40px; } }
 
 /* Imports */
 /* Imports */
@@ -666,8 +675,7 @@ footer {
   color: #FBFBF1;
   width: 100%;
   border-top: 2px solid;
-  border-color: #FBFBF1;
-  background-color: #156a93; }
+  border-color: #FBFBF1; }
   footer .content-parent {
     position: absolute;
     height: 120px;
@@ -734,6 +742,7 @@ body {
 ==============================*/
 h1, h2, h3 {
   font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  font-weight: 500;
   margin: 0;
   -ms-wrap-margin: 0;
   padding: 0; }

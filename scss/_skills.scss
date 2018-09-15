@@ -12,7 +12,7 @@ $skillsBoxWidth: 270px;
             Skills
 ==============================*/
 
-#skills {
+.skills {
     position: relative;
     background-color: #FBFBF1;
     height: auto;
@@ -24,16 +24,17 @@ $skillsBoxWidth: 270px;
 .skills-container {
     position: relative;
     margin: 0 0 0 10%;
-    padding: 3% 0 2% 0;
+    padding: 6% 0 0 0;
     display: block;
     overflow: auto;
     @include transition-ease-out(0.2s);
-    .skills-box {
-        position: relative;
-        float: left;
-        width: $skillsBoxWidth;
-        padding: 25px 1%;
-    }
+}
+
+.skills-box {
+    position: relative;
+    float: left;
+    width: $skillsBoxWidth;
+    padding: 25px 1%;
 }
 
 #skills-logo {
@@ -53,6 +54,9 @@ $skillsBoxWidth: 270px;
     color: $sidebarFontColor;
 }
 
+.extra-space {
+    height: 100px;
+}
 
 /*========================== 
         Media queries
@@ -69,6 +73,9 @@ $skillsBoxWidth: 270px;
             }
         }
     }
+    .extra-space {
+        height: 800px;
+    }
 }
   
    
@@ -83,6 +90,9 @@ $skillsBoxWidth: 270px;
             }
         }
     }
+    .extra-space {
+        height: 60px;
+    }
 }
   
    
@@ -96,5 +106,8 @@ $skillsBoxWidth: 270px;
                 height: $skillsHeight - 45px;
             }
         }
+    }
+    .extra-space {
+        height: 40px;
     }
 }
