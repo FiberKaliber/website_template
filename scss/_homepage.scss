@@ -49,6 +49,13 @@
 }
 
 
+.title-logo {
+    height: $h1-homepage;
+    margin-left: 1rem;
+    width: auto;
+  }
+  
+
 /*========================== 
         Media queries
 ==============================*/
@@ -64,6 +71,11 @@
     .home-page-title {
         font-size: $h1-homepage-lg;
     }
+
+    .title-logo {
+        height: $h1-homepage-lg;
+        margin-left: 0.8rem;
+      }
 }
   
    
@@ -82,6 +94,11 @@
     .home-page-title {
         font-size: $h1-homepage-md;
     }
+
+    .title-logo {
+        height: $h1-homepage-md;
+        margin-left: 0.6rem;
+      }
 }
   
    
@@ -98,4 +115,8 @@
     .home-page-title {
         font-size: $h1-homepage-sm;
     }
+    .title-logo {
+        height: $h1-homepage-sm;
+        margin-left: 0.5rem;
+      }
 }
