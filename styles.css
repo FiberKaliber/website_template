@@ -580,7 +580,8 @@ button {
   position: relative;
   float: left;
   width: 270px;
-  padding: 25px 1%; }
+  height: 190px;
+  padding: 2% 1%; }
 
 #skills-logo {
   border-radius: 50%;
