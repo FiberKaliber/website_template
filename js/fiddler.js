@@ -46,7 +46,7 @@ function titleAnimation() {
             i++;    
             theLoop(i);       
           }
-        }, Math.floor((Math.random() * 40) + 70));
+        }, Math.floor((Math.random() * 50) + 10));
       })(0);
 }
 

@@ -33,6 +33,7 @@ button {
 }
 
 
+
 /*========================== 
             Header 
 ==============================*/
@@ -66,7 +67,6 @@ button {
   }
 }
 
-
 /*========================== 
     Roller effect on navbar
 ==============================*/
@@ -78,7 +78,7 @@ button {
   background-color: $rollerColor;
   top: $navHeight - $rollerHeight;
   @include defualt-margin;
-  @include transition-top-ease-in-out(0.3s);
+  @include transition-all-ease-in-out(0.3s);
 }
 
 

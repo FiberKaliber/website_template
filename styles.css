@@ -49,7 +49,6 @@
   z-index: 100;
   width: 100%;
   height: 100%;
-  margin-bottom: 240px;
   margin: 0;
   -ms-wrap-margin: 0; }
 
@@ -148,14 +147,14 @@ button {
   position: absolute;
   height: 2px;
   border: none;
-  background-color: #FBFBF1;
+  background-color: #f58c62;
   top: 98px;
   margin: 0;
   -ms-wrap-margin: 0;
-  -webkit-transition: top 0.3s ease-in-out;
-  -moz-transition: top 0.3s ease-in-out;
-  -o-transition: top 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out; }
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
 
 /*========================== 
         Navbar/sidebar 
@@ -166,8 +165,8 @@ button {
   top: 0px;
   left: 0px;
   width: 100%;
-  border-color: #FBFBF1;
-  background-color: #171722;
+  border-color: #fbfbf1;
+  background-color: #000000;
   -webkit-transition: height 0.3s ease-in-out;
   -moz-transition: height 0.3s ease-in-out;
   -o-transition: height 0.3s ease-in-out;
@@ -204,7 +203,7 @@ button {
   top: 0;
   height: 0;
   width: calc(100px + 10%);
-  background-color: #FBFBF1;
+  background-color: #fbfbf1;
   -webkit-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
   -moz-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
   -o-transition: all 0.7s ease-in-out, margin 0.3s ease-in-out, width 0.3s ease-in-out;
@@ -225,7 +224,7 @@ button {
       margin-top: 16.66667px; }
       #sidebar #sidebar-menu .menu-item a {
         display: block;
-        color: #171722;
+        color: #000000;
         padding-left: 10%;
         -webkit-transition: padding 0.3s ease;
         -moz-transition: padding 0.3s ease;
@@ -254,14 +253,14 @@ button {
     #navbar-menu .menu-item a {
       height: 33.33333px;
       margin: 0 30px;
-      color: #FBFBF1;
+      color: #fbfbf1;
       -webkit-transition: padding 0.4s ease;
       -moz-transition: padding 0.4s ease;
       -o-transition: padding 0.4s ease;
       transition: padding 0.4s ease; }
       #navbar-menu .menu-item a:hover {
         border-bottom: 2px solid;
-        border-color: #FBFBF1; }
+        border-color: #f1e9d4; }
 
 /*========================== 
         Dropdown button
@@ -435,7 +434,7 @@ button {
 ==============================*/
 #home-page {
   position: relative;
-  background-color: #b46565;
+  background-color: #000000;
   z-index: -9999;
   width: 100%;
   height: calc(100vh - 100px); }
@@ -443,21 +442,31 @@ button {
 .background-container {
   height: 100%;
   width: 100%;
-  background-image: url("images/background/home-page-background.jpg");
+  background-image: url("images/background/backgroundimage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: right bottom; }
 
 .title-container {
   position: absolute;
   width: 50%;
   top: calc(30% - 100px);
-  margin: 0 25%; }
+  margin: 0 10%;
+  text-align: none; }
 
 .home-page-title {
-  font-family: "Montserrat";
-  color: #171722;
-  position: relative; }
+  font-family: "Raleway";
+  color: #000000;
+  position: relative;
+  font-size: 7rem; }
+
+.home-page-under-title {
+  color: #fbfbf1; }
+
+.title-logo {
+  height: 7rem;
+  margin-left: 1rem;
+  width: auto; }
 
 /*========================== 
         Media queries
@@ -467,16 +476,27 @@ button {
   .title-container {
     top: calc(30% - 80px) !important;
     width: 64% !important;
-    margin: 0 calc((100% - 64%) / 2) !important; } }
+    margin: 0 8%; }
+  .home-page-title {
+    font-size: 6rem; }
+  .title-logo {
+    height: 6rem;
+    margin-left: 0.8rem; } }
 
 /* Medium devices and up */
 @media only screen and (max-width: 992px) {
   .title-container {
+    text-align: center;
     top: calc(30% - 60px) !important;
     width: 74% !important;
     margin: 0 calc((100% - 74%) / 2) !important; }
   #home-page {
-    height: calc(100vh - 80px); } }
+    height: calc(100vh - 80px); }
+  .home-page-title {
+    font-size: 5rem; }
+  .title-logo {
+    height: 5rem;
+    margin-left: 0.6rem; } }
 
 /* Small devices and up */
 @media only screen and (max-width: 768px) {
@@ -484,7 +504,12 @@ button {
     width: 84% !important;
     margin: 0 calc((100% - 84%) / 2) !important; }
   #home-page {
-    height: calc(100vh - 60px); } }
+    height: calc(100vh - 60px); }
+  .home-page-title {
+    font-size: 4rem; }
+  .title-logo {
+    height: 4rem;
+    margin-left: 0.5rem; } }
 
 /* Imports */
 /* Imports */
@@ -533,27 +558,82 @@ button {
 /*========================== 
             Skills
 ==============================*/
-#skills {
+.skills {
   position: relative;
   background-color: #FBFBF1;
+  height: auto;
   z-index: -2;
   width: 100%; }
 
 .skills-container {
   position: relative;
-  width: 900px;
-  height: 103px;
-  padding: 50px 0;
-  margin: 0 calc((100% - 900px) / 2); }
+  margin: 0 0 0 10%;
+  padding: 6% 0 6% 0;
+  display: block;
+  overflow: auto;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
 
 .skills-box {
   position: relative;
   float: left;
-  margin: 0 20px; }
+  width: 270px;
+  height: 190px;
+  padding: 2% 1%; }
 
 #skills-logo {
+  border-radius: 50%;
+  height: 140px;
+  width: auto; }
+
+.info-box {
   height: auto;
-  width: 140px; }
+  margin-top: 10px; }
+
+.skills-title {
+  padding-bottom: 1%;
+  color: #000000; }
+
+.extra-space {
+  height: 100px; }
+
+/*========================== 
+        Media queries
+==============================*/
+/* Large devices and up */
+@media only screen and (max-width: 1200px) {
+  .skills-container {
+    margin: 0 0 0 8%; }
+    .skills-container .skills-box {
+      width: 230px; }
+      .skills-container .skills-box #skills-logo {
+        height: 125px; }
+  .extra-space {
+    height: 800px; } }
+
+/* Medium devices and up */
+@media only screen and (max-width: 992px) {
+  .skills-container {
+    margin: 0 0 0 6.5%; }
+    .skills-container .skills-box {
+      width: 180px; }
+      .skills-container .skills-box #skills-logo {
+        height: 110px; }
+  .extra-space {
+    height: 60px; } }
+
+/* Small devices and up */
+@media only screen and (max-width: 768px) {
+  .skills-container {
+    margin: 0 0 0 5%; }
+    .skills-container .skills-box {
+      width: 160px; }
+      .skills-container .skills-box #skills-logo {
+        height: 95px; }
+  .extra-space {
+    height: 40px; } }
 
 /* Imports */
 /* Imports */
@@ -610,8 +690,7 @@ footer {
   color: #FBFBF1;
   width: 100%;
   border-top: 2px solid;
-  border-color: #FBFBF1;
-  background-color: #171722; }
+  border-color: #FBFBF1; }
   footer .content-parent {
     position: absolute;
     height: 120px;
@@ -668,7 +747,7 @@ footer {
             Body 
 ==============================*/
 body {
-  background-color: #171722;
+  background-color: #000000;
   margin: 0;
   -ms-wrap-margin: 0;
   padding: 0; }
@@ -683,7 +762,15 @@ h1, h2, h3 {
   padding: 0; }
 
 h1 {
-  font-size: 4rem; }
+  font-size: 3rem; }
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500; }
+
+h3 {
+  font-size: 1.17rem;
+  font-weight: 500; }
 
 /*========================== 
         Media queries
@@ -691,14 +778,26 @@ h1 {
 /* Large devices and up */
 @media only screen and (max-width: 1200px) {
   h1 {
-    font-size: 3.2rem; } }
+    font-size: 2.7rem; }
+  h2 {
+    font-size: 1.37rem; }
+  h3 {
+    font-size: 1.12rem; } }
 
 /* Medium devices and up */
 @media only screen and (max-width: 992px) {
   h1 {
-    font-size: 2.4rem; } }
+    font-size: 2.4rem; }
+  h2 {
+    font-size: 1.24rem; }
+  h3 {
+    font-size: 1.07rem; } }
 
 /* Small devices and up */
 @media only screen and (max-width: 768px) {
   h1 {
-    font-size: 1.6rem; } }
+    font-size: 2.1rem; }
+  h2 {
+    font-size: 1.11rem; }
+  h3 {
+    font-size: 1.02rem; } }

@@ -10,7 +10,7 @@
 
 #home-page {
     position: relative;
-    background-color: rgb(180, 101, 101);
+    background-color: $backgroundColor;
     z-index: -9999;
     width: 100%;
     height: calc(100vh - #{$navHeight});
@@ -19,10 +19,10 @@
 .background-container {
     height: 100%;
     width: 100%;
-    background-image: url('images/background/home-page-background.jpg');
+    background-image: url('images/background/backgroundimage.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; 
+    background-position: right bottom;
 }
 
 
@@ -30,17 +30,31 @@
     position: absolute;
     width: $titleContainerWidth;
     top: calc(30% - #{$navHeight});
-    margin: 0 $titleContainerResponsiveMargin;
-    //text-align: center;
+    //margin: 0 $titleContainerResponsiveMargin;
+    margin: 0 10%;
+    text-align: none;
 }
 
 .home-page-title {
     font-family: $titleFont;
     color: $titleColor;
     position: relative;
+    font-size: $h1-homepage;
     //text-shadow: 0.05em 0.05em $titleShadowColor;
 }
 
+.home-page-under-title {
+    color: $defualtFontColor;
+   // font-size: $h1-homepage;
+}
+
+
+.title-logo {
+    height: $h1-homepage;
+    margin-left: 1rem;
+    width: auto;
+  }
+  
 
 /*========================== 
         Media queries
@@ -51,14 +65,24 @@
     .title-container {
         top: calc(30% - #{$mediumNavHeight}) !important;
         width: $titleContainerWidth-lg !important;
-        margin: 0 $titleContainerResponsiveMargin-lg !important;
+        margin: 0 8%;
     }
+
+    .home-page-title {
+        font-size: $h1-homepage-lg;
+    }
+
+    .title-logo {
+        height: $h1-homepage-lg;
+        margin-left: 0.8rem;
+      }
 }
   
    
 /* Medium devices and up */
 @media only screen and (max-width: $mediumDevices) {
     .title-container {
+        text-align: center;
         top: calc(30% - #{$smallNavHeight}) !important;
         width: $titleContainerWidth-md !important;
         margin: 0 $titleContainerResponsiveMargin-md !important;
@@ -67,6 +91,14 @@
     #home-page {
         height: calc(100vh - #{$mediumNavHeight});
     }
+    .home-page-title {
+        font-size: $h1-homepage-md;
+    }
+
+    .title-logo {
+        height: $h1-homepage-md;
+        margin-left: 0.6rem;
+      }
 }
   
    
@@ -80,4 +112,11 @@
     #home-page {
         height: calc(100vh - #{$smallNavHeight});
     }
+    .home-page-title {
+        font-size: $h1-homepage-sm;
+    }
+    .title-logo {
+        height: $h1-homepage-sm;
+        margin-left: 0.5rem;
+      }
 }

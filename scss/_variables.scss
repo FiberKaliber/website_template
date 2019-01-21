@@ -3,24 +3,24 @@
 ==============================*/
 
     //Default settings
-$backgroundColor: rgba(23,23,34, 1);
-$defualtFontColor: #FBFBF1;
+$backgroundColor: #000000;
+$defualtFontColor: #fbfbf1;
 
-$sidebarFontColor: rgba(23,23,34, 1);
-$sidebarBackgroundColor: #FBFBF1;
+$sidebarFontColor: $backgroundColor;
+$sidebarBackgroundColor: #fbfbf1;
 
-$titleColor: rgba(23,23,34, 1);
+$titleColor: #000000;
 
     //border color
-$navbarBorderColor: #FBFBF1;
-$menuItemABorderColor: #FBFBF1;
+$navbarBorderColor: #fbfbf1;
+$menuItemABorderColor: #f1e9d4;
 $toolbarBorderColor: rgba(23,23,34, 0.3);
 
     //Shadow color
 $titleShadowColor: $backgroundColor;
 
     //rollor color
-$rollerColor: $defualtFontColor;
+$rollerColor:#f58c62;
 
 
 /*========================== 
@@ -34,7 +34,7 @@ $navbarLinkPadding: 30px;
     //Margins 
 $defaultMargin: 10%;
 $toolbarBorderMargin: $defaultMargin - 2%;
-$skillsBoxMargin: 20px;
+$skillsBoxMargin: 70px;
 
 
 /*========================== 
@@ -73,10 +73,6 @@ $titleContainerResponsiveMargin-lg: calc((100% - #{$titleContainerWidth-lg}) / 2
 $titleContainerResponsiveMargin-md: calc((100% - #{$titleContainerWidth-md}) / 2);
 $titleContainerResponsiveMargin-sm: calc((100% - #{$titleContainerWidth-sm}) / 2);
 
-    //Skills-container
-$skillsWidth: 140px;
-$skillsContainerWidth: ($skillsWidth + ($skillsBoxMargin * 2)) * 5; //width and margin on each skillsBox multiplied with quantity
-$skillsContaiernMargin: calc((100% - #{$skillsContainerWidth}) / 2);
 
     //Line Height
 $defualtLineHeight: 2.5em;
@@ -100,17 +96,33 @@ $toolbarBorderSize: 1px;
 
     //Font Family
 $headerFont: 'Work Sans';
-$titleFont: 'Montserrat';
+$titleFont: 'Raleway';
 
     //Font sizes
 $defaultFontSize: 1rem;
 //$mediumFontSize: 1.4rem;
 //$smallFontSize: 1.2rem; 
 
-$h1: 4rem;
-$h1-lg: $h1 - 0.8rem;
-$h1-md: $h1-lg - 0.8rem;
-$h1-sm: $h1-md - 0.8rem;
+$h1: 3rem;
+$h1-lg: $h1 - 0.3rem;
+$h1-md: $h1-lg - 0.3rem;
+$h1-sm: $h1-md - 0.3rem;
+
+//HOMEPAGE H!
+$h1-homepage: 7rem;
+$h1-homepage-lg: 6rem;
+$h1-homepage-md: 5rem;
+$h1-homepage-sm: 4rem;
+
+$h2: 1.5rem;
+$h2-lg: $h2 - 0.13rem;
+$h2-md: $h2-lg - 0.13rem;
+$h2-sm: $h2-md - 0.13rem;
+
+$h3: 1.17rem;
+$h3-lg: $h3 - 0.05rem;
+$h3-md: $h3-lg - 0.05rem;
+$h3-sm: $h3-md - 0.05rem;
 
     //menu-item size
 $menuItemFont: 1rem;

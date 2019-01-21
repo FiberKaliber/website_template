@@ -3,32 +3,112 @@
 @import "functions";
 @import "variables";
 
+
+    //Variables
+$skillsHeight: 140px;
+$skillsBoxWidth: 270px;
+
 /*========================== 
             Skills
 ==============================*/
 
-#skills {
+.skills {
     position: relative;
     background-color: #FBFBF1;
+    height: auto;
     z-index: -2;
     width: 100%;  
+
 }
 
 .skills-container {
     position: relative;
-    width: $skillsContainerWidth;
-    height: 103px;
-    padding: 50px 0;
-    margin: 0 $skillsContaiernMargin;
+    margin: 0 0 0 10%;
+    padding: 6% 0 6% 0;
+    display: block;
+    overflow: auto;
+    @include transition-ease-out(0.2s);
 }
 
 .skills-box {
     position: relative;
     float: left;
-    margin: 0 $skillsBoxMargin;
+    width: $skillsBoxWidth;
+    height: 190px;
+    padding: 2% 1%;
 }
 
 #skills-logo {
+    border-radius: 50%;
+    height: $skillsHeight;
+    width: auto;
+}
+
+
+.info-box {
     height: auto;
-    width: $skillsWidth;
+    margin-top: 10px;
+}
+
+.skills-title {
+    padding-bottom: 1%;
+    color: $sidebarFontColor;
+}
+
+.extra-space {
+    height: 100px;
+}
+
+/*========================== 
+        Media queries
+==============================*/
+ 
+/* Large devices and up */
+@media only screen and (max-width: $largeDevices) {
+    .skills-container {
+        margin: 0 0 0 8%;
+        .skills-box {
+            width: $skillsBoxWidth - 40px;
+            #skills-logo {
+                height: $skillsHeight - 15px;
+            }
+        }
+    }
+    .extra-space {
+        height: 800px;
+    }
+}
+  
+   
+/* Medium devices and up */
+@media only screen and (max-width: $mediumDevices) {
+    .skills-container {
+        margin: 0 0 0 6.5%;
+        .skills-box {
+            width: $skillsBoxWidth - 90px;
+            #skills-logo {
+                height: $skillsHeight - 30px;
+            }
+        }
+    }
+    .extra-space {
+        height: 60px;
+    }
+}
+  
+   
+/* Small devices and up */
+@media only screen and (max-width: $smallDevices) {
+    .skills-container {
+        margin: 0 0 0 5%;
+        .skills-box {
+            width: $skillsBoxWidth - 110px;
+            #skills-logo {
+                height: $skillsHeight - 45px;
+            }
+        }
+    }
+    .extra-space {
+        height: 40px;
+    }
 }
