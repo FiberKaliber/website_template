@@ -147,7 +147,7 @@ button {
   position: absolute;
   height: 2px;
   border: none;
-  background-color: #f5cf62;
+  background-color: #f58c62;
   top: 98px;
   margin: 0;
   -ms-wrap-margin: 0;
@@ -166,7 +166,7 @@ button {
   left: 0px;
   width: 100%;
   border-color: #fbfbf1;
-  background-color: #156a93;
+  background-color: #000000;
   -webkit-transition: height 0.3s ease-in-out;
   -moz-transition: height 0.3s ease-in-out;
   -o-transition: height 0.3s ease-in-out;
@@ -224,7 +224,7 @@ button {
       margin-top: 16.66667px; }
       #sidebar #sidebar-menu .menu-item a {
         display: block;
-        color: #156a93;
+        color: #000000;
         padding-left: 10%;
         -webkit-transition: padding 0.3s ease;
         -moz-transition: padding 0.3s ease;
@@ -434,7 +434,7 @@ button {
 ==============================*/
 #home-page {
   position: relative;
-  background-color: #156a93;
+  background-color: #000000;
   z-index: -9999;
   width: 100%;
   height: calc(100vh - 100px); }
@@ -442,9 +442,9 @@ button {
 .background-container {
   height: 100%;
   width: 100%;
-  background-image: url("images/background/shumai.jpg");
+  background-image: url("images/background/backgroundimage.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: right bottom; }
 
 .title-container {
@@ -456,7 +456,7 @@ button {
 
 .home-page-title {
   font-family: "Raleway";
-  color: #f5cf62;
+  color: #000000;
   position: relative;
   font-size: 7rem; }
 
@@ -568,7 +568,7 @@ button {
 .skills-container {
   position: relative;
   margin: 0 0 0 10%;
-  padding: 6% 0 0 0;
+  padding: 6% 0 6% 0;
   display: block;
   overflow: auto;
   -webkit-transition: all 0.2s ease;
@@ -594,7 +594,7 @@ button {
 
 .skills-title {
   padding-bottom: 1%;
-  color: #156a93; }
+  color: #000000; }
 
 .extra-space {
   height: 100px; }
@@ -747,7 +747,7 @@ footer {
             Body 
 ==============================*/
 body {
-  background-color: #156a93;
+  background-color: #000000;
   margin: 0;
   -ms-wrap-margin: 0;
   padding: 0; }

@@ -1,278 +1,95 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Website template</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work Sans">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    </head>
-    <body>
-        <div id="wrapper">
 
-            <header id="header">
-                <a id="logo-header" title="CompanyName" href="#"><img class="logo" src="images/logo/logo-header.png"></a>
+<head>
+    <title>Website template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
 
-                <nav id="navbar"> 
+<body>
+    <div id="wrapper">
 
-                    <button id="dropdown-div">
-                        <img id="dropdown-icon" src="images/icons/dropdown-menu.png">
-                    </button>             
+        <header id="header">
+            <!-- Leta upp mappen images och ändra vilken logga du vill ha-->
+            <a id="logo-header" title="CompanyName" href="#"><img class="logo" src="images/logo/logo-header.jpg"></a>
+            <nav id="navbar">
 
-                    <ul id="navbar-menu">
+                <button id="dropdown-div">
+                    <img id="dropdown-icon" src="images/icons/dropdown-menu.png">
+                </button>
+
+                <!-- För varje ny "Section" under Home page så fyller du på med en ny <li> tag och ge den en href för navbar menyn-->
+                <ul id="navbar-menu">
+                    <li class="menu-item"><a href="#Hom">Home</a></li>
+                    <li class="menu-item"><a href="#Team">A-TEAM</a></li>
+                </ul>
+
+                <!-- För varje ny "Section" under Home page så fyller du på med en ny <li> tag och ge den en href för dropdown menyn-->
+                <div id="sidebar">
+                    <ul id="sidebar-menu">
                         <li class="menu-item"><a href="#Hom">Home</a></li>
-                        <li class="menu-item"><a href="#Man">Managers</a></li>
-                        <li class="menu-item"><a href="#Dev">Developers</a></li>
-                        <li class="menu-item"><a href="#Val">Validation</a></li>
-                        <li class="menu-item"><a href="#Ana">Analysts</a></li>
+                        <li class="menu-item"><a href="#Team">A-Team</a></li>
                     </ul>
-
-                    <div id="sidebar">
-                        <ul id="sidebar-menu">
-                                <li class="menu-item"><a href="#Hom">Home</a></li>
-                                <li class="menu-item"><a href="#Man">Managers</a></li>
-                                <li class="menu-item"><a href="#Dev">Developers</a></li>
-                                <li class="menu-item"><a href="#Val">Validation</a></li>
-                                <li class="menu-item"><a href="#Ana">Analysts</a></li>
-                            <!--<ul id="toolbar">
-                                <li class="toolbar-item">
-                                    <button id="lang"><img id="lang-icon" src="images/icons/en-icon.png"></button></li>
-                            </ul> -->
-                        </ul>
-                    </div>
-                    <hr id="roller">
-                </nav>
-            </header>
-
-            <!-- HOME PAGE -->
-                <section id="home-page">
-                    <div class="background-container">
-                        <div class="title-container">
-                            <h1 class="home-page-title">Shumai<img class="title-logo" src="images/logo/logo-header.png"></h1>
-                            <h2 class="home-page-under-title" id="title-animation">With a name like Shumai, it has to be good.</h2>
-                        </div>
-                    </div>
-                </section>
-
-            <!-- DEPARTMENT - MANAGEMENT -->
-                <section id="Man" class="skills">
-                    <div class="skills-container">
-                        <h1 class="skills-title">Managers</h1>
-                        <div class="skills-box">
-                                <img id="skills-logo" src="images/Pictures/Managers/Harald_Ekolm.jpg">
-                                <div class="info-box">
-                                    <h2>Harald Ekholm</h2>
-                                    <h3>Project leader</h3>
-                                </div>
-                        </div>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Managers/Fredrik_Hoije.jpg">
-                            <div class="info-box">
-                                <h2>Fredrik Höije</h2>
-                                <h3>Process manager</h3>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Managers/Benjamin_Andersson.jpg">
-                            <div class="info-box">
-                                <h2>Benjamin Andersson</h2>
-                                <h3>Strategic product manager</h3>
-                            </div>
-                        </div> 
-                        <div class="skills-box">
-                                <img id="skills-logo" src="images/Pictures/Managers/Linda_Olsson.jpg">
-                                <div class="info-box">
-                                    <h2>Linda Olsson</h2>
-                                    <h3>Line manager</h3>
-                                </div>
-                        </div>       
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Managers/Pelle.jpg">
-                            <div class="info-box">
-                                <h2>Pelle Söderberg</h2>
-                                <h3>Line manager</h3>
-                            </div>
-                    </div>                       
-                    </div>
-                </section>
-
-                <!-- DEPARTMENT - DEVELOPERS -->
-                <section id="Dev" class="skills">
-                    <div class="skills-container">
-                        <h1 class="skills-title">Developers</h1>
-                        <div class="skills-box">
-                                <img id="skills-logo" src="images/Pictures/Developers/Adrian_Karlen.jpg">
-                                <div class="info-box">
-                                    <h2>Adrian Karlen</h2>
-                                    <h3>Lead developer</h3>
-                                </div>
-                        </div>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Developers/Johan_Sjostrand.jpg">
-                            <div class="info-box">
-                                <h2>Johan Sjöstrand</h2>
-                                <h3>Architect</h3>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Developers/Fredrik_Gerdin_Borjesson.jpg">
-                            <div class="info-box">
-                                <h2>Fredrik G Borjesson</h2>
-                                <h3>Data Engineer</h3>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Developers/Maria_Davidsson.jpg">
-                            <div class="info-box">
-                                <h2>Maria Davidsson</h2>
-                                <h3>Technical writer</h3>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                                <img id="skills-logo" src="images/Pictures/Developers/Alice_Walden.jpg">
-                                <div class="info-box">
-                                    <h2>Alice Walden</h2>
-                                    <h3>Developer</h3>
-                                </div>
-                        </div>
-                        <div class="skills-box">
-                                <img id="skills-logo" src="images/Pictures/Developers/Fredrik_Andersson.jpg">
-                                <div class="info-box">
-                                    <h2>Fredrik Andersson</h2>
-                                    <h3>Developer</h3>
-                                </div>
-                        </div>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Developers/Sanjana_Vupparige.jpg">
-                            <div class="info-box">
-                                <h2>Sanjana Vupparige</h2>
-                                <h3>Developer</h3>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Developers/Anton_Moback.jpg">
-                            <div class="info-box">
-                                <h2>Anton Mobäck</h2>
-                                <h3>Developer</h3>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Developers/Adrian_Karlen.jpg">
-                            <div class="info-box">
-                                <h2>David Gunbrant</h2>
-                                <h3>Developer</h3>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Developers/someone.jpg">
-                            <div class="info-box">
-                                <h2>Sophie Lindberg</h2>
-                                <h3>UX-designer</h3>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Developers/Linus_Falck.jpg">
-                            <div class="info-box">
-                                <h2>Linus Falck</h2>
-                                <h3>UX-designer</h3>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- DEPARTMENT - VALIDATION -->
-                <section id="Val" class="skills">
-                    <div class="skills-container">
-                        <h1 class="skills-title">Validation</h1>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Validation/Philip_Stratelis.jpg">
-                            <div class="info-box">
-                                <h2>Philip Stratelis</h2>
-                                <h3>Quality coordinator</h3>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                                <img id="skills-logo" src="images/Pictures/Validation/Filip_Renholm.jpg">
-                                <div class="info-box">
-                                    <h2>Filip Renholm</h2>
-                                    <h3>Tester</h3>
-                                </div>
-                        </div>
-                        <div class="skills-box">
-                                <img id="skills-logo" src="images/Pictures/Validation/Lukas_Rydstedt.jpg">
-                                <div class="info-box">
-                                    <h2>Lukas Rydstedt</h2>
-                                    <h3>Tester</h3>
-                                </div>
-                        </div>
-                        <div class="skills-box">
-                                <img id="skills-logo" src="images/Pictures/Validation/Sofia_Hagel.jpg">
-                                <div class="info-box">
-                                    <h2>Sofia Hagel</h2>
-                                    <h3>Tester</h3>
-                                </div>
-                        </div>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Validation/Gustaf_Conner.jpg">
-                            <div class="info-box">
-                                <h2>Gustaf Conner</h2>
-                                <h3>Tester</h3>
-                            </div>
-                    </div>
-                    <div class="skills-box">
-                        <img id="skills-logo" src="images/Pictures/Validation/Lowe_Nyman.jpg">
-                        <div class="info-box">
-                            <h2>Lowe Nyman</h2>
-                            <h3>Tester</h3>
-                        </div>
                 </div>
-                    </div>
-                </section>
-                <!-- DEPARTMENT - ANALYSTS -->
-                <section id="Ana" class="skills">
-                    <div class="skills-container">
-                        <h1 class="skills-title">Analysts</h1>
-                        <div class="skills-box">
-                            <img id="skills-logo" src="images/Pictures/Analysts/Stefan_Lindstedt.jpg">
-                            <div class="info-box">
-                                <h2>Stefan Lindstedt</h2>
-                                <h3>Lead Analyst</h3>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                                <img id="skills-logo" src="images/Pictures/Analysts/Oskar_Berggren.jpg">
-                                <div class="info-box">
-                                    <h2>Oskar Berggren</h2>
-                                    <h3>Analyst</h3>
-                                </div>
-                        </div>
-                        <div class="skills-box">
-                                <img id="skills-logo" src="images/Pictures/Analysts/Johan_Karlsson.jpg">
-                                <div class="info-box">
-                                    <h2>Johan Karlsson</h2>
-                                    <h3>Analyst</h3>
-                                </div>
-                        </div>
-                        <div class="skills-box">
-                                <img id="skills-logo" src="images/Pictures/Analysts/Viktor_Hakegard.jpg">
-                                <div class="info-box">
-                                    <h2>Viktor Hakegård</h2>
-                                    <h3>Analyst</h3>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="extra-space"></div>
-                </section>
-        </div>
-        <footer>
-            <div class="content-parent">
-                &copy; 2018 Shumai, All rights reserved
-                <div class="content">
-                    <a title="terms of service"></a>Website mabe by: David Gunbrant</a>
+                <hr id="roller">
+            </nav>
+        </header>
+
+        <!-- HOME PAGE -->
+        <section id="home-page">
+            <div class="background-container">
+                <div class="title-container">
+                    <!-- Leta upp mappen images och ändra vilken logga du vill ha // ta bort h1 taggen om ingen logga ska synas-->
+                    <h1 class="home-page-title">Title<img class="title-logo" src="images/logo/logo-header.jpg"></h1>
+
+                    <!-- Ta bort "id=title-animation" om ni inte vill ha en animation på undertexten-->
+                    <h2 class="home-page-under-title">The Best Company ever made.</h2>
+                    <!-- <h2 class="home-page-under-title" id="title-animation">With a name like Shumai, it has to be good.</h2> -->
                 </div>
             </div>
-        </footer> 
+        </section>
 
-    </body>
-    
-    <script src="js/fiddler.js"></script>
+        <!-- A-TEAM -->
+        <!-- Se till att id stämmer överrens med Href taggen i navbar/sidebar -->
+        <section id="Team" class="skills">
+            <div class="skills-container">
+                <!-- Rubrik på ny section -->
+                <h1 class="skills-title">A-Team</h1>
+
+
+                <div class="skills-box">
+                    <img id="skills-logo" src="images/Pictures/Company/anonym.jpg">
+                    <div class="info-box">
+                        <h2>Tony Lindgren</h2>
+                        <h3>The Boss</h3>
+                    </div>
+                </div>
+
+                <div class="skills-box">
+                    <img id="skills-logo" src="images/Pictures/Company/anonym.jpg">
+                    <div class="info-box">
+                        <h2>Peter Tvingmark</h2>
+                        <h3>Peasant</h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="content-parent">
+            &copy; 2019 "Company Name", All rights reserved
+            <div class="content">
+                <a title="terms of service"></a>Website mabe by: David Gunbrant</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script src="js/fiddler.js"></script>
+
 </html>

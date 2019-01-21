@@ -24,7 +24,7 @@ $skillsBoxWidth: 270px;
 .skills-container {
     position: relative;
     margin: 0 0 0 10%;
-    padding: 6% 0 0 0;
+    padding: 6% 0 6% 0;
     display: block;
     overflow: auto;
     @include transition-ease-out(0.2s);
